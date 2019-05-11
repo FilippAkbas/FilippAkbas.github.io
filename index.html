@@ -1,63 +1,50 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>T.A.F</title>
-	<link rel="SHORTCUT ICON" href="img/brand.gif" /> 
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Google Api</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-	<header class="header">
-		<div class="search">
-			<label for="search" class="search-area">
-				<input type="text" id="search" class="custom-form" placeholder="Metini yaz">
-				<button>Ara</button>
-			</label>
-		</div>
+<div id="map_canvas"></div>
 
-		<nav class="nav__menu">
-			<div class="nav__logo">
-				<span>Türkiye Atletizm Federasyonu </span>
-			</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCESMQjbnV3D0OaZoVvsLKbZTqLIObG4Jo" async defer></script>
 
-			<ul class="menu__list">
-				<li class="menu__link"><a href="anasayfa.html" class="active">AnaSayfa</a></li>
-				<li class="menu__link"><a href="hakkinda.html">Hakkında</a></li>
-				<li class="menu__link"><a href="yardim.html">Yardım</a></li>
-				<li class="menu__link"><a href="team.html">Team</a></li>
-				<li class="menu__link"><a href="iletisim.html">İletişim</a></li>
-			</ul>
-		</nav>
-	</header>
+<script>
+    var data = '{"name": "mkyong","age": 30,"address": {"streetAddress": "88 8nd Street","city": "New York"}}';
+    var json = JSON.parse(data);
+    var map;
+    var geo;
+    window.onload = function init() {
 
-	<section class="wrap">
-		<div class="sidebar">
-			<ul class="sidebar__list">
-				<li><a href="rekorlar.html">Rekorlar</a></li>
-				<li><a href="federasyon.html">Federasyonumuz</a></li>
-				<li><a href="resimler.html">Resimlerimiz</a></li>
-				<li><a href="sporcular.html">Sporcularımız</a></li>
-				<li><a href="sosyal.html">Sosyal Medya Hesaplarımız</a></li>
-			</ul>
-		</div>
+        geo = new google.maps.Geocoder();
 
-		<div class="main__content">
-			<div class="banner">
-				<img src="img/ramilfiniş.jpg" alt="ramilfiniş">
-			</div>
+        var opt = {
+            zoom: 15,
+            center: {
+                lat:31.2564,
+                lng:31.6897
+            }
+        }
 
-			<p class="description">
-				Atletizm, bir pist veya alanda yapılan, dünyanın en eski sporlarından biridir. Bu oyunlarda atletler koşu, yürüyüş, atlama ve atma yeteneklerini gösterirler. Bu tür etkinlikler, çağlar boyunca tüm dünyada yaygın ilgi görmüştür. Bilinen ilk koşu yarışı MÖ 3800'lü yıllarda Mısır'da düzenlenmiştir.
-			</p>
-		</div>
-	</section>
+        map  = new google.maps.Map(document.querySelector("#map_canvas"),opt);
 
-	<footer class="footer">
-		<span>Telif Hakkı © 2019 Erdoğan CEYLAN Tarafından Tasarlanmıştır.</span>
-	</footer>
-	
+        var address = json.address.city;
+        geo.geocode({'address': address}, function(results,status) {
+            if(status == google.maps.GeocoderStatus.OK) {
+                //console.log(results[0].geometry.location);
+                map.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                   map:map,
+                    position: results[0].geometry.location
+                });
+            }
+            else {
+                alert('Not valid address')
+            }
+        });
+    }
+</script>
 </body>
 </html>
