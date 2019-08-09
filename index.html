@@ -1,117 +1,342 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Google Api</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
 
- <input id="autocomplete"
-             placeholder="Enter your address"
-             onFocus="geolocate()"
-             type="text"/>
+		<link rel="shortcut icon" href="img/favicon.ico">
+        <!-- Page Title Here -->
+        <title>Aselsan Lisesi</title>
+		
+        <!-- Page Description Here -->
+		<meta name="description" content="Aselsan Lisesi">
 
-    <table id="address">
-      <tr>
-        <td class="label">Street address</td>
-        <td class="slimField"><input class="field" id="street_number" disabled="true"/></td>
-        <td class="wideField" colspan="2"><input class="field" id="route" disabled="true"/></td>
-      </tr>
-      <tr>
-        <td class="label">City</td>
-        <td class="wideField" colspan="3"><input class="field" id="locality" disabled="true"/></td>
-      </tr>
-      <tr>
-        <td class="label">State</td>
-        <td class="slimField"><input class="field" id="administrative_area_level_1" disabled="true"/></td>
-        <td class="label">Zip code</td>
-        <td class="wideField"><input class="field" id="postal_code" disabled="true"/></td>
-      </tr>
-      <tr>
-        <td class="label">Country</td>
-<!--        <td class="wideField" colspan="3"><input class="field" id="country" disabled="true"/></td>-->
-      </tr>
-    </table>
+        <!-- Disable screen scaling-->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
 
-<div id="country"></div>
-<div id="street_number"></div>
-<div id="locality"></div>
-<div id="administrative_area_level_1"></div>
-<div id="postal_code"></div>
-<div id="lng"></div>
-<div id="lag"></div>
-<div id="test"></div>
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+        
+        <!-- Initializer -->
+        <link rel="stylesheet" href="css/normalize.css">        
+        
+        <!-- Web fonts and Web Icons -->
+        <link rel="stylesheet" href="css/pageloader.css">
+        <link rel="stylesheet" href="fonts/opensans/stylesheet.css">
+        <link rel="stylesheet" href="fonts/asap/stylesheet.css">
+        <link rel="stylesheet" href="css/ionicons.min.css">
+        
+        <!-- Vendor CSS style -->
+        <link rel="stylesheet" href="css/foundation.min.css">
+        <link rel="stylesheet" href="js/vendor/jquery.fullPage.css">
+        <link rel="stylesheet" href="js/vegas/vegas.min.css">
+        
+		<!-- Main CSS files -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main_responsive.css">
+        <link rel="stylesheet" href="css/style-color1.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="css/sweetalert2.min.css">
+        
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body id="menu" class="alt-bg">
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Page Loader -->
+        <div class="page-loader" id="page-loader">
+            <div><i class="ion ion-loading-d"></i><p>loading</p></div>
+        </div>
+        
+        <!-- BEGIN OF site header Menu -->
+		<!-- Add "material" class for a material design style -->
+		<header class="header-top">
+			
+            <div class="menu clearfix">
+                <a href="#home">Hakkımızda</a>
+				<!-- Add other menu similar to "about" here -->
+                <a href="#contact">İletişim</a>
+            </div>
+		</header>
+        <!-- END OF site header Menu-->
+        
+        <!-- BEGIN OF Quick nav icons at left -->
+		<nav class="quick-link count-4 nav-left">
+			<ul id="qmenu" class="qmenu">
+				<li data-menuanchor="register">
+					<a href="#register" class=""><i class="icon ion ion-ios7-paper-outline"></i>
+					</a>
+					<span class="title">Haberler</span>
+				</li>
+				<li data-menuanchor="about-us">
+					<a href="#register"><i class="icon ion ion-speakerphone"></i>
+					</a>
+					<span class="title">Duyuru</span>
+				</li>
+			</ul>
+		</nav>
+        <!-- END OF Quick nav icons at left -->
+        
 
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCESMQjbnV3D0OaZoVvsLKbZTqLIObG4Jo&libraries=places&callback=initAutocomplete" async defer></script>
+        <!-- BEGIN OF site cover -->
+        <div class="page-cover" id="s-cover">
+            <!-- Cover Background -->
+            <div class="cover-bg pos-abs full-size bg-img" data-image-src="img/aselsan-1.jpg"></div>
+			
+			<!-- Solid color as filter -->
+            <div class="cover-bg-mask pos-abs full-size bg-color" data-bgcolor="rgba(8, 25, 53, .8)"></div>
+            
+        </div>
+        <!--END OF site Cover -->
+		
+		<!-- Begin of timer pane -->
+		<div class="pane-when " id="s-when">
+			<div class="content">
+				<!-- Clock -->
+				<div class="clock clock-countdown">
+					<!-- Logo instead -->
+					<div class="logo">
+						<a href="#">
+							<img src="img/aselsanlisesi.jpg">
+						</a>
+					</div>
+				</div> 
+				
+				
+				<footer>
+					<p><b>Aselsan</b> Lisesi Yakın Zamanda</p>
+				</footer>                
+			</div> 
+		</div>
+		<!-- End of timer pane -->
+        
+        <!-- BEGIN OF site main content content here -->
+        <main class="page-main" id="mainpage">             
+            
+			<!-- Begin of home page -->
+			<div class="section page-home page page-cent" id="s-home">
+				
+				<section class="content">
+					<header class="p-title">
+						<h3>Hakkımızda<i class="ion ion-android-information"></i></h3>
+						<h4 class="subhead">Bilgiyi <span class="bold">güce</span> ve <span class="bold">güvence</span> dönüştüren kuruluş</h4>
+					</header>
+					<article class="text">
+						<p>Türk Silahlı Kuvvetleri'nin haberleşme ihtiyaçlarının milli imkanlarla karşılanması için 1975 yılında kurulan <b>ASELSAN</b>; Türk Silahlı Kuvvetlerini Güçlendirme Vakfı'na (TSKGV) bağlı bir anonim şirkettir. <b>ASELSAN</b> hisselerinin %74,20'si TSKGV'ye aittir, %25,70'lik kısım ise Borsa İstanbul'da (BİST) işlem görmektedir.</p>
 
-<script>
-    var placeSearch, autocomplete;
 
-    var componentForm = {
-      street_number: 'short_name',
-      route: 'long_name',
-      locality: 'long_name',
-      administrative_area_level_1: 'short_name',
-      country: 'long_name',
-      postal_code: 'short_name'
-    };
+					</article>
+				</section>
+			</div>
+			<!-- End of home page -->
+            
+           
+            
+            <!-- Begin of register page -->
+            <div class="section page-register page page-cent"  id="s-register">
+                <section class="content">
+                    <ul class="annouchement-list">
+						<li>
+							<div class="an-title">
+								<h3>Duyuru Title</h3>
+								<div class="date">
+									<i class="ion ion-calendar"></i>
+									<span>21-08-2019</span>
+								</div>
+							</div>
+							<div class="an-content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil similique et dolore est nemo!</p>
+							</div>
+						</li>
 
-    console.log()
+						<li>
+							<div class="an-title">
+								<h3>Duyuru Title</h3>
+								<div class="date">
+									<i class="ion ion-calendar"></i>
+									<span>21-08-2019</span>
+								</div>
+							</div>
+							<div class="an-content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil similique et dolore est nemo!</p>
+							</div>
+						</li>
 
-    function initAutocomplete() {
-  // Create the autocomplete object, restricting the search predictions to
-  // geographical location types.
-  autocomplete = new google.maps.places.Autocomplete(
-      document.getElementById('autocomplete'), {types: ['geocode']});
+						<li>
+							<div class="an-title">
+								<h3>Duyuru Title</h3>
+								<div class="date">
+									<i class="ion ion-calendar"></i>
+									<span>21-08-2019</span>
+								</div>
+							</div>
+							<div class="an-content">
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil similique et dolore est nemo!</p>
+							</div>
+						</li>
+					</ul>
+                </section>
+            </div>
+            <!-- End of register page -->
+            
+            <!-- Begin of about us page -->
+            <div class="section page-about page page-cent" id="s-about-us">
+                <section class="content">
+                    <ul class="news-list">
+                    	<li id="news-1">
+                    		<div class="news-img">
+                    			<a href="#"><img src="img/aselsan-1.jpg" alt="İmages"></a>
+                    		</div>
 
-  // Avoid paying for data that you don't need by restricting the set of
-  // place fields that are returned to just the address components.
-  autocomplete.setFields(['address_component']);
+                    		<div class="nesw-content">
+                    			<a href="#">
+                    				<h3>Haberler Başlık</h3>
+                    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quaerat? </p>
+                    			</a>
+                    		</div>
+                    	</li>
 
-  // When the user selects an address from the drop-down, populate the
-  // address fields in the form.
-  autocomplete.addListener('place_changed', fillInAddress);
-}
+                    	<li id="news-2">
+                    		<div class="news-img">
+                    			<a href="#"><img src="img/aselsan-1.jpg" alt="İmages"></a>
+                    		</div>
 
-function fillInAddress() {
-  // Get the place details from the autocomplete object.
-  var place = autocomplete.getPlace();
+                    		<div class="nesw-content">
+                    			<a href="#">
+                    				<h3>Haberler Başlık</h3>
+                    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quaerat? </p>
+                    			</a>
+                    		</div>
+                    	</li>
+                    </ul>
+                </section>
+            </div>
+            <!-- End of about us page -->
+                
+            <!-- Begin of Contact page   -->
+            <div class="section page-contact page page-cent  bg-color" data-bgcolor="rgba(95, 25, 208, 0.88)s" id="s-contact">
+				<!-- Begin of contact information -->
+				<div class="slide" id="s-information" data-anchor="information">
+					<section class="content">
+						<header class="p-title">
+							<h3>İletişim<i class="ion ion-location">
+								</i>
+							</h3>
+						</header>
+						<!-- Begin Of Page SubSction -->
+						<div class="contact">
+							<div class="row">
+								<div class="medium-12 columns left">
+									<ul>
+										<li>
+											<h4>Posta Kodu</h4>
+											<p>06370</p>
+										</li>
+										<li>
+											<h4>Adres Kimlik No </h4>
+											<p>5349542786</p>
+										</li>
+										<li>
+											<h4>Adres</h4>
+											<p>Yeni batı mah. 2355 cad. No 17/A batıkent</p>
+											<p>Aselsan MTAL resmi adresi  şu an ki adresi  ilk yerleşim mah. 1901 cad. No 2 batıkent Yenimahalle ankara ostim şehit alper zor mesleki ve teknik Anadolu Lisesi</p>
+										</li>
+										<li  class="show-for-medium-up">
+											<h4>Takip Et</h4>
+											<!-- Begin of Social links -->
+											<div class="socialnet">
+												<a href="https://www.facebook.com/aselsan"><i class="ion ion-social-facebook"></i></a>
+												<a href="https://www.instagram.com/aselsan_resmi/"><i class="ion ion-social-instagram"></i></a>
+												<a href="https://twitter.com/aselsan"><i class="ion ion-social-twitter"></i></a>
+											</div>
+											<!-- End of Social links -->
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- End of page SubSection -->
+					</section>  
+				</div>
+				<!-- end of contact information -->
+            </div>
+            <!-- End of Contact page  -->   
+        
+        </main>
 
-  for (var component in componentForm) {
-    document.getElementById(component).value = '';
-    document.getElementById(component).disabled = false;
-  }
+        <!-- END OF site main content content here -->  
+		
+		<!-- Begin of site footer -->
+		<footer class="page-footer">
+			<div>
+				<a href="https://www.facebook.com/aselsan" target="_blank"><i class="ion icon ion-social-facebook"></i></a>
+				<a href="https://www.instagram.com/aselsan_resmi/" target="_blank"><i class="ion icon ion-social-instagram"></i></a>
+				<a href="https://twitter.com/aselsan" target="_blank"><i class="ion icon ion-social-twitter"></i></a>
+			</div>
+		</footer>
+		<!-- End of site footer -->
 
-  // Get each component of the address from the place details,
-  // and then fill-in the corresponding field on the form.
-  for (var i = 0; i < place.address_components.length; i++) {
-    var addressType = place.address_components[i].types[0];
-    if (componentForm[addressType]) {
-      var val = place.address_components[i][componentForm[addressType]];
-        document.getElementById(addressType).value = val;
-        document.getElementById('country').innerHTML = val;
-    }
-  }
-}
 
-    function geolocate() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var geolocation = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
+        <script src="js/vendor/jquery-1.11.2.min.js"></script>
+		<!-- All vendor scripts -->
+        <script src="js/vendor/all.js"></script>
+		<!-- Downcount JS -->
+        <script src="js/jquery.downCount.js"></script>
+		<!-- Form script -->
+        <script src="js/form_script.js"></script>
+        <script src="js/sweetalert2.all.min.js"></script>
+		<!-- Javascript main files -->
+        <script src="js/main.js"></script>
 
-      var circle = new google.maps.Circle(
-          {center: geolocation, radius: position.coords.accuracy});
-      autocomplete.setBounds(circle.getBounds());
-    });
-  }
-}
+        <script>
+        	$('#news-1').click(function() {
+        		Swal.fire({
+				  title: 'Haberler Başlık 1',
+				  html:
+				    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quaerat? , ' +
+				    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quaerat?  ' +
+				    'and other HTML tags',
+				  showCloseButton: true,
+				  showCancelButton: false,
+				  focusConfirm: false,
+				  showConfirmButton: false,
+				  animation: false,
+				  customClass: {
+				    popup: 'animated tada'
+				  },
+				  backdrop: `
+				    rgba(225, 152, 41, 0.6)
+				    center left
+				    no-repeat
+				  `
+				})
+        	});
 
-    //console.log('geolocation');
-</script>
-</body>
+        	$('#news-2').click(function() {
+        		Swal.fire({
+				  title: 'Haberler Başlık 2',
+				  html:
+				    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quaerat? , ' +
+				    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, quaerat?  ' +
+				    'and other HTML tags',
+				  showCloseButton: true,
+				  showCancelButton: false,
+				  focusConfirm: false,
+				  showConfirmButton: false,
+				  animation: false,
+				  customClass: {
+				    popup: 'animated tada'
+				  },
+				  backdrop: `
+				    rgba(225, 152, 41, 0.6)
+				    center left
+				    no-repeat
+				  `
+				})
+        	});
+        	
+        </script>
+    </body>
 </html>
