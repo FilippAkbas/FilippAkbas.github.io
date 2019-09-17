@@ -1,0 +1,20 @@
+$mainColor: #FF7100;
+$mainBlurColor: #06f;
+$blueDarkColor: #091426;
+
+@import url('https://fonts.googleapis.com/css?family=Manjari:400,700&display=swap&subset=malayalam');
+
+body {
+    font-family: 'Manjari', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.custom-color {
+    color: $mainColor;
+}
+
+@import 'components/header','components/slider','components/section';
