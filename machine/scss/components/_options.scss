@@ -1,0 +1,17 @@
+$mainBlueColor: #0066ff;
+$mainYellowColor: #fedc00;
+$darkColor: #000;
+$whiteColor: #fff;
+$montserratFont: 'Montserrat', sans-serif;
+$robotoFont: 'Roboto', sans-serif;
+
+
+
+.wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    z-index: 1;
+    @media only screen and (max-width: 768px) {
+        padding: 0 4%;
+    }
+}
