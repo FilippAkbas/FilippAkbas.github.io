@@ -12,4 +12,15 @@ $(document).ready(function () {
             $(".header").removeClass("fixed-header");
         }
     });
+
+    $('.product-list ul li a').click(function (e) {
+        e.preventDefault();
+        $('.product-list ul li a').removeClass('active');
+        $(this).addClass('active');
+        var tab = $(this).attr('href');
+        $('.product-grid').not(tab).css({
+            'display': 'none'
+        });
+        $(tab).fadeIn(400);
+    });
 });

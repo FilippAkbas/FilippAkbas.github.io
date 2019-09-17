@@ -1,0 +1,33 @@
+@media only screen and (max-width: 1400px) {
+    .main-slider {
+        height: 80vh !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+
+/* for table and mini desctop */
+@media only screen and (max-width: 991px) {
+    
+}
+
+
+/* For mini table */
+@media only screen and (max-width: 768px) {
+    
+}
+
+
+/* for mobile size ekran */
+@media only screen and (max-width: 486px) {
+    
+}
+
+
+/* For iphone 5 */
+@media only screen and (max-width: 370px) {
+    
+}
