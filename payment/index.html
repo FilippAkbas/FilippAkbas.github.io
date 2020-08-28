@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="John Doe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sepet | mapinsky</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section Start -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav_logo">
+                    <a href="#"><img src="mapsky-logo.png" alt="Logo"></a>
+                </div>
+                <div class="nav_list">
+                    <li>Destek: <span><a href="tel:444555">444555</a></span></li>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Tab Content Section Start -->
+    <section class="payment-tabs">
+        <div class="container">
+            <div class="payment-tabs_title">
+                <li><a href="#adres-kargo" class="active">1.Adres & Kargo Bilgileri</a></li>
+                <li><img src="swoosh-right.svg" alt="Svg icon"></li>
+                <li><a href="#odeme" disabled>2. Ödeme Seçenekleri</a></li>
+                <li><img src="swoosh-right.svg" alt="Svg icon"></li>
+                <li>3. Onay</li>
+            </div>
+            <div class="payment-tabs_box">
+                <div class="tabs-box">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="box-content" id="adres-kargo">
+                                <div class="delivery-box">
+                                    <div class="delivery-address_box">
+                                        <div class="delivery-adress__item">
+                                            <div class="address-title">
+                                                <h4>EV</h4>
+                                            </div>
+                                            <div class="address-dsc">
+                                                <li>
+                                                    <span>adres:</span>
+                                                    <span>Lorem ipsum dolor sit amet.</span>
+                                                </li>
+                                                <li>
+                                                    <span>tel:</span>
+                                                    <span>5858585858585</span>
+                                                </li>
+                                            </div>
+                                            <div class="address-btn-group">
+                                                <a href="#" id="do-edit-btn">adres duzenle</a>
+                                                <a href="#" id="add-this">bu adresi sec</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="delivery-adress__item">
+                                            <div class="address-title">
+                                                <h4>EV</h4>
+                                            </div>
+                                            <div class="address-dsc">
+                                                <li>
+                                                    <span>adres:</span>
+                                                    <span>Lorem ipsum dolor sit amet.</span>
+                                                </li>
+                                                <li>
+                                                    <span>tel:</span>
+                                                    <span>5858585858585</span>
+                                                </li>
+                                            </div>
+                                            <div class="address-btn-group">
+                                                <a href="#" id="do-edit-btn">adres duzenle</a>
+                                                <a href="#" id="add-this">bu adresi sec</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-btn">
+                                        <a href="javascript:void(0)">
+                                            <img src="plus.svg" alt="Icon">
+                                            Yeni Adres Olustur
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="kargo-box">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>Lutfen kargo tipini seciniz</h4>
+                                        </div>
+                                        <div class="col-md-12 kargo-item">
+                                            <div class="kargo-item_title">
+                                                <input type="radio" name="kargo-tipi" id="ucretsiz">
+                                                <label for="ucretsiz">Siparişleriniz 2-4 iş günü içerisinde UPS kargoya verilecektir.</label>
+                                            </div>
+                                            <div class="kargo-item_price">0.00 TL</div>
+                                        </div>
+                                        <div class="col-md-12 kargo-item">
+                                            <div class="kargo-item_title">
+                                                <input type="radio" name="kargo-tipi" id="expres">
+                                                <label for="expres">Hızlı Teslimat</label>
+                                                <p>Hafta içi saat 15:00'a kadar verilen hızlı   teslimat siparişleri, aynı   gün içinde teslim edilir. Saat 15:00'dan sonra, hafta sonları ve resmi tatil günleçde verilen hızlı teslimat siparişleri ise takip eden ilk iş gününçslim edilir.</p>
+                                            </div>
+                                            <div class="kargo-item_price">26.00 TL</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="add-address-box">
+                                    <div class="basket-form">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="radio" name="fatura-tipi" id="bireysel">
+                                                <label for="bireysel">bireysel</label>
+                                            </div>
+                                            <div class="col">
+                                                <input type="radio" name="fatura-tipi" id="kurumsal">
+                                                <label for="kurumsal">Kurumsal</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="username">Ad <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="username" id="username" placeholder="" value="">
+                                            </div>
+                                            <div class="col">
+                                                <label for="usersurname">Soyad <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="usersurname" id="usersurname" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="usertc">TC Kimlik No <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="usertc" id="usertc" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="country">Ülke <span class="red-star">*</span></label>
+                                                <select id="country" name="country" class="form-control">
+                                                    <option selected="" value="none">Seçiniz...</option>
+                                                    <option value="Türkiye" id="223">Türkiye</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label for="usercity">Şehir <span class="red-star">*</span></label>
+                                                <select id="usercity" name="usercity" class="form-control">
+                                                    <option selected="" value="none">Seçiniz...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="userpart">İlçe / Semt <span class="red-star">*</span></label>
+                                                <select id="userpart" name="userpart" class="form-control">
+                                                    <option selected="" value="none">Seçiniz...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label for="userzip">Posta Kodu </label>
+                                                <input type="text" class="form-control" name="userzip" id="userzip" placeholder="Posta Kodu">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="userstreet">Adres <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="userstreet" id="userstreet" placeholder="Mahalle,sokak adı,bina no vb. ">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="userphone">Telefon <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="userphone" id="userphone" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="row hidden" id="vergi-area">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="firmaname">Firma adı (isteğe bağlı)</label>
+                                                <input type="text" class="form-control" name="firmaname" id="firmaname" placeholder="Şirket adına kesilecek faturalar için...">
+                                            </div>
+                                            <div class="col">
+                                                <label for="firmavergidairesi">Vergi Dairesi <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="firmavergidairesi" id="firmavergidairesi" placeholder="Fatura İçin Zorunludur">
+                                            </div>
+                                            <div class="col">
+                                                <label for="firmano">Vergi No <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="firmano" id="firmano" placeholder="Fatura İçin Zorunludur">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="checkbox" class="squaredThree" name="fatura-kargo" id="fatura-kargo" placeholder="">
+                                                <label for="fatura-kargo">Kargo bilgilerim fatura bilgilerimle aynı</label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button type="submit" class="btn fatura-btn">Kaydet</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-content" id="odeme">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="payment-method">
+                                            <li>
+                                                <h2 class="title">Lütfen ödeme şekli seçin.</h2>
+                                            </li>
+                                            <li>
+                                                <label for="card-method">
+                                                    <input type="radio" name="payment-method" id="card-method"> Card method
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="havale-method">
+                                                    <input type="radio" name="payment-method" id="havale-method"> Havale Method
+                                                </label>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="payment-item" id="kredit-kard">
+                                            <div class="creditcard__area-card">
+                                                <div class="form-container">
+                                                    <div class="field-container">
+                                                        <label for="name">Ad</label>
+                                                        <input id="name" name="name" maxlength="20" type="text">
+                                                    </div>
+                            
+                                                    <div class="field-container">
+                                                        <label for="surname">Soyad</label>
+                                                        <input id="surname" name="surname" maxlength="20" type="text">
+                                                    </div>
+                            
+                                                    <div class="field-container">
+                                                        <label for="cardnumber">Kart Numarası</label>
+                                                        <input id="cardnumber" name="cardnumber" type="text" inputmode="numeric" placeholder="•••• •••• •••• ••••">
+                                                        <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        </svg>
+                                                    </div>
+                                                    <div class="field-container group-container">
+                                                        <label for="expirationmm" class="card-title-flex"><div class="d-flex justify-content-between"><span>Ay</span> <span>Yıl</span></div></label>
+                                                        <input id="expirationmm" name="ay" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                        <input id="expirationyy" name="yil" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                    </div>
+                                                    <div class="field-container">
+                                                        <label for="securitycode">Güvenlik Numarası(CVC)</label>
+                                                        <input id="securitycode" name="securecode" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="payment-item" id="havale">
+                                            <p>Havale Secimi Lorem ipsum dolor sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-md-12 mb-4">
+                                    <div class="products-box">
+                                        <div class="products-box__title">
+                                            <h2>Sepet</h2>
+                                        </div>
+
+                                        <ul class="products-box__list">
+                                            <li>Urun</li>
+                                            <li>Urun</li>
+                                            <li>Urun</li>
+                                            <li>Urun</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                    <div class="products-box">
+                                        <ul class="products-box__list">
+                                            <li class="products-kargo__item">
+                                                <span class="products-item__title">Ürünlerin Toplamı</span>
+                                                <span class="products-item__total">499.00 TL</span>
+                                            </li>
+                                            <li class="products-kargo__item">
+                                                <span class="products-item__title">Kargo Ücreti (Hızlı Teslimat)</span>
+                                                <span class="products-item__total">12.90 TL</span>
+                                            </li>
+                                            <li class="products-kargo__item">
+                                                <span class="products-item__title">Toplam</span>
+                                                <span class="products-item__total">511.90 TL</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="products-box kargo-btn">
+                                        <button>Kaydet Ve Devam Et</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tab Content Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_box">
+                <div class="footer_box-img">
+                    <img src="cards.png" alt="Cards">
+                </div>
+                <div class="footer_box-text">
+                    mapinsky © 2019 - made with 🤍 by <a href="https://www.efervesan.com" target="_blank">efervesan || kreatif</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section Start -->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js"></script>
+    <script src="card.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

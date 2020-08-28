@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,500,600,700,800,900&display=swap&subset=devanagari,latin-ext');
+
+
+/* Custom Option */
+body {
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* header option */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.nav .nav_logo img {
+    width: 200px;
+}
+
+.nav .nav_list {
+    list-style: none;
+}
+
+.nav .nav_list li {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.nav .nav_list li span {
+    font-weight: bold;
+}
+
+.payment-tabs {
+    /* height: 60vh; */
+    margin-bottom: 50px;
+}
+
+/* footer option */
+
+.footer_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.footer_box-img {
+    margin-bottom: 15px;
+}
+
+.footer_box-text {
+    color: #ddd;
+}
+
+.footer_box-text a {
+    text-decoration: none;
+    color: #ddd;
+    transition: all .4s;
+}
+
+.footer_box-text a:hover {
+    color: #777;
+}
+
+
+/* Tabs option */
+
+.payment-tabs_title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.payment-tabs_title li {
+    list-style: none;
+    padding: 0;
+    margin: 0 15px 0 0;
+    font-weight: 400;
+    font-size: 20px;
+    color: #cccaca;
+    cursor: pointer;
+}
+
+.payment-tabs_title li a {
+    text-decoration: none;
+    color: #cccaca;
+}
+
+.payment-tabs_title li img {
+    width: 30px;
+}
+
+.payment-tabs_title li a.active {
+    color: #000;
+}
+
+.payment-tabs_box {
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+/* #adres-kargo {
+    display: none;
+} */
+
+#odeme {
+    display: none;
+}
+
+.tabs-box {
+    padding: 10px;
+}
+
+.box-content {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.products-box {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.products-box__title {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.products-box__title h2 {
+    font-size: 18px;
+}
+
+.products-box__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.products-box__list li {
+    margin-bottom: 5px;
+}
+
+.products-kargo__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-box__list li:last-child span {
+    font-weight: bold;
+}
+
+.kargo-btn {
+    padding: 0;
+    border-radius: 20px;
+}
+
+.kargo-btn button {
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 0;
+}
+
+/* Tabs address option */
+
+.delivery-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-address_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.delivery-adress__item {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+.delivery-adress__item .address-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.address-dsc {
+    margin-bottom: 15px;
+}
+
+.address-dsc li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.address-btn-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address-btn-group #do-edit-btn {
+    text-decoration: underline;
+}
+
+.address-btn-group #add-this {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.delivery-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.delivery-btn a {
+    color: #000;
+    font-size: 18px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.delivery-btn a img {
+    width: 20px;
+}
+
+.add-address-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.kargo-box h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.kargo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.kargo-item_title {
+    flex-basis: 75%;
+}
+
+.kargo-item_title label {
+    margin: 0;
+}
+
+.kargo-item_title p {
+    font-size: 12px;
+    width: 95%;
+    padding: 0 0 0 17px;
+}
+
+.kargo-item_price {
+    flex-basis: 25%;
+    text-align: right;
+}
+
+/* form option */
+
+.basket-form .row {
+    margin-bottom: 15px;
+}
+
+.fatura-btn {
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.red-star {
+    color: red;
+}
+
+/* Payment Method Option  */
+
+.payment-method {
+    list-style: none;
+    margin: 0;padding: 10px;
+}
+
+.payment-method li {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.payment-method li:first-child {
+    border: none;
+}
+
+.payment-method li h2 {
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.payment-method li label {
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.payment-method li label input {
+    margin-right: 10px;
+}
