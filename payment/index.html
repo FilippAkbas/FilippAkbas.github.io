@@ -8,19 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Sepet | mapinsky</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="card.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Header Section Start -->
-    <header class="header">
+    <header class="payment-header">
         <div class="container">
-            <nav class="nav">
-                <div class="nav_logo">
+            <nav class="payment-nav">
+                <div class="payment-nav_logo">
                     <a href="#"><img src="mapsky-logo.png" alt="Logo"></a>
                 </div>
-                <div class="nav_list">
+                <div class="payment-nav_list">
                     <li>Destek: <span><a href="tel:444555">444555</a></span></li>
                 </div>
             </nav>
@@ -32,9 +31,9 @@
     <section class="payment-tabs">
         <div class="container">
             <div class="payment-tabs_title">
-                <li><a href="#adres-kargo" class="active">1.Adres & Kargo Bilgileri</a></li>
+                <li><a href="javascript:void(0)" class="active">1.Adres & Kargo Bilgileri</a></li>
                 <li><img src="swoosh-right.svg" alt="Svg icon"></li>
-                <li><a href="#odeme" disabled>2. Ödeme Seçenekleri</a></li>
+                <li><a href="basketPayment2.html" disabled>2. Ödeme Seçenekleri</a></li>
                 <li><img src="swoosh-right.svg" alt="Svg icon"></li>
                 <li>3. Onay</li>
             </div>
@@ -47,50 +46,105 @@
                                     <div class="delivery-address_box">
                                         <div class="delivery-adress__item">
                                             <div class="address-title">
-                                                <h4>EV</h4>
+                                                <h4>Fatura Bilgileri</h4>
                                             </div>
-                                            <div class="address-dsc">
-                                                <li>
-                                                    <span>adres:</span>
-                                                    <span>Lorem ipsum dolor sit amet.</span>
+                                            <ul class="form__info-list fatura-list">
+                                                <li class="username">
+                                                    <span>Ad: </span>
+                                                    <div>ad</div>
                                                 </li>
-                                                <li>
-                                                    <span>tel:</span>
-                                                    <span>5858585858585</span>
+                                                <li class="usersurname">
+                                                    <span>Soyad :</span>
+                                                    <div>soyad</div>
                                                 </li>
-                                            </div>
+                                                <li class="firmaname">
+                                                    <span>Firma Adı: </span>
+                                                    <div>Firma Adı</div>
+                                                </li>
+                                                <li class="usertc">
+                                                    <span>TC: </span>
+                                                    <div>TC</div>
+                                                </li>
+                                                <li class="country">
+                                                    <span>Ülke: </span>
+                                                    <div>Türkiye</div>
+                                                </li>
+                                                <li class="usercity">
+                                                    <span>Şehir: </span>
+                                                    <div>Istanbul</div>
+                                                </li>
+                                                <li class="userpart">
+                                                    <span>İlçe / Semt: </span>
+                                                    <div>Kadikoy</div>
+                                                </li>
+                                                <li class="userstreet">
+                                                    <span>Adres: </span>
+                                                    <div>Adres</div>
+                                                </li>
+                                                <li class="userzip">
+                                                    <span>Posta Kodu: </span>
+                                                    <div>Posta Kodu</div>
+                                                </li>
+                                                <li class="userphone">
+                                                    <span>Telefon: </span>
+                                                    <div>+91 (231) 231-23-12</div>
+                                                </li>
+                                                <li class="useremail">
+                                                    <span>E-Posta: </span>
+                                                    <div>deneme@deneme.com</div>
+                                                </li>
+                                            </ul>
                                             <div class="address-btn-group">
                                                 <a href="#" id="do-edit-btn">adres duzenle</a>
-                                                <a href="#" id="add-this">bu adresi sec</a>
                                             </div>
                                         </div>
 
                                         <div class="delivery-adress__item">
                                             <div class="address-title">
-                                                <h4>EV</h4>
+                                                <h4>Kargo Bilgileri</h4>
                                             </div>
-                                            <div class="address-dsc">
-                                                <li>
-                                                    <span>adres:</span>
-                                                    <span>Lorem ipsum dolor sit amet.</span>
+                                            <ul class="form__info-list kargo-list">
+                                                <li class="anyname">
+                                                    <span>Ad: </span>
+                                                    <div>Ad</div>
                                                 </li>
-                                                <li>
-                                                    <span>tel:</span>
-                                                    <span>5858585858585</span>
+                                                <li class="anysurname">
+                                                    <span>Soyad: </span>
+                                                    <div>Soyad</div>
                                                 </li>
-                                            </div>
-                                            <div class="address-btn-group">
-                                                <a href="#" id="do-edit-btn">adres duzenle</a>
-                                                <a href="#" id="add-this">bu adresi sec</a>
-                                            </div>
+                                                <li class="anycountry">
+                                                    <span>Ülke: </span>
+                                                    <div>Türkiye</div>
+                                                </li>
+                                                <li class="anycity">
+                                                    <span>Şehir: </span>
+                                                    <div>Istanbul</div>
+                                                </li>
+                                                <li class="anypart">
+                                                    <span>İlçe / Semt: </span>
+                                                    <div>Kadikoy</div>
+                                                </li>
+                                                <li class="anystreet">
+                                                    <span>Adres: </span>
+                                                    <div>Adres</div>
+                                                </li>
+                                                <li class="anyzip">
+                                                    <span>Posta Kodu: </span>
+                                                    <div>Posta Kodu</div>
+                                                </li>
+                                                <li class="anyphone">
+                                                    <span>Telefon: </span>
+                                                    <div>+91 (231) 231-23-12</div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="delivery-btn">
-                                        <a href="javascript:void(0)">
-                                            <img src="plus.svg" alt="Icon">
-                                            Yeni Adres Olustur
-                                        </a>
-                                    </div>
+                                </div>
+                                <div class="delivery-btn">
+                                    <a href="javascript:void(0)">
+                                        <img src="plus.svg" alt="Icon">
+                                        Yeni Adres Olustur
+                                    </a>
                                 </div>
                                 <div class="kargo-box">
                                     <div class="row">
@@ -104,7 +158,7 @@
                                             </div>
                                             <div class="kargo-item_price">0.00 TL</div>
                                         </div>
-                                        <div class="col-md-12 kargo-item">
+                                        <div class="col-md-12 kargo-item" id="express-kargo-select">
                                             <div class="kargo-item_title">
                                                 <input type="radio" name="kargo-tipi" id="expres">
                                                 <label for="expres">Hızlı Teslimat</label>
@@ -115,15 +169,12 @@
                                     </div>
                                 </div>
                                 <div class="add-address-box">
-                                    <div class="basket-form">
+                                    <div class="basket-form" id="fatura-bilgiler">
                                         <div class="row">
                                             <div class="col">
-                                                <input type="radio" name="fatura-tipi" id="bireysel">
-                                                <label for="bireysel">bireysel</label>
-                                            </div>
-                                            <div class="col">
-                                                <input type="radio" name="fatura-tipi" id="kurumsal">
-                                                <label for="kurumsal">Kurumsal</label>
+                                                <div class="box__title">
+                                                    <h2>Fatura bilgiler</h2>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="row">
@@ -137,6 +188,22 @@
                                             </div>
                                         </div>
                                         <div class="row">
+                                            <div class="col">
+                                                <label for="firmaname">Firma adı (isteğe bağlı)</label>
+                                                <input type="text" class="form-control" name="firmaname" id="firmaname" placeholder="Şirket adına kesilecek faturalar için...">
+                                            </div>
+                                        </div>
+                                        <div class="row hidden" id="vergi-area">
+                                            <div class="col">
+                                                <label for="firmavergidairesi">Vergi Dairesi <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="firmavergidairesi" id="firmavergidairesi" placeholder="Fatura İçin Zorunludur">
+                                            </div>
+                                            <div class="col">
+                                                <label for="firmano">Vergi No <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="firmano" id="firmano" placeholder="Fatura İçin Zorunludur">
+                                            </div>
+                                        </div>
+                                        <div class="row show" id="tc-no">
                                             <div class="col">
                                                 <label for="usertc">TC Kimlik No <span class="red-star">*</span></label>
                                                 <input type="text" class="form-control" name="usertc" id="usertc" placeholder="">
@@ -154,6 +221,7 @@
                                                 <label for="usercity">Şehir <span class="red-star">*</span></label>
                                                 <select id="usercity" name="usercity" class="form-control">
                                                     <option selected="" value="none">Seçiniz...</option>
+                                                    <option value="Istanbul" id="223">Istanbul</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -162,6 +230,7 @@
                                                 <label for="userpart">İlçe / Semt <span class="red-star">*</span></label>
                                                 <select id="userpart" name="userpart" class="form-control">
                                                     <option selected="" value="none">Seçiniz...</option>
+                                                    <option value="Kadikoy" id="223">Kadikoy</option>
                                                 </select>
                                             </div>
                                             <div class="col">
@@ -180,88 +249,84 @@
                                                 <label for="userphone">Telefon <span class="red-star">*</span></label>
                                                 <input type="text" class="form-control" name="userphone" id="userphone" placeholder="">
                                             </div>
-                                        </div>
-                                        <div class="row hidden" id="vergi-area">
-                                            <div class="col-md-12 mb-3">
-                                                <label for="firmaname">Firma adı (isteğe bağlı)</label>
-                                                <input type="text" class="form-control" name="firmaname" id="firmaname" placeholder="Şirket adına kesilecek faturalar için...">
-                                            </div>
                                             <div class="col">
-                                                <label for="firmavergidairesi">Vergi Dairesi <span class="red-star">*</span></label>
-                                                <input type="text" class="form-control" name="firmavergidairesi" id="firmavergidairesi" placeholder="Fatura İçin Zorunludur">
-                                            </div>
-                                            <div class="col">
-                                                <label for="firmano">Vergi No <span class="red-star">*</span></label>
-                                                <input type="text" class="form-control" name="firmano" id="firmano" placeholder="Fatura İçin Zorunludur">
+                                                <label for="useremail">E-posta adresi <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="useremail" id="useremail" placeholder="">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <input type="checkbox" class="squaredThree" name="fatura-kargo" id="fatura-kargo" placeholder="">
+                                                <input type="checkbox" class="squaredThree" name="fatura-kargo" id="fatura-kargo" placeholder="" checked>
                                                 <label for="fatura-kargo">Kargo bilgilerim fatura bilgilerimle aynı</label>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="basket-form" id="kargo-bilgiler">
                                         <div class="row">
                                             <div class="col">
-                                                <button type="submit" class="btn fatura-btn">Kaydet</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="box-content" id="odeme">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        <div class="payment-method">
-                                            <li>
-                                                <h2 class="title">Lütfen ödeme şekli seçin.</h2>
-                                            </li>
-                                            <li>
-                                                <label for="card-method">
-                                                    <input type="radio" name="payment-method" id="card-method"> Card method
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label for="havale-method">
-                                                    <input type="radio" name="payment-method" id="havale-method"> Havale Method
-                                                </label>
-                                            </li>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="payment-item" id="kredit-kard">
-                                            <div class="creditcard__area-card">
-                                                <div class="form-container">
-                                                    <div class="field-container">
-                                                        <label for="name">Ad</label>
-                                                        <input id="name" name="name" maxlength="20" type="text">
-                                                    </div>
-                            
-                                                    <div class="field-container">
-                                                        <label for="surname">Soyad</label>
-                                                        <input id="surname" name="surname" maxlength="20" type="text">
-                                                    </div>
-                            
-                                                    <div class="field-container">
-                                                        <label for="cardnumber">Kart Numarası</label>
-                                                        <input id="cardnumber" name="cardnumber" type="text" inputmode="numeric" placeholder="•••• •••• •••• ••••">
-                                                        <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                        </svg>
-                                                    </div>
-                                                    <div class="field-container group-container">
-                                                        <label for="expirationmm" class="card-title-flex"><div class="d-flex justify-content-between"><span>Ay</span> <span>Yıl</span></div></label>
-                                                        <input id="expirationmm" name="ay" type="text" pattern="[0-9]*" inputmode="numeric">
-                                                        <input id="expirationyy" name="yil" type="text" pattern="[0-9]*" inputmode="numeric">
-                                                    </div>
-                                                    <div class="field-container">
-                                                        <label for="securitycode">Güvenlik Numarası(CVC)</label>
-                                                        <input id="securitycode" name="securecode" type="text" pattern="[0-9]*" inputmode="numeric">
-                                                    </div>
+                                                <div class="box__title">
+                                                    <h2>Kargo bilgiler</h2>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="payment-item" id="havale">
-                                            <p>Havale Secimi Lorem ipsum dolor sit.</p>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="anyname">Ad <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="anyname" id="anyname" placeholder="" value="">
+                                            </div>
+                                            <div class="col">
+                                                <label for="anysurname">Soyad <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="anysurname" id="anysurname" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="anycountry">Ülke <span class="red-star">*</span></label>
+                                                <select id="anycountry" name="anycountry" class="form-control">
+                                                    <option selected="" value="none">Seçiniz...</option>
+                                                    <option value="Türkiye" id="223">Türkiye</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="anycity">Şehir <span class="red-star">*</span></label>
+                                                <select id="anycity" name="anycity" class="form-control">
+                                                    <option selected="">Seçiniz...</option>
+                                                    <option value="Istanbul" id="223">Istanbul</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="anypart">İlçe / Semt <span class="red-star">*</span></label>
+                                                <select id="anypart" name="anypart" class="form-control">
+                                                    <option value="" selected="">Seçiniz...</option>
+                                                    <option value="Kadikoy" id="223">Kadikoy</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="anystreet">Adres <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="anystreet" id="anystreet" placeholder="Mahalle,sokak adı,bina no vb.">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="anyzip">Posta Kodu </label>
+                                                <input type="text" class="form-control" name="anyzip" id="anyzip" placeholder="Posta Kodu">
+                                            </div>
+                                            <div class="col">
+                                                <label for="anyphone">Telefon <span class="red-star">*</span></label>
+                                                <input type="text" class="form-control" name="anyphone" id="anyphone" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col">
+                                            <button type="submit" class="btn fatura-btn">Kaydet</button>
                                         </div>
                                     </div>
                                 </div>
@@ -288,22 +353,22 @@
                                         <ul class="products-box__list">
                                             <li class="products-kargo__item">
                                                 <span class="products-item__title">Ürünlerin Toplamı</span>
-                                                <span class="products-item__total">499.00 TL</span>
+                                                <span class="products-item__total"><span id="product-total">499.00</span> TL</span>
                                             </li>
-                                            <li class="products-kargo__item">
-                                                <span class="products-item__title">Kargo Ücreti (Hızlı Teslimat)</span>
-                                                <span class="products-item__total">12.90 TL</span>
+                                            <li class="products-kargo__item" id="kargo-selected">
+                                                <span class="products-item__title">Ucretsiz Kargo</span>
+                                                <span class="products-item__total"> <span class="kargo-total">0</span> TL</span>
                                             </li>
                                             <li class="products-kargo__item">
                                                 <span class="products-item__title">Toplam</span>
-                                                <span class="products-item__total">511.90 TL</span>
+                                                <span class="products-item__total"><span id="total">511.90 </span> TL</span>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="products-box kargo-btn">
-                                        <button>Kaydet Ve Devam Et</button>
+                                        <button id="go-to-next">Kaydet Ve Devam Et</button>
                                     </div>
                                 </div>
                             </div>
@@ -316,13 +381,13 @@
     <!-- Tab Content Section End -->
 
     <!-- Footer Section Start -->
-    <footer class="footer">
+    <footer class="payment-footer">
         <div class="container">
-            <div class="footer_box">
-                <div class="footer_box-img">
+            <div class="payment-footer_box">
+                <div class="payment-footer_box-img">
                     <img src="cards.png" alt="Cards">
                 </div>
-                <div class="footer_box-text">
+                <div class="payment-footer_box-text">
                     mapinsky © 2019 - made with 🤍 by <a href="https://www.efervesan.com" target="_blank">efervesan || kreatif</a>
                 </div>
             </div>
@@ -335,7 +400,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js"></script>
-    <script src="card.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="script.js"></script>
 </body>
 </html>

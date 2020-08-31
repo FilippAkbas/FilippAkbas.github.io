@@ -8,18 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Sepet | mapinsky</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="card.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Header Section Start -->
-    <header class="header">
+    <header class="payment-header">
         <div class="container">
-            <nav class="nav">
-                <div class="nav_logo">
+            <nav class="payment-nav">
+                <div class="payment-nav_logo">
                     <a href="#"><img src="mapsky-logo.png" alt="Logo"></a>
                 </div>
-                <div class="nav_list">
+                <div class="payment-nav_list">
                     <li>Destek: <span><a href="tel:444555">444555</a></span></li>
                 </div>
             </nav>
@@ -31,24 +32,72 @@
     <section class="payment-tabs">
         <div class="container">
             <div class="payment-tabs_title">
-                <li><a href="#adres-kargo" class="active">1.Adres & Kargo Bilgileri</a></li>
+                <li><a href="basketPayment.html">1.Adres & Kargo Bilgileri</a></li>
                 <li><img src="swoosh-right.svg" alt="Svg icon"></li>
-                <li><a href="#odeme">2. Ödeme Seçenekleri</a></li>
+                <li><a href="javascript:void(0)" class="active">2. Ödeme Seçenekleri</a></li>
                 <li><img src="swoosh-right.svg" alt="Svg icon"></li>
-                <li><a href="#onay">3. Onay</a></li>
+                <li>3. Onay</li>
             </div>
             <div class="payment-tabs_box">
                 <div class="tabs-box">
                     <div class="row">
                         <div class="col-md-8">
-                            <div class="box-content" id="adres-kargo">
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
                             <div class="box-content" id="odeme">
-                                <p>Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="box-content" id="onay">
-                                <p>Lorem ipsum dolor sit amet.</p>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="payment-method">
+                                            <li>
+                                                <h2 class="title">Lütfen ödeme şekli seçin.</h2>
+                                            </li>
+                                            <li>
+                                                <label for="card-method">
+                                                    <input type="radio" name="payment-method" id="card-method"> Card method
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label for="havale-method">
+                                                    <input type="radio" name="payment-method" id="havale-method"> Havale Method
+                                                </label>
+                                            </li>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <div class="payment-item" id="kredit-kard">
+                                            <div class="creditcard__area-card">
+                                                <div class="form-container">
+                                                    <div class="field-container">
+                                                        <label for="name">Ad</label>
+                                                        <input id="name" name="name" maxlength="20" type="text">
+                                                    </div>
+                            
+                                                    <div class="field-container">
+                                                        <label for="surname">Soyad</label>
+                                                        <input id="surname" name="surname" maxlength="20" type="text">
+                                                    </div>
+                            
+                                                    <div class="field-container">
+                                                        <label for="cardnumber">Kart Numarası</label>
+                                                        <input id="cardnumber" name="cardnumber" type="text" inputmode="numeric" placeholder="•••• •••• •••• ••••">
+                                                        <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        </svg>
+                                                    </div>
+                                                    <div class="field-container group-container">
+                                                        <label for="expirationmm" class="card-title-flex"><div class="d-flex justify-content-between"><span>Ay</span> <span>Yıl</span></div></label>
+                                                        <input id="expirationmm" name="ay" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                        <input id="expirationyy" name="yil" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                    </div>
+                                                    <div class="field-container">
+                                                        <label for="securitycode">Güvenlik Numarası(CVC)</label>
+                                                        <input id="securitycode" name="securecode" type="text" pattern="[0-9]*" inputmode="numeric">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="payment-item" id="havale">
+                                            <p>Havale Secimi Lorem ipsum dolor sit.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -100,13 +149,13 @@
     <!-- Tab Content Section End -->
 
     <!-- Footer Section Start -->
-    <footer class="footer">
+    <footer class="payment-footer">
         <div class="container">
-            <div class="footer_box">
-                <div class="footer_box-img">
+            <div class="payment-footer_box">
+                <div class="payment-footer_box-img">
                     <img src="cards.png" alt="Cards">
                 </div>
-                <div class="footer_box-text">
+                <div class="payment-footer_box-text">
                     mapinsky © 2019 - made with 🤍 by <a href="https://www.efervesan.com" target="_blank">efervesan || kreatif</a>
                 </div>
             </div>
@@ -118,6 +167,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js"></script>
+    <script src="card.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

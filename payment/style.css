@@ -17,9 +17,23 @@ a:hover {
     text-decoration: none;
 }
 
+.hidden {
+    display: none;
+}
+
+.box__title {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.box__title h2 {
+    font-size: 18px;
+}
+
 /* header option */
 
-.nav {
+.payment-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,20 +42,20 @@ a:hover {
     padding-bottom: 30px;
 }
 
-.nav .nav_logo img {
+.payment-nav .payment-nav_logo img {
     width: 200px;
 }
 
-.nav .nav_list {
+.payment-nav .payment-nav_list {
     list-style: none;
 }
 
-.nav .nav_list li {
+.payment-nav .payment-nav_list li {
     font-size: 18px;
     font-weight: normal;
 }
 
-.nav .nav_list li span {
+.payment-nav .payment-nav_list li span {
     font-weight: bold;
 }
 
@@ -52,29 +66,29 @@ a:hover {
 
 /* footer option */
 
-.footer_box {
+.payment-footer_box {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 25px 0;
 }
 
-.footer_box-img {
+.payment-footer_box-img {
     margin-bottom: 15px;
 }
 
-.footer_box-text {
-    color: #ddd;
+.payment-footer_box-text {
+    color: #777;
 }
 
-.footer_box-text a {
+.payment-footer_box-text a {
     text-decoration: none;
-    color: #ddd;
+    color: #777;
     transition: all .4s;
 }
 
-.footer_box-text a:hover {
-    color: #777;
+.payment-footer_box-text a:hover {
+    color: #1f1f1f;
 }
 
 
@@ -220,6 +234,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 15px 0;
 }
 
 .address-btn-group #do-edit-btn {
@@ -293,6 +308,26 @@ a:hover {
     text-align: right;
 }
 
+.kargo-select-box {
+    background: #fff;
+    padding: 10px;
+}
+
+.kargo-box-dsc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.kargo-box-dsc span:first-child {
+    font-weight: 600;
+}
+
+.kargo-box-dsc span:last-child {
+    text-align: right;
+}
+
 /* form option */
 
 .basket-form .row {
@@ -309,6 +344,29 @@ a:hover {
 
 .red-star {
     color: red;
+}
+
+.form__info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-list__group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form__info-list li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 45%;
+    margin-bottom: 5px;
+}
+
+.form__info-list li span:first-child {
+    font-weight: 600;
+    margin-right: 15px;
 }
 
 /* Payment Method Option  */
