@@ -117,6 +117,7 @@ $('#country').on('change', function() {
 $('#usercity').on('change', function() {
     var id = $(this).val();
     kargoUcretsiz();
+    $('#ucretsiz').prop('checked', true);
     getIlce(id);
 });
 
@@ -124,6 +125,7 @@ $('#userpart').on('change', function() {
     var id = $(this).val();
     selectedSemtOption = id;
     kargoUcretsiz();
+    $('#ucretsiz').prop('checked', true);
 });
 
 //Option 
