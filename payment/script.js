@@ -52,6 +52,8 @@ let kargoDivAdres = document.querySelector('.anystreet div');
 let kargoDivPosta = document.querySelector('.anyzip div');
 let kargoDivTelefon = document.querySelector('.anyphone div');
 
+var selectedSemtOption = '';
+
 var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 var targetUrl = 'https://il-ilce-rest-api.herokuapp.com/v1/cities';
 
@@ -114,7 +116,14 @@ $('#country').on('change', function() {
 
 $('#usercity').on('change', function() {
     var id = $(this).val();
+    kargoUcretsiz();
     getIlce(id);
+});
+
+$('#userpart').on('change', function() {
+    var id = $(this).val();
+    selectedSemtOption = id;
+    kargoUcretsiz();
 });
 
 //Option 
@@ -198,9 +207,7 @@ function wrideKargoDiv() {
     kargoDivTelefon.innerHTML = kargoTelefon.value;
 }
 function wrideKargoInput() {
-    console.log(faturaAd.value);
     kargoAd.value = faturaAd.value;
-    console.log(kargoAd.value);
     kargoSoyad.value = faturaSoyad.value;
     kargoUlke.options[kargoUlke.selectedIndex].text = faturaUlke.options[faturaUlke.selectedIndex].text;
     kargoSehir.options[kargoSehir.selectedIndex].text = faturaSehir.options[faturaSehir.selectedIndex].text;
@@ -382,32 +389,46 @@ $('.fatura-btn').on('click', function(e) {
             });
         };
     }
+
+    if(selectedSemtOption == 'bccdf16204b5a81620ed39c8c69930ea' || selectedSemtOption == 'c4df5abe743f2f734cbd194806bdcb0d' || selectedSemtOption == 'b863ccd5205c53c99f2c60172eedc64f' || selectedSemtOption == '96b874ea9c147691cacc1636e989e8e2') {
+        expresKargoSelect.show();
+    } else {
+        expresKargoSelect.hide();
+    }
 });
+
+function kargoUcretsiz() {
+    $('#kargo-selected').html('<span class="products-item__title">Ucretsiz Kargo</span><span class="products-item__total"> <span class="kargo-total">0</span> TL</span>');
+    kargoTotal = 0;
+    let parseKargoTotal = parseFloat(kargoTotal);
+    let basketToplam = ParseProductTotal + parseKargoTotal;
+    let fixedBasketToplam = basketToplam.toFixed(2);
+    $('#total').html(fixedBasketToplam);
+}
+
+function kargoExpress() {
+    $('#kargo-selected').html('<span class="products-item__title">Kargo Ücreti (Hızlı Teslimat)</span><span class="products-item__total"><span class="kargo-total">12.90</span> TL</span>');
+    kargoTotal = 19.20;
+    let parseKargoTotal = parseFloat(kargoTotal);
+    let basketToplam = ParseProductTotal + parseKargoTotal;
+    let fixedBasketToplam = basketToplam.toFixed(2);
+    $('#total').html(fixedBasketToplam);
+}
 
 
 kargoRadio.on('change', function() {
     if($(this).attr('id') == 'ucretsiz') {
-        $('#kargo-selected').html('<span class="products-item__title">Ucretsiz Kargo</span><span class="products-item__total"> <span class="kargo-total">0</span> TL</span>');
-        kargoTotal = 0;
-        let parseKargoTotal = parseFloat(kargoTotal);
-        let basketToplam = ParseProductTotal + parseKargoTotal;
-        let fixedBasketToplam = basketToplam.toFixed(2);
-        $('#total').html(fixedBasketToplam);
+        kargoUcretsiz();
     } else if ($(this).attr('id') == 'expres') {
-        $('#kargo-selected').html('<span class="products-item__title">Kargo Ücreti (Hızlı Teslimat)</span><span class="products-item__total"><span class="kargo-total">12.90</span> TL</span>');
-        kargoTotal = 19.20;
-        let parseKargoTotal = parseFloat(kargoTotal);
-        let basketToplam = ParseProductTotal + parseKargoTotal;
-        let fixedBasketToplam = basketToplam.toFixed(2);
-        $('#total').html(fixedBasketToplam);
+        kargoExpress();
     }
 });
 
-if(kargoSehir || kargoIlce) {
-    expresKargoSelect.show();
-} else {
-    expresKargoSelect.hide();
-}
+// if(kargoSehir || kargoIlce) {
+//     expresKargoSelect.show();
+// } else {
+//     expresKargoSelect.hide();
+// }
 
 allTrueBtn.on('click', function() {
     if(allTrue == false) {
