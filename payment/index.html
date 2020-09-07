@@ -402,5 +402,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.0.5/imask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="script.js"></script>
+
+    <script>
+        var usertc = IMask(document.querySelector("input[name=usertc]"), {
+            mask: '00000000000',
+        });
+        var userphone = IMask(document.querySelector("input[name=userphone]"), {
+            mask: '+90 (000) 000-00-00',
+        });
+        var anyphone = IMask(document.querySelector("input[name=anyphone]"), {
+            mask: '+90 (000) 000-00-00',
+        });
+    </script>
 </body>
 </html>

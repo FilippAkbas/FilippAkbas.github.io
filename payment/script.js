@@ -52,6 +52,71 @@ let kargoDivAdres = document.querySelector('.anystreet div');
 let kargoDivPosta = document.querySelector('.anyzip div');
 let kargoDivTelefon = document.querySelector('.anyphone div');
 
+var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+var targetUrl = 'https://il-ilce-rest-api.herokuapp.com/v1/cities';
+
+var myHeaders = new Headers();
+    myHeaders.append("Content-Type", "text/html; charset=utf-8");
+    myHeaders.set('Access-Control-Allow-Origin', '*');
+
+function getSehir() {
+    fetch(proxyUrl + targetUrl, {
+        method: 'GET',
+        mode: 'cors',
+        headers: myHeaders,
+        body: null,
+        cache: 'default'
+    }).then(res => res.json())
+    .then(data => {
+        let allData = data.data;
+        let listTxt = '';
+    
+        console.log(allData);
+    
+        allData.forEach((element) => {
+            listTxt = listTxt = listTxt + '<option value="' + element._id + '">' + element.name + '</option>';
+        });
+    
+        $('#usercity').html(listTxt);
+    }).catch(error => {
+        console.log('Request failed', error);
+    });
+}
+
+function getIlce(id) {
+    var ilceUrl = targetUrl + "/" + id + '/towns';
+    fetch(proxyUrl + ilceUrl, {
+        method: 'GET',
+        mode: 'cors',
+        headers: myHeaders,
+        body: null,
+        cache: 'default'
+    }).then(res => res.json())
+    .then(data => {
+        let allData = data.data;
+        let listTxt = '';
+    
+        console.log(allData);
+    
+        allData.forEach((element) => {
+            listTxt = listTxt = listTxt + '<option value="' + element._id + '">' + element.name + '</option>';
+        });
+    
+        $('#userpart').html(listTxt);
+    }).catch(error => {
+        console.log('Request failed', error);
+    });
+}
+
+$('#country').on('change', function() {
+    getSehir();
+});
+
+$('#usercity').on('change', function() {
+    var id = $(this).val();
+    getIlce(id);
+});
+
 //Option 
 
 let allTrue = false;
@@ -103,16 +168,6 @@ addAdresSelect.on('click', function() {
     kargoSelectBox.show();
 });
 
-var usertc = IMask(document.querySelector("input[name=usertc]"), {
-    mask: '00000000000',
-});
-var userphone = IMask(document.querySelector("input[name=userphone]"), {
-    mask: '+90 (000) 000-00-00',
-});
-var anyphone = IMask(document.querySelector("input[name=anyphone]"), {
-    mask: '+90 (000) 000-00-00',
-});
-
 // Valide Mail
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -135,9 +190,9 @@ function wrideFaturaDiv() {
 function wrideKargoDiv() {
     kargoDivAd.innerHTML = kargoAd.value;
     kargoDivSoyad.innerHTML = kargoSoyad.value;
-    kargoDivUlke.innerHTML = kargoUlke.options[faturaUlke.selectedIndex].text;
-    kargoDivSehir.innerHTML = kargoSehir.options[faturaSehir.selectedIndex].text;
-    kargoDivIlce.innerHTML = kargoIlce.options[faturaIlce.selectedIndex].text;
+    // kargoDivUlke.innerHTML = kargoUlke.options[faturaUlke.selectedIndex].text;
+    // kargoDivSehir.innerHTML = kargoSehir.options[faturaSehir.selectedIndex].text;
+    // kargoDivIlce.innerHTML = kargoIlce.options[faturaIlce.selectedIndex].text;
     kargoDivAdres.innerHTML = kargoAdres.value;
     kargoDivPosta.innerHTML = kargoPosta.value;
     kargoDivTelefon.innerHTML = kargoTelefon.value;
@@ -185,6 +240,23 @@ faturaCheck.on('change', function() {
         wrideKargoInput();
         wrideKargoDiv();
         kargoForm.show();
+    }
+});
+
+var kreditKard = $('#kredit-kard');
+var havale = $('#havale');
+
+havale.hide();
+
+$('input[name=payment-method]').on('change', function() {
+    var id = $(this).attr('id');
+    
+    if(id == 'card-method') {
+        kreditKard.show();
+        havale.hide();
+    } else {
+        kreditKard.hide();
+        havale.show();
     }
 });
 
