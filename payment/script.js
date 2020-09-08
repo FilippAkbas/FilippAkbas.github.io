@@ -55,14 +55,14 @@ let kargoDivTelefon = document.querySelector('.anyphone div');
 var selectedSemtOption = '';
 
 var proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-var targetUrl = 'https://il-ilce-rest-api.herokuapp.com/v1/cities';
+var targetUrl = 'http://efervesan-location.herokuapp.com/';
 
 var myHeaders = new Headers();
     myHeaders.append("Content-Type", "text/html; charset=utf-8");
     myHeaders.set('Access-Control-Allow-Origin', '*');
 
-function getSehir() {
-    fetch(proxyUrl + targetUrl, {
+function getUlke() {
+    fetch(targetUrl + 'countries', {
         method: 'GET',
         mode: 'cors',
         headers: myHeaders,
@@ -79,15 +79,41 @@ function getSehir() {
             listTxt = listTxt = listTxt + '<option value="' + element._id + '">' + element.name + '</option>';
         });
     
-        $('#usercity').html(listTxt);
+        $('#country').append(listTxt);
+    }).catch(error => {
+        console.log('Request failed', error);
+    });
+}
+
+getUlke();
+
+function getSehir() {
+    fetch(targetUrl + 'cities', {
+        method: 'GET',
+        mode: 'cors',
+        headers: myHeaders,
+        body: null,
+        cache: 'default'
+    }).then(res => res.json())
+    .then(data => {
+        let allData = data.data;
+        let listTxt = '';
+    
+        console.log(allData);
+    
+        allData.forEach((element) => {
+            listTxt = listTxt = listTxt + '<option value="' + element._id + '">' + element.name + '</option>';
+        });
+    
+        $('#usercity').append(listTxt);
     }).catch(error => {
         console.log('Request failed', error);
     });
 }
 
 function getIlce(id) {
-    var ilceUrl = targetUrl + "/" + id + '/towns';
-    fetch(proxyUrl + ilceUrl, {
+    var ilceUrl = targetUrl  + 'cities' + "/" + id + '/towns';
+    fetch(ilceUrl, {
         method: 'GET',
         mode: 'cors',
         headers: myHeaders,
@@ -104,7 +130,7 @@ function getIlce(id) {
             listTxt = listTxt = listTxt + '<option value="' + element._id + '">' + element.name + '</option>';
         });
     
-        $('#userpart').html(listTxt);
+        $('#userpart').append(listTxt);
     }).catch(error => {
         console.log('Request failed', error);
     });
