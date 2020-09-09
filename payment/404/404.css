@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,500,500i,700&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,500,600,700,800,900&display=swap&subset=devanagari,latin-ext');
+
+:root {
+    --UbuntuFont: 'Ubuntu', sans-serif;
+    --PopinsFont: 'Poppins', sans-serif;;
+    --MainColor: #8224e3;
+    --greenColor: #2fd333;
+    --lightOrange: #E0B252;
+}
+
+body {
+    font-family: var(--PopinsFont);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-box img {
+    width: 100%;
+    height: 80%;
+}
+
+.image-box__error {
+    position: absolute;
+    color: #fff;
+    top: 40%;
+    left: 58%;
+    transform: translate(-50%, -50%);
+    font-size: 105px;
+    font-weight: bold;
+}
+
+.image-box__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 60%;
+    margin: 0 auto 25px;
+    font-size: 20px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.image-box__text p {
+    margin: 0 0 15px 0;
+}
+
+.image-box__text a {
+    background: #24285b;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.image-box__text img {
+    width: 200px;
+}
