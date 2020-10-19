@@ -1,0 +1,46 @@
+.header {
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 5px 50px;
+        .logo {
+            span {
+                font-weight: bold;
+                font-size: 20px;
+            }
+            img {
+                width: 70px;
+            }
+        }
+        .menu {
+            display: flex;
+            li {
+                list-style: none;
+                padding: 0;
+                margin-right: 15px;
+                text-decoration: none;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    color: #000;
+                }
+            }
+        }
+        .menu-info {
+            display: flex;
+            li {
+                list-style: none;
+                margin-right: 15px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+}
