@@ -74,7 +74,6 @@
 
         let totalArr = [];
 
-
         $colorSelect.select2();
         $sizeSelect.select2();
         $typeSelect.select2();
@@ -102,6 +101,8 @@
 
         postForm.addEventListener('click', (e) => {
             e.preventDefault();
+
+            console.log(totalArr);
 
             $.ajax({
                 type: "POST",
