@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="product-filtre.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <form action="#" method="POST" class="product-filtre">
+        <div class="product-filtre__header">
+            <div class="product-filtre__header-item">
+                <div class="item-box">
+                    <select class="color-select" id="color-select" name="colors[]" multiple="multiple">
+                        <option value="select" disabled>Seciniz...</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Purple">Purple</option>
+                        <option value="Red">Red</option>
+                        <option value="Green">Green</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-filtre__header-item">
+                <div class="item-box">
+                    <select class="size-select" id="size-select" name="sizes[]" multiple="multiple">
+                        <option value="select" disabled>Seciniz...</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-filtre__header-item">
+                <div class="item-box">
+                    <select class="type-select" id="type-select" name="states[]">
+                        <option value="select" selected disabled>Seciniz...</option>
+                        <option value="Women">Women</option>
+                        <option value="Man">Man</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-filtre__header-item">
+                <button class="btn add-filtre">Ekle</button>
+            </div>
+        </div>
+        <div class="product-filtre__content">
+            <div class="product-filtre__content-item">
+                <button type="submit" class="btn" id="post-form">Gonder</button>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script src="product-filtre.js"></script>
+    <script>
+        let filtreContent = document.querySelector(".product-filtre__content");
+        let addFiltre = document.querySelector(".add-filtre");
+        let postForm = document.querySelector("#post-form");
+
+        let $colorSelect = $('#color-select');
+        let $sizeSelect = $('#size-select');
+        let $typeSelect = $('#type-select');
+
+        let colorArr = "";
+        let sizeArr = "";
+        let typeArr = "";
+
+        let totalArr = [];
+
+
+        $colorSelect.select2();
+        $sizeSelect.select2();
+        $typeSelect.select2();
+
+
+        $colorSelect.on('select2:select', () => {
+            colorArr = $colorSelect.select2().val();
+        });
+
+        $sizeSelect.on('select2:select', () => {
+            sizeArr = $sizeSelect.select2().val();
+        });
+
+        $typeSelect.on('select2:select', () => {
+            typeArr = $typeSelect.select2().val();
+        });
+
+        addFiltre.addEventListener("click", (e) => {
+            e.preventDefault();
+            totalArr.push(colorArr, sizeArr, typeArr);
+            let html =
+                `<div class="product-filtre__content-item"><div class="item-box"><h3>Colors:</h3><ul id="item-color"><li>${colorArr}</li></ul></div><div class="item-box"><h3>Size:</h3><ul id="item-size"><li>${sizeArr}</li></ul></div><div class="item-box"> <h3>Type:</h3><ul id="item-type"><li>${typeArr}</li></ul></div></div>`;
+            filtreContent.insertAdjacentHTML("beforeend", html);
+        });
+
+        postForm.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            $.ajax({
+                type: "POST",
+                url: "#",
+                data: totalArr,
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function () {
+                    console.log('error')
+                }
+            }).done(function (data) {
+                form.submit();
+            });
+        });
+    </script>
+</body>
+
+</html>
