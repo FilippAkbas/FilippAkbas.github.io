@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Line Chart</title>
+	<!-- Resources -->
+	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+	<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+	<style>
+		#chartdiv {
+		  width: 100%;
+		  height: 500px;
+		}
+
+		.data-box {
+			display: flex;
+			flex-direction: row;
+			margin-top: 25px;
+		}
+
+		.data-box li {
+			list-style: none;
+			margin-right: 25px;
+		}
+
+		.data-box li a {
+			text-decoration: none;
+			color: #000;
+			font-weight: bold;
+			font-size: 20px;
+			padding: 5px 15px;
+			border-radius: 5px;
+		}
+
+		.data-box li a.active {
+			background-color: #ddd;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- HTML -->
+	<div id="chartdiv"></div>
+
+	<div class="data-box">
+		<li><a href="javascript:void(0)" id="day">Day</a></li>
+		<li><a href="javascript:void(0)" id="mouth">Mouth</a></li>
+		<li><a href="javascript:void(0)" id="year">Year</a></li>
+	</div>
+
+
+
+	<!-- Chart code -->
+	<script>
+		am4core.ready(function() {
+
+			let days = document.querySelector('#day');
+			let mouth = document.querySelector('#mouth');
+			let year = document.querySelector('#year');
+			let chartData = [];
+			let totalValue = '';
+
+		    // Themes begin
+		    am4core.useTheme(am4themes_animated);
+		    // Themes end
+
+		    // Create chart instance
+		    var chart = am4core.create("chartdiv", am4charts.XYChart);
+
+		    // Add data
+		    chart.data = [{
+		        "date": new Date(2018, 3, 20),
+		        "value": 90
+		    }, {
+		        "date": new Date(2018, 3, 21),
+		        "value": 102
+		    }, {
+		        "date": new Date(2018, 3, 22),
+		        "value": 65
+		    }, {
+		        "date": new Date(2018, 3, 23),
+		        "value": 62
+		    }, {
+		        "date": new Date(2018, 3, 24),
+		        "value": 55
+		    }, {
+		        "date": new Date(2018, 3, 25),
+		        "value": 81
+		    }];
+
+		    days.addEventListener('click', ()=> {
+		    	year.classList.remove('active');
+		    	mouth.classList.remove('active');
+		    	days.classList.add('active');
+
+				// Add data
+			    chart.data = [{
+			        "date": new Date(2018, 3, 20),
+			        "value": 10
+			    }, {
+			        "date": new Date(2018, 3, 21),
+			        "value": 2
+			    }, {
+			        "date": new Date(2018, 3, 22),
+			        "value": 15
+			    }, {
+			        "date": new Date(2018, 3, 23),
+			        "value": 30
+			    }, {
+			        "date": new Date(2018, 3, 24),
+			        "value": 20
+			    }, {
+			        "date": new Date(2018, 3, 25),
+			        "value": 10
+			    }];
+
+			    // console.log(chart.data[0].value);
+
+			    // for(let i = 0; i < chart.data.length; i++) {
+			    // 	console.log(chart.data[i].value);
+			    // 	let chartArray = [];
+			    // 	let chartValue = chartArray.push(chart.data[i].value);
+			    // 	console.log(chartArray);
+			    // 	// console.log(chartValue.reduce((total, value) => total + value));
+			    // }
+		    });
+
+		    mouth.addEventListener('click', ()=> {
+		    	days.classList.remove('active');
+		    	year.classList.remove('active');
+		    	mouth.classList.add('active');
+
+		    	// Add data
+			    chart.data = [{
+			        "date": new Date(2018, 3, 20),
+			        "value": 90
+			    }, {
+			        "date": new Date(2018, 3, 21),
+			        "value": 102
+			    }, {
+			        "date": new Date(2018, 3, 22),
+			        "value": 65
+			    }, {
+			        "date": new Date(2018, 3, 23),
+			        "value": 62
+			    }, {
+			        "date": new Date(2018, 3, 24),
+			        "value": 55
+			    }, {
+			        "date": new Date(2018, 3, 25),
+			        "value": 81
+			    }];
+		    });
+
+		    year.addEventListener('click', ()=> {
+		    	days.classList.remove('active');
+		    	mouth.classList.remove('active');
+		    	year.classList.add('active');
+
+		    	// Add data
+			    chart.data = [{
+			        "date": new Date(2018, 3, 20),
+			        "value": 25
+			    }, {
+			        "date": new Date(2018, 3, 21),
+			        "value": 150
+			    }, {
+			        "date": new Date(2018, 3, 22),
+			        "value": 75
+			    }, {
+			        "date": new Date(2018, 3, 23),
+			        "value": 62
+			    }, {
+			        "date": new Date(2018, 3, 24),
+			        "value": 55
+			    }, {
+			        "date": new Date(2018, 3, 25),
+			        "value": 81
+			    }];
+		    });
+
+		    // Create axes
+		    var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+
+		    // Create value axis
+		    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+
+		    // Create series
+		    var lineSeries = chart.series.push(new am4charts.LineSeries());
+		    lineSeries.dataFields.valueY = "value";
+		    lineSeries.dataFields.dateX = "date";
+		    lineSeries.name = "Sales";
+		    lineSeries.strokeWidth = 3;
+
+		    // Add simple bullet
+		    var bullet = lineSeries.bullets.push(new am4charts.Bullet());
+		    var image = bullet.createChild(am4core.Image);
+		    image.href = "https://www.amcharts.com/lib/images/star.svg";
+		    image.width = 30;
+		    image.height = 30;
+		    image.horizontalCenter = "middle";
+		    image.verticalCenter = "middle";
+
+		}); // end am4core.ready()
+	</script>
+</body>
+</html>
