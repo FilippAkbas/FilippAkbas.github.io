@@ -4,50 +4,62 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Line Chart</title>
+	<link rel="stylesheet" href="chart.css">
 	<!-- Resources -->
+	<script src="jquery-3.5.1.min.js"></script>
 	<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
 	<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
 	<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-	<style>
-		#chartdiv {
-		  width: 100%;
-		  height: 500px;
-		}
-
-		.data-box {
-			display: flex;
-			flex-direction: row;
-			margin-top: 25px;
-		}
-
-		.data-box li {
-			list-style: none;
-			margin-right: 25px;
-		}
-
-		.data-box li a {
-			text-decoration: none;
-			color: #000;
-			font-weight: bold;
-			font-size: 20px;
-			padding: 5px 15px;
-			border-radius: 5px;
-		}
-
-		.data-box li a.active {
-			background-color: #ddd;
-		}
-
-	</style>
 </head>
 <body>
 	<!-- HTML -->
-	<div id="chartdiv"></div>
+	
 
 	<div class="data-box">
-		<li><a href="javascript:void(0)" id="day">Day</a></li>
-		<li><a href="javascript:void(0)" id="mouth">Mouth</a></li>
-		<li><a href="javascript:void(0)" id="year">Year</a></li>
+		<div class="data-box__item">
+			<ul class="data-list">
+				<li><a href="#day_block" id="day" class="active">Day</a></li>
+				<li><a href="#mouth_block" id="mouth">Mouth</a></li>
+				<li><a href="#year_block" id="year">Year</a></li>
+			</ul>
+		</div>
+		<div class="data-box__item">
+			<div id="chartdiv"></div>
+			<div class="data-info">
+				<div class="data-info__item" id="day_block">
+					<div class="info-item__box">
+						<div class="info-title">Lorem ipsum dolor sit amet.</div>
+						<div class="info-dsc">Lorem, ipsum dolor.</div>
+					</div>
+
+					<div class="info-item__box">
+						<div class="info-title">Lorem ipsum dolor sit amet.</div>
+						<div class="info-dsc">Lorem, ipsum dolor.</div>
+					</div>
+
+					<div class="info-item__box">
+						<div class="info-title">Lorem ipsum dolor sit amet.</div>
+						<div class="info-dsc">Lorem, ipsum dolor.</div>
+					</div>
+				</div>
+				<div class="data-info__item" id="mouth_block">
+					<div class="info-item__box">
+						<div class="info-title">Lorem ipsum dolor sit amet.</div>
+						<div class="info-dsc">Lorem, ipsum dolor.</div>
+					</div>
+					<div class="info-item__box">
+						<div class="info-title">Lorem ipsum dolor sit amet.</div>
+						<div class="info-dsc">Lorem, ipsum dolor.</div>
+					</div>
+				</div>
+				<div class="data-info__item" id="year_block">
+					<div class="info-item__box">
+						<div class="info-title">Lorem ipsum dolor sit amet.</div>
+						<div class="info-dsc">Lorem, ipsum dolor.</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 
@@ -91,10 +103,6 @@
 		    }];
 
 		    days.addEventListener('click', ()=> {
-		    	year.classList.remove('active');
-		    	mouth.classList.remove('active');
-		    	days.classList.add('active');
-
 				// Add data
 			    chart.data = [{
 			        "date": new Date(2018, 3, 20),
@@ -128,10 +136,6 @@
 		    });
 
 		    mouth.addEventListener('click', ()=> {
-		    	days.classList.remove('active');
-		    	year.classList.remove('active');
-		    	mouth.classList.add('active');
-
 		    	// Add data
 			    chart.data = [{
 			        "date": new Date(2018, 3, 20),
@@ -155,10 +159,6 @@
 		    });
 
 		    year.addEventListener('click', ()=> {
-		    	days.classList.remove('active');
-		    	mouth.classList.remove('active');
-		    	year.classList.add('active');
-
 		    	// Add data
 			    chart.data = [{
 			        "date": new Date(2018, 3, 20),
@@ -204,6 +204,19 @@
 		    image.verticalCenter = "middle";
 
 		}); // end am4core.ready()
+	</script>
+
+	<script>
+		$('.data-list li a').click(function (e) {
+			e.preventDefault();
+			$('.data-list li a.active').removeClass('active');
+			$(this).addClass('active');
+			var tab = $(this).attr('href');
+			$('.data-info__item').not(tab).css({
+				'display': 'none'
+			});
+			$(tab).fadeIn(400);
+		});
 	</script>
 </body>
 </html>
