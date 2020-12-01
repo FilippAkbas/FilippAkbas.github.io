@@ -1,0 +1,27 @@
+$mainColor: #EFEDDC;
+$anyColor: #00c0b9;
+
+@import url('https://fonts.googleapis.com/css?family=Marko+One|Muli:300,400,600,700,800,900|Open+Sans:400,600,700,800&display=swap&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese');
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+h1,h2,h3 {
+    font-family: 'Marko One', serif;
+}
+
+h4,h5,h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    font-family: 'Muli', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@import 'components/slider','components/header','components/banner';

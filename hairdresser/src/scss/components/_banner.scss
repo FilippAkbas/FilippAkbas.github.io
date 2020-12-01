@@ -1,0 +1,45 @@
+.section-banner {
+    position: relative;
+    top: -80px;
+    z-index: 100;
+    .callback-banner {
+        background-color: #fff;
+        padding: 50px 50px 20px 50px;
+        border-radius: 10px;
+        box-shadow: 0 2px 24px 0 rgba(0,0,0,0.1);
+        h2 {
+            font-family: 'Muli', sans-serif;
+            font-weight: 800;
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+        .callback-btn {
+            border: 2px solid #000;
+            input {
+                width: auto;
+                height: 70px;
+                border: none;
+                font-family: 'Muli', sans-serif !important;
+                padding: 0 0 0 20px;
+                &:focus {
+                    outline: none;
+                }
+            }
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #000;
+                font-weight: 600;
+                padding: 0 20px 0 0;
+                width: auto;
+                display: inline-flex;
+                align-items: center;
+                font-size: 18px;
+                img {
+                    width: 20px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
