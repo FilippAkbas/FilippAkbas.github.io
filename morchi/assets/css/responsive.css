@@ -101,15 +101,31 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .slider-section .slider-img {
+        height: 65vh;
+    }
+
     .about-section_line-top {
-        top: -2%;
+        top: -1.9%;
     }
     
     .about-section_line-bottom {
-        bottom: -2%;
+        bottom: -1.9%;
     }
     .contact-box {
         width: 80%;
+    }
+
+    .footer-menu {
+        justify-content: center;
+    }
+
+    .footer-menu li {
+        padding: 5px 10px;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
     }
 
     .footer-logo {
