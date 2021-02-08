@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Metropolis-Black';
+  src: url('../font/Metropolis-Black.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-BlackItalic';
+  src: url('../font/Metropolis-BlackItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-Bold';
+  src: url('../font/Metropolis-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-BoldItalic';
+  src: url('../font/Metropolis-BoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-ExtraBold';
+  src: url('../font/Metropolis-ExtraBold.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-ExtraBoldItalic';
+  src: url('../font/Metropolis-ExtraBoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-ExtraLight';
+  src: url('../font/Metropolis-ExtraLight.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-ExtraLightItalic';
+  src: url('../font/Metropolis-ExtraLightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-Light';
+  src: url('../font/Metropolis-Light.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-LightItalic';
+  src: url('../font/Metropolis-LightItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-Medium';
+  src: url('../font/Metropolis-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-MediumItalic';
+  src: url('../font/Metropolis-MediumItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-Regular';
+  src: url('../font/Metropolis-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-RegularItalic';
+  src: url('../font/Metropolis-RegularItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-SemiBold';
+  src: url('../font/Metropolis-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-SemiBoldItalic';
+  src: url('../font/Metropolis-SemiBoldItalic.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-Thin';
+  src: url('../font/Metropolis-Thin.otf');
+}
+
+@font-face {
+  font-family: 'Metropolis-ThinItalic';
+  src: url('../font/Metropolis-ThinItalic.otf');
+}

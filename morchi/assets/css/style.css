@@ -1,0 +1,522 @@
+body {
+    font-family: 'Metropolis-Regular', sans-serif;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Metropolis-Regular', sans-serif;
+}
+
+h1, h2, h3, h4, h4, h5, h6 {
+    font-family: 'Metropolis-Bold', sans-serif;
+}
+
+p {
+    font-family: 'Metropolis-Regular', sans-serif;
+}
+
+ul,li {
+    list-style: none;
+    font-family: 'Metropolis-Regular', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+/* header css option */
+
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.header .container {
+    background: url(../img/menu-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header .nav .menu {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo img {
+    max-width: 100px;
+}
+
+.lang-item {
+    position: absolute;
+    right: 0;
+}
+
+.lang-item img {
+    width: 20px;
+}
+
+.mobile-menu, .mobile-full-area {
+    display: none;
+}
+
+
+/* slider css option */
+
+.slider-section .slider-img {
+    height: 85vh;
+}
+
+.slider-section .slider-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Priority css option */
+
+.priority-section {
+    margin-bottom: 150px;
+}
+
+.flex-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.priority-section .priority-block {
+    margin-bottom: 20px;
+    width: 80%;
+}
+
+.priority-section__coffe {
+    position: absolute;
+    z-index: 2;
+}
+
+.priority-section__coffe img {
+    width: 100%;
+    height: 100%;
+}
+
+.priority-block_number {
+    font-size: 70px;
+    font-weight: bold;
+    color: #f8d6c5;
+    font-family: 'Metropolis-Bold', sans-serif;
+}
+
+.priority-block_title h4 {
+    font-size: 24px;
+}
+
+.priority-block_desc p {
+    font-size: 20px;
+    font-family: 'Metropolis-Light', sans-serif;
+}
+
+/* About css option */
+
+.about-section {
+    position: relative;
+    background-color: #4b7021;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.about-section::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -160px;
+    background: url(../img/open-koffe.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 230px;
+    height: 100%;
+}
+
+.about-section_line {
+    position: absolute;
+}
+
+.about-section_line img {
+    object-fit: contain;
+}
+
+.about-section_line-top {
+    top: -9%;
+}
+
+.about-section_line-bottom {
+    bottom: -9%;
+}
+
+.about-section h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    margin-bottom: 20px;
+}
+
+.about-big-title {
+    font-size: 60px;
+    line-height: 70px;
+    width: 60%;
+    font-family: 'Metropolis-BoldItalic', sans-serif;
+}
+
+.about-big-title span {
+    font-weight: 300;
+    font-family: 'Metropolis-LightItalic', sans-serif;
+}
+
+.about-title__line {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-title__line img {
+    width: 160px;
+}
+
+/* product css option */
+
+.product-section {
+    position: relative;
+    padding: 150px 0 0;
+}
+
+.sheet-area {
+    position: absolute;
+    width: 25%;
+}
+
+.sheet-right {
+    top: 0;
+    right: 0;
+}
+
+.sheet-left {
+    bottom: 5%;
+    left: 0;
+}
+
+.product-item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background-color: #e8e9e9;
+    padding: 30px;
+    margin-bottom: 150px;
+    height: 250px;
+}
+
+.product-item_img {
+    width: 150px;
+    height: 250px;
+    object-fit: contain;
+    margin-right: 40px;
+}
+
+.product-item_img img {
+    position: relative;
+    top: -80px;
+}
+
+.item-info_number {
+    font-size: 76px;
+    color: #4b7021;
+    font-family: 'Metropolis-ExtraBold';
+    line-height: 55px;
+}
+
+.item-info_title {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.item-info_title span {
+    font-weight: 500;
+    font-family: 'Metropolis-Light';
+}
+
+.item-info_line {
+    position: absolute;
+    bottom: 25px;
+    right: -25px;
+    width: 150px;
+    text-align: right;
+}
+
+/* contact css option */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 50px;
+}
+
+.contact-box {
+    width: 40%;
+    border: 1px solid #4b7021;
+    text-align: center;
+    padding: 25px;
+    color: #4b7021;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-box a {
+    color: #4b7021;
+}
+
+.contact-box__img img {
+    width: 40px;
+    margin-bottom: 25px;
+}
+
+.contact-box__dsc {
+    font-size: 30px;
+}
+
+.contact-box__dsc p {
+    margin: 0;
+}
+
+.contact-box__title {
+    font-size: 34px;
+}
+
+.contact-box__number {
+    font-size: 30px;
+}
+
+/* instagram css option */
+
+.instagram-section {
+    background-color: #4b7021;
+}
+
+.instagram-section .row {
+    margin: 0;
+}
+
+.instagram-section .row div:nth-child(2) {
+    margin: 0;
+    padding: 0;
+}
+
+.instagram-info__img {
+    margin-right: 15px;
+    margin-bottom: 35px;
+}
+
+.instagram-info__img img {
+    width: 45px;
+}
+
+.instagram-info__title {
+    width: 50%;
+}
+
+.instagram-info__title h3 {
+    font-family: 'Metropolis-Medium';
+}
+
+.instagram-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    margin-right: 50px;
+    color: #fff;
+}
+
+.instagram-info a {
+    color: #fff;
+}
+
+.instagram-slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.instagram-slider__item {
+    position: relative;
+    flex-basis: 25%;
+}
+
+.instagram-slider__item a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(75,112,33, 0.5);
+    transition: all .3s;
+}
+
+.instagram-slider__item:hover a::after {
+    background-color: transparent;
+}
+
+.instagram-slider__item img {
+    width: 100%;
+    height: 100%;
+}
+
+/* product page css option  */
+
+.product-bloc__section {
+    position: relative;
+    width: 80%;
+    margin: 100px auto 100px;
+}
+
+.product-bloc__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 85px 100px;
+}
+
+.grid-item {
+    background-color: #e8e9e9;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-gap: 10px 40px;
+}
+
+.grid-item__category {
+    grid-column: span 2;
+}
+
+.grid-item__img {}
+
+.grid-item__img img {
+    position: relative;
+    top: -80px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.grid-item__category {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-list {
+    display: flex;
+}
+
+.category-list a {
+    border: 1px solid #32200f;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.category-list a img {
+    width: 30px;
+    height: 30px;
+}
+
+.categoty-line img {
+    position: relative;
+    width: 200px;
+    object-fit: contain;
+    right: -30%;
+}
+
+.grid-item__dsc .dsc-number {
+    color: #586e2a;
+    font-size: 95px;
+    line-height: 80px;
+    font-family: 'Metropolis-Bold';
+}
+.grid-item__dsc .dsc-title {
+    font-size: 30px;
+    font-family: 'Metropolis-Bold';
+}
+.grid-item__dsc .dsc-title span {
+    font-family: 'Metropolis-Light';
+}
+.grid-item__dsc .dsc-info {
+    font-size: 18px;
+}
+
+/* Footer Css option */
+.footer {
+    background-color: #e8e9e9;
+    padding: 30px 0 0;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.footer-menu li a {
+    color: #391c00;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #391c00;
+}
+
+.footer-copyright img {
+    object-fit: contain;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-social li {
+    margin-right: 5px;
+}
+
+.footer-social li a  {
+    color: #391c00;
+}
+
+.footer-social li a img {
+    object-fit: contain;
+    width: 15px;
+}
