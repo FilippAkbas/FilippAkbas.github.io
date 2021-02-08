@@ -224,7 +224,8 @@ img {
     flex-direction: row;
     background-color: #e8e9e9;
     padding: 30px;
-    margin-bottom: 150px;
+    width: 85%;
+    margin: 0 auto 100px;
     height: 250px;
 }
 
