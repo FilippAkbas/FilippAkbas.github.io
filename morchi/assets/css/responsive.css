@@ -98,6 +98,15 @@
     .product-bloc__grid {
         grid-gap: 130px 0;
     }
+
+    .product-bloc__grid::after {
+        bottom: -2%;
+        right: -12%;
+    }
+
+    .product-bloc__grid::before {
+        left: -15%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -218,5 +227,9 @@
     .about-section::after {
         width: 110px;
         top: -100px;
+    }
+
+    .product-bloc__grid::after, .product-bloc__grid::before, .dot-icon {
+        display: none;
     }
 }
