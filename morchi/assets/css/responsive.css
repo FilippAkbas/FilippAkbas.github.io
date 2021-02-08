@@ -117,6 +117,7 @@
     }
 
     .footer-menu {
+        flex-wrap: wrap;
         justify-content: center;
     }
 
