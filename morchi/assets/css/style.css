@@ -1,25 +1,30 @@
 body {
     font-family: 'Metropolis-Regular', sans-serif;
     font-size: 14px;
+    color: #391c00;
+    overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #391c00;
     font-family: 'Metropolis-Regular', sans-serif;
 }
 
 h1, h2, h3, h4, h4, h5, h6 {
     font-family: 'Metropolis-Bold', sans-serif;
+    color: #391c00;
 }
 
 p {
     font-family: 'Metropolis-Regular', sans-serif;
+    color: #391c00;
 }
 
 ul,li {
     list-style: none;
     font-family: 'Metropolis-Regular', sans-serif;
+    color: #391c00;
 }
 
 img {
@@ -38,7 +43,7 @@ img {
 }
 
 .header .container {
-    background: url(../img/menu-bg.png);
+    background: url(../img/header.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -58,11 +63,12 @@ img {
 }
 
 .menu-item a {
-    font-size: 17px;
+    font-size: 18px;
+    color: #391c00;
 }
 
 .menu-item a:hover {
-    color: #4b7021;
+    color: #586e2a;
 }
 
 .menu-logo img {
@@ -74,8 +80,12 @@ img {
     right: 0;
 }
 
+.lang-item a {
+    font-size: 16px;
+}
+
 .lang-item img {
-    width: 20px;
+    width: 25px;
 }
 
 .mobile-menu, .mobile-full-area {
@@ -150,12 +160,12 @@ img {
 .about-section::after {
     content: '';
     position: absolute;
-    right: 0;
+    right: -65px;
     top: -160px;
     background: url(../img/open-koffe.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 230px;
+    width: 300px;
     height: 100%;
 }
 
@@ -178,10 +188,12 @@ img {
 .about-section h4 {
     font-size: 24px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .about-section p {
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .about-big-title {
@@ -189,6 +201,7 @@ img {
     line-height: 70px;
     width: 60%;
     font-family: 'Metropolis-BoldItalic', sans-serif;
+    color: #fff;
 }
 
 .about-big-title span {
@@ -252,7 +265,7 @@ img {
 
 .item-info_number {
     font-size: 76px;
-    color: #4b7021;
+    color: #391c00;
     font-family: 'Metropolis-ExtraBold';
     line-height: 55px;
 }
@@ -260,6 +273,7 @@ img {
 .item-info_title {
     font-weight: 700;
     font-size: 35px;
+    font-family: 'Metropolis-Bold';
 }
 
 .item-info_title span {
@@ -310,10 +324,12 @@ img {
 
 .contact-box__dsc p {
     margin: 0;
+    color: #4b7021;
 }
 
-.contact-box__title {
+.contact-box__title h3 {
     font-size: 34px;
+    color: #4b7021;
 }
 
 .contact-box__number {
@@ -350,9 +366,11 @@ img {
 
 .instagram-info__title h3 {
     font-family: 'Metropolis-Medium';
+    color: #fff;
 }
 
 .instagram-info {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -363,6 +381,16 @@ img {
 
 .instagram-info a {
     color: #fff;
+}
+
+.instagram-line {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.instagram-line img {
+    width: 100px;
 }
 
 .instagram-slider {
@@ -573,6 +601,6 @@ img {
 }
 
 .footer-social li a img {
-    object-fit: contain;
-    width: 15px;
+    width: 20px;
+    height: 18px;
 }
