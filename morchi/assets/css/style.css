@@ -32,6 +32,10 @@ img {
     height: 100%;
 }
 
+.pre-header {
+    height: 165px;
+}
+
 /* header css option */
 
 .header {
@@ -86,6 +90,42 @@ img {
 
 .lang-item img {
     width: 25px;
+}
+
+.lang-item:hover .lang-box {
+    display: flex;
+}
+
+.lang-box {
+    position: absolute;
+    top: 105%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #391c00;
+    width: 100%;
+    height: 65px;
+}
+
+.lang-box > div {
+    border-bottom: 1px solid #fff;
+}
+
+.lang-box > div:last-child {
+    border-bottom: none;
+}
+
+.lang-box a {
+    color: #fff;
+}
+
+.lang-box a:hover {
+    color: #fff;
+}
+
+.lang-box.active {
+    display: flex;
 }
 
 .mobile-menu, .mobile-full-area {
@@ -216,6 +256,120 @@ img {
 
 .about-title__line img {
     width: 160px;
+}
+
+.section-bloc__about {
+    padding: 50px 0;
+}
+
+.bloc-about__img {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+}
+
+.bloc-about__img img {
+    object-fit: contain;
+}
+
+.image-border {
+    position: relative;
+    max-width: 500px;
+}
+
+.image-border::before {
+    content: "";
+    position: absolute;
+    bottom: -8%;
+    left: -9%;
+    width: 100%;
+    height: 100%;
+    background-color: #f8d6c5;
+    z-index: -1;
+}
+
+.bloc-about__info {
+    margin-left: 10%;
+}
+
+.about-info__title {
+    width: 53%;
+}
+
+.about-info__title h2 {
+    font-size: 35px;
+    font-family: 'Metropolis-Light';
+}
+
+.about-info__title h2 .font-weight {
+    font-family: 'Metropolis-Bold';
+}
+.about-info__title h2 .font-normal {
+    font-family: 'Metropolis-Medium';
+}
+
+.about-info__line {
+    position: relative;
+    left: -50px;
+    padding: 25px 0;
+}
+
+.about-info__line img {
+    width: 120px;
+}
+
+.about-info__dsc p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.bloc-about__prerioty {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 60px;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.priority-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 85px;
+    margin: 100px auto 50px;
+    background-color: #e8e9e9;
+    padding: 15px;
+}
+
+.priority-area__img img {
+    object-fit: contain;
+}
+
+.priority-area__title .title-number {
+    font-size: 60px;
+    font-family: 'Metropolis-ExtraBold';
+    line-height: 55px;
+    color: #586e2a;
+}
+
+.priority-area__title .title-title {
+    font-size: 32px;
+}
+
+.priority-area__dsc {
+    position: relative;
+    margin: 25px 0 10px;
+    grid-column: span 2;
+}
+
+.priority-area__line {
+    position: absolute;
+    bottom: -20%;
+    right: -15%;
+}
+
+.priority-area__line img {
+    width: 110px;
 }
 
 /* product css option */
@@ -441,36 +595,12 @@ img {
     grid-gap: 85px 100px;
 }
 
-.product-bloc__grid::after {
-    content: '';
-    position: absolute;
-    bottom: -5%;
-    right: -8%;
-    background: url(../img/icon-3.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100px;
-    height: 100px;
-}
-
-.product-bloc__grid::before {
-    content: '';
-    position: absolute;
-    top: 18%;
-    left: -9%;
-    background: url(../img/icon-2.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100px;
-    height: 200px;
-}
-
 .dot-icon {
     position: absolute;
 }
 
 .dot-icon img {
-    width: 25px;
+    width: 55px;
     object-fit: contain;
 }
 
@@ -479,9 +609,43 @@ img {
     top: 22%;
 }
 
+.top-left-dot {
+    top: 18%;
+    left: -7%;
+}
+
+.top-left-dot img {
+    width: 90px;
+}
+
 .bottom-dot {
     left: -10%;
     bottom: 22%;
+}
+
+.bottom-right-dot {
+    bottom: -5%;
+    right: -8%;
+}
+
+.bottom-right-dot img {
+    width: 100px !important;
+}
+
+.top-dot.big-dot img {
+    width: 120px;
+}
+
+.top-left-dot.big-dot {
+    left: -13%;
+}
+
+.top-left-dot.big-dot img {
+    width: 140px;
+}
+
+.bottom-dot.big-dot img {
+    width: 140px;
 }
 
 .grid-item {
@@ -540,10 +704,19 @@ img {
     font-size: 95px;
     line-height: 80px;
     font-family: 'Metropolis-Bold';
+    margin-bottom: 10px;
 }
 .grid-item__dsc .dsc-title {
     font-size: 30px;
     font-family: 'Metropolis-Bold';
+}
+.grid-item__dsc .dsc-title h2 {
+    margin: 0;
+}
+.grid-item__dsc .dsc-weight {
+    font-size: 19px;
+    font-family: 'Metropolis-LightItalic';
+    margin-bottom: 10px;
 }
 .grid-item__dsc .dsc-title span {
     font-family: 'Metropolis-Light';
