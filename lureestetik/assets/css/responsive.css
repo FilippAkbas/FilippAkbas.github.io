@@ -1,0 +1,5 @@
+@media only screen (max-width: 1300px) {
+    .header-menu li a {
+        font-size: 14px;
+    }
+}

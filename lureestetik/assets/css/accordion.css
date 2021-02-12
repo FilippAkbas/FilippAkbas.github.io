@@ -1,0 +1,47 @@
+.accordion {
+  list-style: none;
+  padding: 0;
+}
+.accordion .inner {
+  padding-left: 1em;
+  overflow: hidden;
+  display: none;
+}
+.accordion .inner.show {
+  /*display: block;*/
+  font-size: 15px;
+}
+.accordion .inner.show li {
+  margin-bottom: 20px;
+}
+.accordion li {
+  margin: 0.5em 0;
+}
+.accordion li a.toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: #000;
+  padding: 0.75em;
+  border-radius: 0.15em;
+  transition: background 0.3s ease;
+}
+.accordion li a.toggle:hover .toggle-icon {
+  background: #19bece;
+}
+
+.accordion li .toggle-icon {
+  background-color: #000;
+  margin-right: 15px;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.accordion li .toggle-icon .svg-inline--fa {
+  color: #fff;
+}
