@@ -171,6 +171,7 @@ section {
 
 .menu-item__lang img {
   width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
@@ -211,6 +212,7 @@ section {
 .menu-item__submenu div a {
   display: flex;
   align-items: center;
+  color: #fff;
 }
 
 .menu-item__submenu div a:hover {
@@ -244,6 +246,47 @@ section {
   color: var(--main-color);
 }
 
+.header-mobile {
+  display: none;
+  position: relative;
+}
+
+.header-mobile .menu-item__submenu {
+  position: relative;
+  top: 0;
+  padding: 10px;
+}
+
+.header-mobile__area {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-mobile.active .header-mobile__area {
+  display: flex;
+}
+
+.close-mobile__btn {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-size: 36px;
+}
+
+.header-mobile__area li {
+  margin-bottom: 10px;
+}
+
 /* Slider css option  */
 
 .slider-section {
@@ -273,6 +316,7 @@ section {
 
 .slider-content {
   position: absolute;
+  width: 60%;
   top: 60%;
   right: 50%;
   transform: translate(-50%, -50%);
@@ -704,6 +748,7 @@ section {
 
 .blog-list li {
   display: flex;
+  align-items: center;
 }
 
 .blog-list li .blog-img {
