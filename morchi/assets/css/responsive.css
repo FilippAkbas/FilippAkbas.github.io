@@ -344,4 +344,7 @@
         flex-basis: 100%;
         margin-bottom: 20px;
     }
+    .contact-image img {
+    	max-height: 230px;
+    }
 }
