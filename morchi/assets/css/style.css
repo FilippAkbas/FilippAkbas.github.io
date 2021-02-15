@@ -67,7 +67,7 @@ img {
 }
 
 .menu-item a {
-    font-size: 18px;
+    font-size: 20px;
     color: #391c00;
 }
 
@@ -76,7 +76,7 @@ img {
 }
 
 .menu-logo img {
-    max-width: 115px;
+    max-width: 145px;
 }
 
 .lang-item {
@@ -135,6 +135,10 @@ img {
 
 /* slider css option */
 
+.slider-section {
+    margin-bottom: 50px;
+}
+
 .slider-section .slider-img {
     height: 85vh;
 }
@@ -174,6 +178,7 @@ img {
 
 .priority-block_number {
     font-size: 70px;
+    line-height: 55px;
     font-weight: bold;
     color: #f8d6c5;
     font-family: 'Metropolis-Bold', sans-serif;
@@ -200,12 +205,12 @@ img {
 .about-section::after {
     content: '';
     position: absolute;
-    right: -65px;
+    right: -455px;
     top: -160px;
     background: url(../img/open-koffe.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 300px;
+    width: 700px;
     height: 100%;
 }
 
@@ -267,6 +272,7 @@ img {
     display: flex;
     justify-content: flex-end;
     align-items: start;
+    margin-bottom: 200px;
 }
 
 .bloc-about__img img {
@@ -320,8 +326,8 @@ img {
 }
 
 .about-info__dsc p {
-    margin: 0;
-    font-size: 18px;
+    margin: 0 0 30px 0;
+    font-size: 16px;
 }
 
 .bloc-about__prerioty {
@@ -399,7 +405,7 @@ img {
     display: flex;
     flex-direction: row;
     background-color: #e8e9e9;
-    padding: 30px;
+    padding: 30px 10px;
     width: 85%;
     margin: 0 auto 100px;
     height: 250px;
@@ -409,7 +415,7 @@ img {
     width: 150px;
     height: 250px;
     object-fit: contain;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .product-item_img img {
@@ -648,6 +654,15 @@ img {
     width: 140px;
 }
 
+.bloc-left-dot {
+    bottom: 13%;
+    left: 8%;
+}
+
+.bloc-left-dot img {
+    width: 75px;
+}
+
 .grid-item {
     background-color: #e8e9e9;
     padding: 25px;
@@ -723,6 +738,196 @@ img {
 }
 .grid-item__dsc .dsc-info {
     font-size: 18px;
+}
+
+/* contact bloc css option  */
+
+.section-bloc__contact {
+    position: relative;
+}
+
+.contac-block__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px 0;
+}
+
+.block-list__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.block-list__item::after {
+    content: '';
+    position: absolute;
+    background: url(../img/contact-line-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 35%;
+    right: -20%;
+    width: 135px;
+    height: 3px; 
+}
+
+.block-list__item:nth-child(3)::after {
+    background: url(../img/contact-line-2.png);
+    background-repeat: no-repeat;
+    width: 120px;
+    right: -40px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.block-list__item:nth-child(4)::after,
+.block-list__item:nth-child(6)::after {
+    display: none;
+}
+
+.list-item__text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.list-item__img {
+    margin-bottom: 10px;
+}
+
+.list-item__img img {
+    width: auto;
+    height: 70px;
+    object-fit: contain;
+}
+
+.contact-image {
+    padding: 50px 0;
+}
+
+.contact-image img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: contain;
+}
+
+.contact-info {
+    display: flex;
+    padding: 50px 0;
+}
+
+.contact-info li {
+    flex-basis: 33%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info__icon {
+    margin-bottom: 20px;
+}
+
+.contact-info__icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.contact-info__text {
+    text-align: center;
+}
+
+.contac-block__contact {
+    background: url(../img/contact-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    color: #fff;
+    padding: 75px 0 50px;
+    margin-bottom: 50px;
+}
+
+.sell-area {
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.sell-icon__group {
+    display: flex;
+}
+
+.sell-icon__group img {
+    position: relative;
+}
+
+.sell-icon__group img:nth-child(1) {
+    top: -10px;
+}
+.sell-icon__group img:nth-child(3) {
+    top: -10px;
+}
+
+.sell-area img {
+    width: 40px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.sell-area h2 {
+    width: 35%;
+    color: #fff;
+}
+
+.sell-area p {
+    font-family: 'Metropolis-LightItalic';
+    width: 40%;
+    color: #fff;
+}
+
+.sell-area a {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sell-area__icon {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.single-sell {
+    position: relative;
+}
+.single-sell::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../img/contact-line-white.png);
+    width: 2px;
+    height: 100%;
+    transform: rotate(360deg);
+    background-repeat: no-repeat;
+}
+.multi-sell {}
+
+.contac-block__title {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contac-block__title h1 {
+    font-family: 'Metropolis-light', sans-serif;
+    font-weight: 400;
+}
+
+.contac-block__title h1 span {
+    font-family: 'Metropolis-Bold', sans-serif;
 }
 
 /* Footer Css option */

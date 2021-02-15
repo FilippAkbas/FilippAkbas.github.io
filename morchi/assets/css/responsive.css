@@ -312,4 +312,36 @@
     .instagram-line {
         display: none;
     }
+
+    .block-list__item::after {
+        display: none;
+    }
+
+    .block-list__item:nth-child(4) {
+        display: none;
+    }
+
+    .contac-block__contact {
+        flex-direction: column;
+    }
+    .contac-block__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .single-sell {
+        margin-bottom: 50px;
+    }
+    .single-sell::after {
+        display: none;
+    }
+    .sell-area h2, 
+    .sell-area p {
+        width: 100%;
+    }
+    .contact-info {
+        flex-direction: column;
+    }
+    .contact-info li {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
 }
