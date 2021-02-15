@@ -62,6 +62,7 @@ img {
 }
 
 .menu-item {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -73,6 +74,32 @@ img {
 
 .menu-item a:hover {
     color: #586e2a;
+}
+
+.menu-item:hover .submenu {
+    display: flex;
+}
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #391c00;
+    width: max-content;
+    height: auto;
+}
+
+.submenu > div {
+    margin-bottom: 5px;
+}
+
+.submenu a {
+    font-size: 16px;
+    color: #fff;
 }
 
 .menu-logo img {
@@ -162,7 +189,7 @@ img {
 }
 
 .priority-section .priority-block {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 80%;
 }
 
