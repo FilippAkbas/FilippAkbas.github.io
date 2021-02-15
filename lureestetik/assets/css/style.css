@@ -11,6 +11,16 @@
     no-repeat scroll right bottom/210% 100% #19becc;
 }
 
+.input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3), .input-group:not(.has-validation)>:not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
 body {
   font-family: var(--main-font);
   font-size: 18px;
@@ -81,8 +91,15 @@ section {
 
 .input-group input {
   border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
   border-bottom: 1px solid var(--grey-color);
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.input-group.full-width label {
+  width: 85%;
+  display: inline-block;
 }
 
 .section__title {
@@ -318,7 +335,7 @@ section {
   position: absolute;
   width: 60%;
   top: 60%;
-  right: 50%;
+  right: 0%;
   transform: translate(-50%, -50%);
 }
 
@@ -352,33 +369,11 @@ section {
 }
 
 .banner-section__form form .input-group:first-child label {
-  flex-basis: 50%;
+  flex-basis: 25%;
 }
 
 .banner-section__form form .input-group.full-width {
   flex-basis: 100%;
-}
-
-.banner-section__form form input {
-  background-color: var(--dark-blue);
-  color: #fff !important;
-  padding: 5px 10px;
-}
-
-.banner-section__form form input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #fff;
-  opacity: 1; /* Firefox */
-}
-
-.banner-section__form form input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #fff;
-}
-
-.banner-section__form form input::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #fff;
 }
 
 .form-btn button {
@@ -387,7 +382,7 @@ section {
   color: #fff;
   font-size: 18px;
   border-radius: 20px;
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .form-btn button:hover {
@@ -702,7 +697,6 @@ section {
 }
 
 .swiper-pagination {
-  top: 70% !important;
   bottom: 0px !important;
 }
 
@@ -915,7 +909,6 @@ section {
 .section-contact-map {
   width: 100%;
   height: 60vh;
-  border: 1px solid #000;
 }
 
 .section-form {
