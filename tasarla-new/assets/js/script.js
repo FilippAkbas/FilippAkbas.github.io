@@ -220,19 +220,6 @@ geocoder.on('result', (data,lat,lng) => {
 
 function thisTabs() {
     for(let i = 0;i < tabtsLink.length; i++) {
-        let activeTabs = tabtsLink[i];
-        activeTabs.addEventListener('click', ()=> {
-            if(tabtsLink[i].id === 'tabsLink-1') {
-                document.querySelector('#tabs-btn').style.display = 'block';
-                document.querySelector('#next-btn').style.display = 'none';
-                tabsBtn.textContent = 'Boyut ve Cerceve Secenekleri';
-            }
-            if(tabtsLink[i].id === 'tabsLink-2') {
-                document.querySelector('#tabs-btn').style.display = 'block';
-                document.querySelector('#next-btn').style.display = 'none';
-                tabsBtn.textContent = 'Gorunum Ayarlari';
-            }
-        })
         if(tabtsLink[i].classList.contains('active')) {
             if(tabtsLink[i].id === 'tabsLink-1') {
                 document.querySelector('#tabs-1').style.display = 'none';
@@ -260,6 +247,24 @@ tabsBtn.addEventListener('click', (e) => {
     e.preventDefault();
     thisTabs()
 });
+
+for(let i = 0;i < tabtsLink.length; i++) {
+    let activeTabs = tabtsLink[i];
+    activeTabs.addEventListener('click', ()=> {
+        if(tabtsLink[i].id === 'tabsLink-1') {
+            document.querySelector('#tabs-btn').style.display = 'block';
+            document.querySelector('#next-btn').style.display = 'none';
+            tabsBtn.textContent = 'Boyut ve Cerceve Secenekleri';
+        }else if(tabtsLink[i].id === 'tabsLink-2') {
+            document.querySelector('#tabs-btn').style.display = 'block';
+            document.querySelector('#next-btn').style.display = 'none';
+            tabsBtn.textContent = 'Gorunum Ayarlari';
+        } else if (tabtsLink[i].id === 'tabsLink-3') {
+            document.querySelector('#tabs-btn').style.display = 'none';
+            document.querySelector('#next-btn').style.display = 'block';
+        }
+    });
+}
 
 // Thema List Change
 for(let i = 0; i < themaList.length; i++) {
