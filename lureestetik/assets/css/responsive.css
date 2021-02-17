@@ -146,6 +146,30 @@
     .contact-block__list li {
         flex-basis: 100%;
     }
+    .footer-list li .icon {
+        margin-right: 5px;
+    }
+    .section-hizmetlerimiz-banner {
+        position: relative;
+        background-position: left;
+    }
+
+    .section-hizmetlerimiz-banner::before {
+        content: '';
+        position: absolute;
+        background: #0000002b;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+    .banner-content,
+    .banner-content__text {
+        z-index: 2;
+    }
 }
 
 @media only screen and (max-width: 468px) {

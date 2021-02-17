@@ -84,7 +84,7 @@ section {
 .input-group {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   font-size: 18px;
   flex-basis: 50%;
 }
@@ -135,7 +135,7 @@ section {
 /* header css option */
 
 .header {
-  position: fixed;
+  position: relative;
   width: 100%;
   top: 0;
   right: 0;
@@ -146,6 +146,10 @@ section {
   align-items: center;
   z-index: 50;
   background-color: #fff;
+}
+
+.header.header-fixed {
+  position: fixed !important;
 }
 
 .header-logo {
@@ -315,7 +319,7 @@ section {
   z-index: 1;
 }
 
-.swiper-container-vertical > .swiper-wrapper {
+.swiper-container > .swiper-wrapper {
   height: 80vh;
 }
 
@@ -599,7 +603,7 @@ section {
 }
 
 .difference-list__item {
-  flex-basis: 33%;
+  flex-basis: 25%;
   padding: 0 25px;
 }
 
@@ -697,7 +701,11 @@ section {
 }
 
 .swiper-pagination {
-  bottom: 0px !important;
+  z-index: 999;
+}
+
+.swiper-pagination span {
+  cursor: pointer;
 }
 
 /* footer css option  */
@@ -809,6 +817,9 @@ section {
 .blog-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: top;
+  max-height: 480px;
 }
 
 .blog-block {

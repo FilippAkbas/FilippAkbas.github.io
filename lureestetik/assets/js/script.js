@@ -1,13 +1,23 @@
+$(window).scroll(function () {
+  var height = $(window).scrollTop();
+  if (height > 100) {
+    $("header").addClass("header-fixed");
+  } else {
+    $("header").removeClass("header-fixed");
+  }
+});
+
 const mainSlider = new Swiper("#main-slider", {
   // Optional parameters
   loop: true,
-  direction: "vertical",
   slidesPerView: 1,
   margin: "25px",
 
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    type: 'bullets',
+    clickable: true,
   },
 
   // Navigation arrows
@@ -22,6 +32,8 @@ const blogSlider = new Swiper("#blog-slider", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
+    type: 'bullets',
+    clickable: true,
   },
 
   // Navigation arrows
@@ -43,16 +55,15 @@ const blogSlider = new Swiper("#blog-slider", {
   },
 });
 
+let mobileBurger = document.querySelector(".header-mobile__btn");
+let mobileCloseMenu = document.querySelector(".close-mobile__btn a");
 
-let mobileBurger = document.querySelector('.header-mobile__btn');
-let mobileCloseMenu = document.querySelector('.close-mobile__btn a');
+let headerMobile = document.querySelector(".header-mobile");
 
-let headerMobile = document.querySelector('.header-mobile');
-
-mobileBurger.addEventListener('click', ()=>{ 
-  headerMobile.classList.add('active');
+mobileBurger.addEventListener("click", () => {
+  headerMobile.classList.add("active");
 });
 
-mobileCloseMenu.addEventListener('click', ()=>{ 
-  headerMobile.classList.remove('active');
+mobileCloseMenu.addEventListener("click", () => {
+  headerMobile.classList.remove("active");
 });
