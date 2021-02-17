@@ -125,6 +125,7 @@ section {
 .section-title h2 {
   font-weight: bold;
   font-size: 56px;
+  margin-top: 30px;
 }
 
 .section-title p {
@@ -140,7 +141,7 @@ section {
   top: 0;
   right: 0;
   left: 0;
-  padding: 10px 15px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,7 +157,7 @@ section {
 }
 
 .header-logo img {
-  width: 150px;
+  width: 110px;
 }
 
 .header-menu {
@@ -212,7 +213,8 @@ section {
   flex-direction: column;
   background-color: var(--main-color);
   border-radius: 5px;
-  top: 25px;
+  top: 30px;
+  padding: 5px 10px;
   display: none;
 }
 
@@ -319,7 +321,7 @@ section {
   z-index: 1;
 }
 
-.swiper-container > .swiper-wrapper {
+#main-slider > .swiper-wrapper {
   height: 80vh;
 }
 
@@ -356,7 +358,7 @@ section {
 
 .contact-banner-section {
   background-color: var(--dark-blue);
-  padding: 50px 0;
+  padding: 50px 0 30px;
   color: #fff;
 }
 
@@ -580,7 +582,7 @@ section {
 .date-benner__list-item .list-item__text {
   position: relative;
   color: #fff;
-  font-family: var(--second-font);
+  font-family: var(--main-font);
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -751,12 +753,12 @@ section {
 .blog-list li {
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .blog-list li .blog-img {
-  flex-basis: 20%;
+  flex-basis: 15%;
   margin-right: 20px;
-  margin-bottom: 20px;
 }
 
 .blog-list li .blog-img img {
