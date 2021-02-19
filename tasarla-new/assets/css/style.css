@@ -3,7 +3,7 @@
 body {
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f4fb;
+    background-color: #fff;
     overflow-x: hidden;
 }
 
@@ -122,7 +122,7 @@ img {
 
 .canvas-area {
     padding: 15px;
-    background-color: #fff;
+    background-color: #f0f4fb;
     position: relative;
     box-shadow: 0px 0px 20px #e2e2e2;
 }
@@ -154,7 +154,7 @@ img {
 }
 .canvas-border__title-top,
 .canvas-border__title-bottom {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -168,7 +168,7 @@ img {
 .canvas-border__icon {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .canvas-border__icon img {
     width: 40px;
@@ -207,6 +207,8 @@ img {
 
 .tasarla-option__link {
     display: flex;
+    border: 1px solid #adadad;
+    border-radius: 5px;
     margin-bottom: 25px;
 }
 
@@ -236,6 +238,8 @@ img {
 }
 
 .tasarla-option__tabs {
+    border: 1px solid #adadad;
+    border-radius: 5px;
     padding: 5px;
 }
 
@@ -341,6 +345,8 @@ img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    border-bottom: 1px solid #adadad;
+    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
@@ -520,13 +526,13 @@ img {
         display: none;
     }
     .canvas-area__border {
-        width: 85vw;
+        width: 90vw;
         height: 550px;
         overflow: hidden;
     }
     .preview {
         width: 80%;
-        transform: rotate(-25deg) translate(-47%, -50%);
+        transform: rotate(-25deg) translate(-41%, -50%);
         font-size: 52px;
     }
     .tasarla-section__form {
@@ -557,6 +563,9 @@ img {
         padding: 10px 35px;
         height: 40px;
     }
+    .option-tabs__div.input-div textarea {
+        height: auto !important;
+    }
     .mapboxgl-ctrl-geocoder--icon-search {
         top: 10px;
     }
@@ -566,10 +575,11 @@ img {
     .tasarla-option__link {
        justify-content: center;
        margin-bottom: 0;
+       padding: 0 5px;
+       margin-bottom: 20px;
     }
     .tasarla-option__link li {
         text-align: center;
-        margin-bottom: 20px;
     }
     .footer-copyrating {
         flex-direction: column;
@@ -588,5 +598,24 @@ img {
     }
     .option-tabs__list {
         justify-content: center;
+    }
+    .canvas-border__title-top,
+    .canvas-border__title-bottom {
+        font-size: 9px;
+    }
+    .canvas-border__title-top { 
+        margin-top: 40px;
+    }
+    .canvas-border__location input {
+        width: 20%;
+    }
+    .tasarla-option__link li a {
+        font-size: 14px;
+    }
+    .tasarla-option__link li a { 
+        max-height: 30px;
+    }
+    .canvas-border__icon {
+        margin-bottom: 20px;
     }
 }

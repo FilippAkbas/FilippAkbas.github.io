@@ -143,7 +143,10 @@ $("#message-top").keyup(function () {
     $('.canvas-border__title-top').text($("#message-top").val());
 });
 
+document.querySelector('.canvas-border__title-bottom').style.opacity = '0';
+
 $("#message-bottom").keyup(function () {
+    document.querySelector('.canvas-border__title-bottom').style.opacity = '1';
     $('.canvas-border__title-bottom').text($("#message-bottom").val());
 });
 
@@ -152,8 +155,7 @@ $("#takimyildizlari").change(function () {
     if (agreed == true) {
         skyConstellations = true;
         PlanetMap();
-    }
-    else {
+    } else {
         skyConstellations = false;
         PlanetMap();
     }
@@ -161,10 +163,9 @@ $("#takimyildizlari").change(function () {
 $("#koordinatlar").change(function () {
     var agreed = $(this).is(':checked');
     if (agreed === true) {
-        $('.canvas-border__location').css('display','flex');
-    }
-    else {
-        $('.canvas-border__location').css('display','none');
+        $('.canvas-border__location').css('opacity','1');
+    } else {
+        $('.canvas-border__location').css('opacity','0');
     }
 });
 
@@ -319,6 +320,18 @@ function checkBlackColorIcon() {
         document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/placeholder.svg';
     }else if(selectedIcon === 'unicornInput') {
         document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/unicorn.svg';
+    }else if(selectedIcon === 'dumbbell') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/dumbbell.svg';
+    }else if(selectedIcon === 'star') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/star.svg';
+    }else if(selectedIcon === 'startup') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/startup.svg';
+    }else if(selectedIcon === 'rainbow') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/rainbow.svg';
+    }else if(selectedIcon === 'kite') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/kite.svg';
+    }else if(selectedIcon === 'martini') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/martini.svg';
     }
 }
 
@@ -328,7 +341,8 @@ for(let i = 0; i < colorList.length; i++) {
             uzayColorChecked = false;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#fff';
             document.querySelector('.canvas-area__content').style.borderColor = '#000';
-            document.querySelector('.canvas-border__title').style.color = '#000';
+            document.querySelector('.canvas-border__title-top').style.color = '#000';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#000';
             document.querySelector('.canvas-border__icon').style.color = '#000';
             document.querySelector('.canvas-border__date').style.color = '#000';
             document.querySelector('.canvas-border__text').style.color = '#000';
@@ -336,12 +350,14 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
             document.querySelector('.canvas-border__size').style.color = '#000';
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            document.querySelector('.preview').style.color = "#dcdcdc";
             checkBlackColorIcon();
         }else if (colorList[i].id === 'uzaycolor') {
             uzayColorChecked = true;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#000';
             document.querySelector('.canvas-area__content').style.borderColor = '#fff';
-            document.querySelector('.canvas-border__title').style.color = '#fff';
+            document.querySelector('.canvas-border__title-top').style.color = '#fff';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#fff';
             document.querySelector('.canvas-border__icon').style.color = '#fff';
             document.querySelector('.canvas-border__date').style.color = '#fff';
             document.querySelector('.canvas-border__text').style.color = '#fff';
@@ -349,7 +365,7 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#fff';
             document.querySelector('.canvas-border__size').style.color = '#fff';
             document.querySelector('.canvas-border__logo svg').style.fill = '#fff';
-            document.querySelector('.preview').style.color = "#505050";
+            document.querySelector('.preview').style.color = "#2b2b2b";
             if(selectedIcon === 'babyFootprintInput') {
                 document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/baby-footprint-white.svg';
             }else if(selectedIcon === 'favoriteInput') {
@@ -372,12 +388,25 @@ for(let i = 0; i < colorList.length; i++) {
                 document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/placeholder-white.svg';
             }else if(selectedIcon === 'unicornInput') {
                 document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/unicorn-white.svg';
+            }else if(selectedIcon === 'dumbbell') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/dumbbell-white.svg';
+            }else if(selectedIcon === 'star') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/star-white.svg';
+            }else if(selectedIcon === 'startup') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/startup-white.svg';
+            }else if(selectedIcon === 'rainbow') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/rainbow-white.svg';
+            }else if(selectedIcon === 'kite') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/kite-white.svg';
+            }else if(selectedIcon === 'martini') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/martini-white.svg';
             }
         }else if (colorList[i].id === 'yildiztozucolor') {
             uzayColorChecked = false;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#cfd2d3';
             document.querySelector('.canvas-area__content').style.borderColor = '#000';
-            document.querySelector('.canvas-border__title').style.color = '#000';
+            document.querySelector('.canvas-border__title-top').style.color = '#000';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#000';
             document.querySelector('.canvas-border__icon').style.color = '#000';
             document.querySelector('.canvas-border__date').style.color = '#000';
             document.querySelector('.canvas-border__text').style.color = '#000';
@@ -385,12 +414,14 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
             document.querySelector('.canvas-border__size').style.color = '#000';
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            document.querySelector('.preview').style.color = "#c7c7c7";
             checkBlackColorIcon();
         }else if (colorList[i].id === 'lolipopcolor') {
             uzayColorChecked = false;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#fac8c9';
             document.querySelector('.canvas-area__content').style.borderColor = '#000';
-            document.querySelector('.canvas-border__title').style.color = '#000';
+            document.querySelector('.canvas-border__title-top').style.color = '#000';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#000';
             document.querySelector('.canvas-border__icon').style.color = '#000';
             document.querySelector('.canvas-border__date').style.color = '#000';
             document.querySelector('.canvas-border__text').style.color = '#000';
@@ -398,6 +429,7 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
             document.querySelector('.canvas-border__size').style.color = '#000';
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            document.querySelector('.preview').style.color = "#c7c7c7";
             checkBlackColorIcon();
         }
     })
@@ -518,6 +550,66 @@ for(let i = 0; i < iconList.length; i++) {
             } else {
                 document.querySelector('.canvas-border__icon img').src = url;
             }
+        }else if (iconList[i].id === 'dumbbell') {
+            let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
+            document.querySelector('.canvas-border__icon img').style.opacity = '1';
+            document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'dumbbell';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/dumbbell-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
+        }else if (iconList[i].id === 'star') {
+            let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
+            document.querySelector('.canvas-border__icon img').style.opacity = '1';
+            document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'star';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/star-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
+        }else if (iconList[i].id === 'startup') {
+            let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
+            document.querySelector('.canvas-border__icon img').style.opacity = '1';
+            document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'startup';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/startup-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
+        }else if (iconList[i].id === 'rainbow') {
+            let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
+            document.querySelector('.canvas-border__icon img').style.opacity = '1';
+            document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'rainbow';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/rainbow-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
+        }else if (iconList[i].id === 'kite') {
+            let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
+            document.querySelector('.canvas-border__icon img').style.opacity = '1';
+            document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'kite';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/kite-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
+        }else if (iconList[i].id === 'martini') {
+            let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
+            document.querySelector('.canvas-border__icon img').style.opacity = '1';
+            document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'martini';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/martini-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }
     })
 }
@@ -541,7 +633,7 @@ for(let i = 0; i < sizeList.length; i++) {
 for(let i = 0; i < borderList.length; i++) {
     borderList[i].addEventListener('click', ()=> {
         if(borderList[i].id === 'beyazBorder') {
-            document.querySelector('.canvas-area').style.backgroundColor = '#fff';
+            document.querySelector('.canvas-area').style.backgroundColor = '#f0f4fb';
             document.querySelector('.canvas-area').style.padding = '15px';
         }else if (borderList[i].id === 'siyahBorder') {
             document.querySelector('.canvas-area').style.backgroundColor = '#000';
