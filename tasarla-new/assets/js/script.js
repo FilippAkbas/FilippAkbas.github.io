@@ -241,7 +241,7 @@ function thisTabs() {
                 document.querySelector('#tabs-2').style.display = 'block';
                 document.querySelector('#tabsLink-1').classList.remove('active');
                 document.querySelector('#tabsLink-2').classList.add('active');
-                tabsBtn.innerHTML = 'Gorunum Ayarlari <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+                tabsBtn.innerHTML = 'Boyutlar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
                 return false;
             } else if(tabtsLink[i].id === 'tabsLink-2') {
                 document.querySelector('#tabs-2').style.display = 'none';
@@ -273,7 +273,7 @@ for(let i = 0;i < tabtsLink.length; i++) {
         }else if(tabtsLink[i].id === 'tabsLink-2') {
             document.querySelector('#tabs-btn').style.display = 'block';
             document.querySelector('#next-btn').style.display = 'none';
-            tabsBtn.innerHTML = 'Gorunum Ayarlari <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+            tabsBtn.innerHTML = 'Boyutlar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
         } else if (tabtsLink[i].id === 'tabsLink-3') {
             document.querySelector('#tabs-btn').style.display = 'none';
             document.querySelector('#next-btn').style.display = 'block';
