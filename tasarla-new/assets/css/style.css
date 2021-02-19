@@ -152,12 +152,17 @@ img {
 .canvas-border__canvas img {
     width: 80%;
 }
-.canvas-border__title {
-    margin-top: 50px;
-    margin-bottom: 20px;
+.canvas-border__title-top,
+.canvas-border__title-bottom {
     font-size: 10px;
     font-weight: bold;
     text-align: center;
+}
+.canvas-border__title-top {
+    margin-top: 50px;
+}
+.canvas-border__title-bottom {
+    margin-bottom: 20px;
 }
 .canvas-border__icon {
     display: flex;

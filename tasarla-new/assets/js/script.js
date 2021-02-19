@@ -139,8 +139,12 @@ $('.datepicker-here').datepicker({
     },
 });
 
-$("#message").keyup(function () {
-    $('.canvas-border__text').text($("#message").val());
+$("#message-top").keyup(function () {
+    $('.canvas-border__title-top').text($("#message-top").val());
+});
+
+$("#message-bottom").keyup(function () {
+    $('.canvas-border__title-bottom').text($("#message-bottom").val());
 });
 
 $("#takimyildizlari").change(function () {
