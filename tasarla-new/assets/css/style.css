@@ -562,7 +562,7 @@ img {
         display: none;
     }
     .canvas-area__border {
-        width: 90vw;
+        width: 85vw;
         height: 550px;
         overflow: hidden;
     }
