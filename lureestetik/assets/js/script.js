@@ -1,12 +1,3 @@
-$(window).scroll(function () {
-  var height = $(window).scrollTop();
-  if (height > 100) {
-    $("header").addClass("header-fixed");
-  } else {
-    $("header").removeClass("header-fixed");
-  }
-});
-
 const mainSlider = new Swiper("#main-slider", {
   // Optional parameters
   loop: true,
@@ -16,7 +7,7 @@ const mainSlider = new Swiper("#main-slider", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    type: 'bullets',
+    type: "bullets",
     clickable: true,
   },
 
@@ -32,7 +23,7 @@ const blogSlider = new Swiper("#blog-slider", {
   // If we need pagination
   pagination: {
     el: ".swiper-pagination",
-    type: 'bullets',
+    type: "bullets",
     clickable: true,
   },
 
@@ -66,4 +57,16 @@ mobileBurger.addEventListener("click", () => {
 
 mobileCloseMenu.addEventListener("click", () => {
   headerMobile.classList.remove("active");
+});
+
+$(".header-menu li a.item-big__submenu").mouseover(function () {
+  $('.menu-item__submenu.big-submenu').addClass("hover");
+});
+
+$(".header-menu li.menu-item__lang a").mouseover(function () {
+  $('.menu-item__lang .menu-item__submenu').addClass("hover");
+});
+
+$(".menu-item__submenu").mouseleave(function () {
+  $(this).removeClass("hover");
 });

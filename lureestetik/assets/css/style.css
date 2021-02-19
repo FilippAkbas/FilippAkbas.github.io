@@ -24,6 +24,7 @@
 body {
   font-family: var(--main-font);
   font-size: 18px;
+  line-height: 25px;
 }
 
 a {
@@ -146,11 +147,15 @@ section {
   justify-content: space-between;
   align-items: center;
   z-index: 50;
-  background-color: #fff;
+  background-color: #ffffff52;
 }
 
 .header.header-fixed {
-  position: fixed !important;
+  position: fixed;
+}
+
+.header.header-full {
+  background-color: #fff;
 }
 
 .header-logo {
@@ -202,7 +207,8 @@ section {
   display: flex !important;
 }
 
-.menu-item__submenu:hover {
+.menu-item__submenu.big-submenu.hover,
+.menu-item__lang .menu-item__submenu.hover {
   display: flex !important;
 }
 
@@ -313,7 +319,7 @@ section {
 /* Slider css option  */
 
 .slider-section {
-  height: 80vh;
+  height: 100vh;
   padding: 0;
 }
 
@@ -322,7 +328,7 @@ section {
 }
 
 #main-slider > .swiper-wrapper {
-  height: 80vh;
+  height: 100vh;
 }
 
 .swiper-slide {
@@ -811,6 +817,10 @@ section {
   padding: 20px 0;
 }
 
+.block-list {
+  margin-bottom: 15px;
+}
+
 .blog-img {
   width: 100%;
   height: 100%;
@@ -1120,7 +1130,6 @@ section {
 
 .list-item__content a {
   display: inline-block;
-  margin-bottom: 10px;
   color: #000;
 }
 
@@ -1135,7 +1144,7 @@ section {
 
 .list-item__content p .svg-inline--fa {
   color: var(--main-color);
-  margin-right: 10px;
+  margin-right: 3px;
 }
 
 .blog-content {}

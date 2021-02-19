@@ -534,7 +534,6 @@ img {
        justify-content: center;
        margin-bottom: 0;
     }
-
     .tasarla-option__link li {
         text-align: center;
         margin-bottom: 20px;
@@ -553,5 +552,11 @@ img {
     }
     .canvas-border__canvas {
         height: 260px;
+    }
+    .option-tabs__title {
+        text-align: center;
+    }
+    .option-tabs__list {
+        justify-content: center;
     }
 }
