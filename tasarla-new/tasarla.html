@@ -36,13 +36,13 @@
         <form action="#" method="POST" class="tasarla-section__form">
             <div class="tasarla-section__option">
                 <div class="tasarla-option__link">
-                    <li><a href="#tabs-1" id="tabsLink-1" class="active">Tema Seciniz</a></li>
-                    <li><a href="#tabs-2" id="tabsLink-2">Boyut ve Cerceve Secenekleri</a></li>
+                    <li><a href="#tabs-1" id="tabsLink-1" class="active">Tema Seçiniz</a></li>
+                    <li><a href="#tabs-2" id="tabsLink-2">Detaylar</a></li>
                     <li><a href="#tabs-3" id="tabsLink-3">Gorunum Ayarlari</a></li>
                 </div>
                 <div class="tasarla-option__tabs">
                     <div class="option-tabs" id="tabs-1">
-                        <div class="option-tabs__title"><h2>Tema seciniz: </h2></div>
+                        <div class="option-tabs__title"><h2>Tema Seçimi </h2></div>
                         <div class="option-tabs__list thema-list">
                             <li><label for="klasiktema">
                                 <input type="radio" name="mainThema" id="klasiktema" class="option-list__input" value="Klasik Tema" checked>
@@ -53,7 +53,7 @@
                                 <div class="input__box">Modern Tema</div>
                             </label></li>
                         </div>
-                        <div class="option-tabs__title"><h2>Canvas Rengi: </h2></div>
+                        <div class="option-tabs__title"><h2>Baskı Rengi </h2></div>
                         <div class="option-tabs__list color-list">
                             <li><label for="beyazcolor">
                                 <input type="radio" name="selectedColor" id="beyazcolor" class="option-list__input" value="Beyaz" checked>
@@ -72,7 +72,7 @@
                                 <div class="input__box">Lolipop</div>
                             </label></li>
                         </div>
-                        <div class="option-tabs__title"><h2>Canvas Iconu: </h2></div>
+                        <div class="option-tabs__title"><h2>İkon Seçimi </h2></div>
                         <div class="option-tabs__list icon-list">
                             <li><label for="null">
                                 <input type="radio" name="selectedIcon" id="null" class="option-list__input" value="Null" checked>
@@ -131,11 +131,15 @@
                         </div>
                         <div class="option-tabs__div input-div">
                             <div class="div-title">Tarih</div>
-                            <input type="text" name="Tarih" class="datepicker-here" placeholder="Tarih">
+                            <input type="text" name="Tarih" class="datepicker-here" placeholder="Tarih Seçiniz">
                         </div>
                         <div class="option-tabs__div input-div">
-                            <div class="div-title">Text</div>
-                            <textarea name="message" id="message" cols="15" rows="3"></textarea>
+                            <div class="div-title">Üst Metin</div>
+                            <textarea name="message" id="message" cols="15" rows="3" maxlength="40"></textarea>
+                        </div>
+                        <div class="option-tabs__div input-div">
+                            <div class="div-title">Alt Metin</div>
+                            <textarea name="message" id="message" cols="15" rows="3" maxlength="40"></textarea>
                         </div>
                         <label for="takimyildizlari" class="option-tabs__div">
                             <div class="div-title">Takimyildizlari</div>
@@ -203,7 +207,7 @@
                             </label>
                         </div>
                     </div>
-                    <button class="tabs-btn" id="tabs-btn">Boyut ve Cerceve Secenekleri</button>
+                    <button class="tabs-btn" id="tabs-btn">Detaylar <img src="assets/img/icon/arrow.svg" alt="Right Arrow"></button>
                     <button class="tabs-btn" id="next-btn">Odeme sayfaya geciniz <span class="totalPrice">25</span>TL</button>
                 </div>
             </div>

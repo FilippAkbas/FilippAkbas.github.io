@@ -237,7 +237,7 @@ function thisTabs() {
                 document.querySelector('#tabs-2').style.display = 'block';
                 document.querySelector('#tabsLink-1').classList.remove('active');
                 document.querySelector('#tabsLink-2').classList.add('active');
-                tabsBtn.textContent = 'Gorunum Ayarlari';
+                tabsBtn.innerHTML = 'Gorunum Ayarlari <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
                 return false;
             } else if(tabtsLink[i].id === 'tabsLink-2') {
                 document.querySelector('#tabs-2').style.display = 'none';
@@ -265,11 +265,11 @@ for(let i = 0;i < tabtsLink.length; i++) {
         if(tabtsLink[i].id === 'tabsLink-1') {
             document.querySelector('#tabs-btn').style.display = 'block';
             document.querySelector('#next-btn').style.display = 'none';
-            tabsBtn.textContent = 'Boyut ve Cerceve Secenekleri';
+            tabsBtn.innerHTML = 'Detaylar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
         }else if(tabtsLink[i].id === 'tabsLink-2') {
             document.querySelector('#tabs-btn').style.display = 'block';
             document.querySelector('#next-btn').style.display = 'none';
-            tabsBtn.textContent = 'Gorunum Ayarlari';
+            tabsBtn.innerHTML = 'Gorunum Ayarlari <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
         } else if (tabtsLink[i].id === 'tabsLink-3') {
             document.querySelector('#tabs-btn').style.display = 'none';
             document.querySelector('#next-btn').style.display = 'block';
@@ -538,8 +538,10 @@ for(let i = 0; i < borderList.length; i++) {
     borderList[i].addEventListener('click', ()=> {
         if(borderList[i].id === 'beyazBorder') {
             document.querySelector('.canvas-area').style.backgroundColor = '#fff';
+            document.querySelector('.canvas-area').style.padding = '15px';
         }else if (borderList[i].id === 'siyahBorder') {
             document.querySelector('.canvas-area').style.backgroundColor = '#000';
+            document.querySelector('.canvas-area').style.padding = '15px';
         }else if (borderList[i].id === 'nonBorder') {
             document.querySelector('.canvas-area').style.backgroundColor = '#f0f4fb';
             document.querySelector('.canvas-area').style.padding = '0';
