@@ -30,8 +30,8 @@ let tabsLink2Text = 'Detaylar';
 let tabsLink3Text = 'Boyutlar';
 let tabsBtn1Text = 'Boyutlar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
 let tabsBtn2Text = 'Detaylar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+let currency = ' ₺';
 
-$('.totalPrice').text(skyTotal + ' ₺');
 
 if(document.querySelector('body').classList.contains('english-design')) {
     inputPlaceholder = 'Enter a location';
@@ -40,7 +40,13 @@ if(document.querySelector('body').classList.contains('english-design')) {
     tabsLink3Text = 'Format';
     tabsBtn1Text = 'Format <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
     tabsBtn2Text = 'Details <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+    skyTotal = 20;
+    currency = ' $ ';
+    $('.totalPrice').text(currency + skyTotal);
+} else {
+    $('.totalPrice').text(skyTotal + currency);
 }
+
 
 if(window.innerWidth <= 768) {
     document.querySelector('#tabsLink-1').textContent = tabsLink1Text;
@@ -452,6 +458,168 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
             document.querySelector('.preview').style.color = "#c7c7c7";
             checkBlackColorIcon();
+        }else if (colorList[i].id === 'navycolor') {
+            uzayColorChecked = true;
+            document.querySelector('.canvas-area__border').style.backgroundColor = '#293952';
+            document.querySelector('.canvas-area__content').style.borderColor = '#fff';
+            document.querySelector('.canvas-border__title-top').style.color = '#fff';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#fff';
+            document.querySelector('.canvas-border__icon').style.color = '#fff';
+            document.querySelector('.canvas-border__date').style.color = '#fff';
+            document.querySelector('.canvas-border__text').style.color = '#fff';
+            document.querySelector('.canvas-border__location input.latitudeText').style.color = '#fff';
+            document.querySelector('.canvas-border__location input.longitudeText').style.color = '#fff';
+            document.querySelector('.canvas-border__size').style.color = '#fff';
+            document.querySelector('.canvas-border__logo svg').style.fill = '#fff';
+            document.querySelector('.preview').style.color = "#2b2b2b5e";
+            if(selectedIcon === 'babyFootprintInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/baby-footprint-white.svg';
+            }else if(selectedIcon === 'favoriteInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/favorite-white.svg';
+            }else if(selectedIcon === 'giftboxInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/giftbox-white.svg';
+            }else if(selectedIcon === 'ringInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/ring-white.svg';
+            }else if(selectedIcon === 'bouquetInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/bouquet-white.svg';
+            }else if(selectedIcon === 'cakeInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/cake-white.svg';
+            }else if(selectedIcon === 'emzikInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/emzik-white.svg';
+            }else if(selectedIcon === 'highHeelsInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/high-heels-white.svg';
+            }else if(selectedIcon === 'kepInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/kep-white.svg';
+            }else if(selectedIcon === 'placeholderInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/placeholder-white.svg';
+            }else if(selectedIcon === 'unicornInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/unicorn-white.svg';
+            }else if(selectedIcon === 'dumbbell') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/dumbbell-white.svg';
+            }else if(selectedIcon === 'star') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/star-white.svg';
+            }else if(selectedIcon === 'startup') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/startup-white.svg';
+            }else if(selectedIcon === 'rainbow') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/rainbow-white.svg';
+            }else if(selectedIcon === 'kite') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/kite-white.svg';
+            }else if(selectedIcon === 'martini') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/martini-white.svg';
+            }
+        }else if (colorList[i].id === 'aquacolor') {
+            uzayColorChecked = true;
+            document.querySelector('.canvas-area__border').style.backgroundColor = '#234955';
+            document.querySelector('.canvas-area__content').style.borderColor = '#fff';
+            document.querySelector('.canvas-border__title-top').style.color = '#fff';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#fff';
+            document.querySelector('.canvas-border__icon').style.color = '#fff';
+            document.querySelector('.canvas-border__date').style.color = '#fff';
+            document.querySelector('.canvas-border__text').style.color = '#fff';
+            document.querySelector('.canvas-border__location input.latitudeText').style.color = '#fff';
+            document.querySelector('.canvas-border__location input.longitudeText').style.color = '#fff';
+            document.querySelector('.canvas-border__size').style.color = '#fff';
+            document.querySelector('.canvas-border__logo svg').style.fill = '#fff';
+            document.querySelector('.preview').style.color = "#2b2b2b5e";
+            if(selectedIcon === 'babyFootprintInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/baby-footprint-white.svg';
+            }else if(selectedIcon === 'favoriteInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/favorite-white.svg';
+            }else if(selectedIcon === 'giftboxInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/giftbox-white.svg';
+            }else if(selectedIcon === 'ringInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/ring-white.svg';
+            }else if(selectedIcon === 'bouquetInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/bouquet-white.svg';
+            }else if(selectedIcon === 'cakeInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/cake-white.svg';
+            }else if(selectedIcon === 'emzikInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/emzik-white.svg';
+            }else if(selectedIcon === 'highHeelsInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/high-heels-white.svg';
+            }else if(selectedIcon === 'kepInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/kep-white.svg';
+            }else if(selectedIcon === 'placeholderInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/placeholder-white.svg';
+            }else if(selectedIcon === 'unicornInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/unicorn-white.svg';
+            }else if(selectedIcon === 'dumbbell') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/dumbbell-white.svg';
+            }else if(selectedIcon === 'star') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/star-white.svg';
+            }else if(selectedIcon === 'startup') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/startup-white.svg';
+            }else if(selectedIcon === 'rainbow') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/rainbow-white.svg';
+            }else if(selectedIcon === 'kite') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/kite-white.svg';
+            }else if(selectedIcon === 'martini') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/martini-white.svg';
+            }
+        }else if (colorList[i].id === 'redcolor') {
+            uzayColorChecked = false;
+            document.querySelector('.canvas-area__border').style.backgroundColor = 'red';
+            document.querySelector('.canvas-area__content').style.borderColor = '#000';
+            document.querySelector('.canvas-border__title-top').style.color = '#000';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#000';
+            document.querySelector('.canvas-border__icon').style.color = '#000';
+            document.querySelector('.canvas-border__date').style.color = '#000';
+            document.querySelector('.canvas-border__text').style.color = '#000';
+            document.querySelector('.canvas-border__location input.latitudeText').style.color = '#000';
+            document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
+            document.querySelector('.canvas-border__size').style.color = '#000';
+            document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            document.querySelector('.preview').style.color = "#0000002b";
+            checkBlackColorIcon();
+        }else if (colorList[i].id === 'purplelattecolor') {
+            uzayColorChecked = true;
+            document.querySelector('.canvas-area__border').style.backgroundColor = '#BE9EC9';
+            document.querySelector('.canvas-area__content').style.borderColor = '#fff';
+            document.querySelector('.canvas-border__title-top').style.color = '#fff';
+            document.querySelector('.canvas-border__title-bottom').style.color = '#fff';
+            document.querySelector('.canvas-border__icon').style.color = '#fff';
+            document.querySelector('.canvas-border__date').style.color = '#fff';
+            document.querySelector('.canvas-border__text').style.color = '#fff';
+            document.querySelector('.canvas-border__location input.latitudeText').style.color = '#fff';
+            document.querySelector('.canvas-border__location input.longitudeText').style.color = '#fff';
+            document.querySelector('.canvas-border__size').style.color = '#fff';
+            document.querySelector('.canvas-border__logo svg').style.fill = '#fff';
+            document.querySelector('.preview').style.color = "#2b2b2b5e";
+            if(selectedIcon === 'babyFootprintInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/baby-footprint-white.svg';
+            }else if(selectedIcon === 'favoriteInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/favorite-white.svg';
+            }else if(selectedIcon === 'giftboxInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/giftbox-white.svg';
+            }else if(selectedIcon === 'ringInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/ring-white.svg';
+            }else if(selectedIcon === 'bouquetInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/bouquet-white.svg';
+            }else if(selectedIcon === 'cakeInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/cake-white.svg';
+            }else if(selectedIcon === 'emzikInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/emzik-white.svg';
+            }else if(selectedIcon === 'highHeelsInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/high-heels-white.svg';
+            }else if(selectedIcon === 'kepInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/kep-white.svg';
+            }else if(selectedIcon === 'placeholderInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/placeholder-white.svg';
+            }else if(selectedIcon === 'unicornInput') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/unicorn-white.svg';
+            }else if(selectedIcon === 'dumbbell') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/dumbbell-white.svg';
+            }else if(selectedIcon === 'star') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/star-white.svg';
+            }else if(selectedIcon === 'startup') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/startup-white.svg';
+            }else if(selectedIcon === 'rainbow') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/rainbow-white.svg';
+            }else if(selectedIcon === 'kite') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/kite-white.svg';
+            }else if(selectedIcon === 'martini') {
+                document.querySelector('.canvas-border__icon img').src = 'assets/img/svg-icon-white/martini-white.svg';
+            }
         }
     })
 }

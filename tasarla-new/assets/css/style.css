@@ -409,6 +409,26 @@ img {
     color: #000;
 }
 
+#navycolor + .input__box {
+    background-color: #293952;
+    color: #fff;
+}
+
+#aquacolor + .input__box {
+    background-color: #234955;
+    color: #fff;
+}
+
+#redcolor + .input__box {
+    background-color: red;
+    color: #fff;
+}
+
+#purplelattecolor + .input__box {
+    background-color: #BE9EC9;
+    color: #fff;
+}
+
 .option-tabs__div {
     padding: 20px 0;
     display: flex;
@@ -550,6 +570,9 @@ img {
         width: 80%;
         transform: rotate(-25deg) translate(-41%, -50%);
         font-size: 52px;
+    }
+    .english-design .preview {
+        transform: rotate(-25deg) translate(-32%, -50%);
     }
     .tasarla-section__form {
         flex-direction: column;
