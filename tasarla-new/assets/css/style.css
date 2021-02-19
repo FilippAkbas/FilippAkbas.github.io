@@ -309,6 +309,7 @@ img {
 }
 
 .option-tabs__title {
+    text-align: center;
     margin: 10px 0;
 }
 
@@ -318,6 +319,7 @@ img {
 
 .option-tabs__list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
@@ -341,7 +343,7 @@ img {
 }
 
 .thema-list li {
-    flex-basis: 50%;
+    flex-basis: 25%;
 }
 
 .thema-list li:nth-child(1) .input__box {
@@ -552,9 +554,6 @@ img {
     }
     .canvas-border__canvas {
         height: 260px;
-    }
-    .option-tabs__title {
-        text-align: center;
     }
     .option-tabs__list {
         justify-content: center;
