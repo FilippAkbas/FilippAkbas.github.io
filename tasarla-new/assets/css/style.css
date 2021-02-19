@@ -92,7 +92,7 @@ img {
 /* tasarla css option  */
 
 .tasarla-section {
-    padding: 50px 0;
+    padding: 25px 0;
 }
 
 .tasarla-section__form {
@@ -101,6 +101,7 @@ img {
 
 .tasarla-section__option {
     flex-basis: 35%;
+    padding: 0 0 0 10px;
 }
 
 .tasarla-section__canvas {
@@ -470,12 +471,22 @@ img {
     transform: rotate(-25deg) translate(-33%, -50%);
 }
 
+@media only screen and (min-width: 1600px) {
+    .tasarla-section__option {
+        flex-basis: 30%;
+    }
+    .tasarla-section__canvas {
+        flex-basis: 70%;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .header {
         display: none;
     }
     .canvas-area__border {
-        width: 80vw;
+        width: 85vw;
+        height: 550px;
         overflow: hidden;
     }
     .preview {
@@ -499,13 +510,27 @@ img {
     }
 
     .option-tabs__list li {
-        flex-basis: 33%;
+        flex-basis: 25%;
+    }
+    .option-tabs__list li label {
+        margin-right: 0;
+    }
+    .border-list li label {
+        margin-right: 25px;
+    }
+    .option-tabs__div.input-div input, .option-tabs__div.input-div .mapboxgl-ctrl-geocoder--input, .option-tabs__div.input-div textarea {
+        padding: 10px 35px;
+        height: 40px;
+    }
+    .mapboxgl-ctrl-geocoder--icon-search {
+        top: 10px;
     }
 }
 
 @media only screen and (max-width: 768px) {
     .tasarla-option__link {
-        flex-direction: column;
+       justify-content: center;
+       margin-bottom: 0;
     }
 
     .tasarla-option__link li {
@@ -520,5 +545,11 @@ img {
     }
     .footer-copyrating img {
         width: 100%;
+    }
+    .tasarla-section__option {
+        padding: 0;
+    }
+    .canvas-border__canvas {
+        height: 260px;
     }
 }

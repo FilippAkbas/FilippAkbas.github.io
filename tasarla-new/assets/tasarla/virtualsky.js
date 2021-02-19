@@ -163,8 +163,6 @@
     };
     
     // export api
-    //window.fullScreenApi = fullScreenApi;
-    // End of Full Screen API
     
     /*! VirtualSky */
     function VirtualSky(input){
@@ -260,7 +258,7 @@
         let RoundRadius = 2.35;
 
         if ($(window).width() < 768) {
-            RoundRadius = 2.25;
+            RoundRadius = 3.15;
         }
 
         if ($(window).width() > 1000 && $(window).width() < 1400 ) {
@@ -281,187 +279,6 @@
                 },
                 polartype: true,
                 atmos: true
-            },
-            'fisheye':{
-                title: 'Fisheye polar projection',
-                azel2xy: function(az,el,w,h){
-                    var radius = h/2;
-                    var r = radius*Math.sin(((Math.PI/2)-el)/2)/0.70710678;    // the field of view is bigger than 180 degrees
-                    return {x:(w/2-r*Math.sin(az)),y:(radius-r*Math.cos(az)),el:el};
-                },
-                polartype:true,
-                atmos: true
-            },
-            'ortho':{
-                title: 'Orthographic polar projection',
-                azel2xy: function(az,el,w,h){
-                    var radius = h/2;
-                    var r = radius*Math.cos(el);
-                    return {x:(w/2-r*Math.sin(az)),y:(radius-r*Math.cos(az)),el:el};
-                },
-                polartype:true,
-                atmos: true
-            },
-            'stereo': {
-                title: 'Stereographic projection',
-                azel2xy: function(az,el,w,h){
-                    var f = 0.42;
-                    var sinel1 = 0;
-                    var cosel1 = 1;
-                    var cosaz = Math.cos((az-Math.PI));
-                    var sinaz = Math.sin((az-Math.PI));
-                    var sinel = Math.sin(el);
-                    var cosel = Math.cos(el);
-                    var k = 2/(1+sinel1*sinel+cosel1*cosel*cosaz);
-                    return {x:(w/2+f*k*h*cosel*sinaz),y:(h-f*k*h*(cosel1*sinel-sinel1*cosel*cosaz)),el:el};
-                },
-                atmos: true
-            },
-            'lambert':{
-                title: 'Lambert projection',
-                azel2xy: function(az,el,w,h){
-                    var cosaz = Math.cos((az-Math.PI));
-                    var sinaz = Math.sin((az-Math.PI));
-                    var sinel = Math.sin(el);
-                    var cosel = Math.cos(el);
-                    var k = Math.sqrt(2/(1+cosel*cosaz));
-                    return {x:(w/2+0.6*h*k*cosel*sinaz),y:(h-0.6*h*k*(sinel)),el:el};
-                },
-                atmos: true
-            },
-            'gnomic': {
-                title: 'Gnomic projection',
-                azel2xy: function(az,el){
-                    if(el >= 0){
-                        var pos = this.azel2radec(az,el);
-                        return this.radec2xy(pos.ra*this.d2r,pos.dec*this.d2r,[el,az]);
-                    }else{
-                        return { x: -1, y: -1, el: el };
-                    }
-                },
-                radec2xy: function(ra,dec,coords){
-    
-                    var fov, cd, cd0, sd, sd0, dA, A, F, scale, twopi;
-    
-                    // Only want to project the sky around the map centre
-                    if(Math.abs(dec-this.dc_off) > this.maxangle) return {x:-1,y:-1,el:-1};
-                    var ang = this.greatCircle(this.ra_off,this.dc_off,ra,dec);
-                    if(ang > this.maxangle) return {x:-1,y:-1,el:-1};
-    
-                    if(!coords) coords = this.coord2horizon(ra, dec);
-    
-                    // Should we show things below the horizon?
-                    if(this.ground && coords[0] < -1e-6) return {x:-1, y:-1, el:coords[0]*this.r2d};
-    
-                    // number of pixels per degree in the map
-                    scale = this.tall/this.fov;
-    
-                    cd = Math.cos(dec);
-                    cd0 = Math.cos(this.dc_off);
-                    sd = Math.sin(dec);
-                    sd0 = Math.sin(this.dc_off);
-    
-                    dA = ra-this.ra_off;
-                    dA = inrangeAz(dA);
-    
-                    A = cd*Math.cos(dA);
-                    F = scale*this.r2d/(sd0*sd + A*cd0);
-    
-                    return {x:(this.wide/2)-F*cd*Math.sin(dA),y:(this.tall/2) -F*(cd0*sd - A*sd0),el:coords[0]*this.r2d};
-                },
-                draw: function(){
-                    if(!this.transparent){
-                        this.ctx.fillStyle = (this.hasGradient()) ? "rgba(0,15,30, 1)" : ((this.negative) ? this.col.black : this.col.black);
-                        this.ctx.fillRect(0,0,this.wide,this.tall);
-                        this.ctx.fill();
-                    }
-                },
-                isVisible: function(el){
-                    return true;
-                },
-                atmos: false,
-                fullsky: true
-            },
-            'equirectangular':{
-                title: 'Equirectangular projection',
-                azel2xy: function(az,el,w,h){
-                    while(az < 0) az += 2*Math.PI;
-                    az = (az)%(Math.PI*2);
-                    return {x:(((az-Math.PI)/(Math.PI/2))*h + w/2),y:(h-(el/(Math.PI/2))*h),el:el};
-                },
-                maxb: 90,
-                atmos: true
-            },
-            'mollweide':{
-                title: 'Mollweide projection',
-                radec2xy: function(ra,dec){
-                    var dtheta, x, y, coords, sign, outside, normra;
-                    var thetap = Math.abs(dec);
-                    var pisindec = Math.PI*Math.sin(Math.abs(dec));
-                    // Now iterate to correct answer
-                    for(var i = 0; i < 20 ; i++){
-                        dtheta = -(thetap + Math.sin(thetap) - pisindec)/(1+Math.cos(thetap));
-                        thetap += dtheta;
-                        if(dtheta < 1e-4) break;
-                    }
-                    normra = (ra+this.d2r*this.az_off)%(2*Math.PI) - Math.PI;
-                    outside = false;
-                    x = -(2/Math.PI)*(normra)*Math.cos(thetap/2)*this.tall/2 + this.wide/2;
-                    if(x > this.wide) outside = true;
-                    sign = (dec >= 0) ? 1 : -1;
-                    y = -sign*Math.sin(thetap/2)*this.tall/2 + this.tall/2;
-                    coords = this.coord2horizon(ra, dec);
-                    return {x:(outside ? -100 : x%this.wide),y:y,el:coords[0]*this.r2d};
-                },
-                draw: function(){
-                    var c = this.ctx;
-                    c.moveTo(this.wide/2,this.tall/2);
-                    c.beginPath();
-                    var x = this.wide/2-this.tall;
-                    var y = 0;
-                    var w = this.tall*2;
-                    var h = this.tall;
-                    var kappa = 0.5522848;
-                    var ox = (w / 2) * kappa; // control point offset horizontal
-                    var oy = (h / 2) * kappa; // control point offset vertical
-                    var xe = x + w;           // x-end
-                    var ye = y + h;           // y-end
-                    var xm = x + w / 2;       // x-middle
-                    var ym = y + h / 2;       // y-middle
-                    c.moveTo(x, ym);
-                    c.bezierCurveTo(x, ym - oy, xm - ox, y, xm, y);
-                    c.bezierCurveTo(xm + ox, y, xe, ym - oy, xe, ym);
-                    c.bezierCurveTo(xe, ym + oy, xm + ox, ye, xm, ye);
-                    c.bezierCurveTo(xm - ox, ye, x, ym + oy, x, ym);
-                    c.closePath();
-                    if(!this.transparent){
-                        c.fillStyle = (this.hasGradient()) ? "rgba(0,15,30, 1)" : ((this.negative) ? this.col.white : this.col.black);
-                        c.fill();
-                    }
-                },
-                altlabeltext:true,
-                fullsky:true,
-                atmos: false
-            },
-            'planechart':{
-                title: 'Planechart projection',
-                radec2xy: function(ra,dec){
-                    ra = inrangeAz(ra);
-                    var normra = (ra+this.d2r*this.az_off)%(2*Math.PI)-Math.PI;
-                    var x = -(normra/(2*Math.PI))*this.tall*2 + this.wide/2;
-                    var y = -(dec/Math.PI)*this.tall+ this.tall/2;
-                    var coords = this.coord2horizon(ra, dec);
-                    return {x:x,y:y,el:coords[0]*this.r2d};
-                },
-                draw: function(){
-                    if(!this.transparent){
-                        this.ctx.fillStyle = (this.hasGradient()) ? "rgba(0,15,30, 1)" : ((this.negative) ? this.col.white : this.col.black);
-                        this.ctx.fillRect((this.wide/2) - (this.tall),0,this.tall*2,this.tall);
-                        this.ctx.fill();
-                    }
-                },
-                fullsky:true,
-                atmos: false
             }
         };
     
@@ -1242,48 +1059,6 @@
             this.draw();
         return this;
     }
-    VirtualSky.prototype.toggleHelp = function(){
-        var v = "virtualsky";
-        if(S('.'+v+'_dismiss').length > 0) S('.'+v+'_dismiss').trigger('click');
-        else{
-            // Build the list of keyboard options
-            var o = '';
-            for(var i = 0; i < this.keys.length ; i++){
-                if(this.keys[i].txt)
-                    o += '<li>'+
-                            '<strong class="'+v+'_help_key '+v+'_'+this.keys[i].txt+'">'+this.keys[i].str+'</strong> &rarr; <a href="#" class="'+v+'_'+this.keys[i].txt+'" style="text-decoration:none;">'+this.getPhrase(this.keys[i].txt)+'</a>'+
-                        '</li>'; }
-            this.container.append('<div class="'+v+'_help">'+
-                '<div class="'+v+'_dismiss" title="'+this.getPhrase('close')+'">&times;</div>'+
-                '<div style="margin-bottom: 0.5em;">'+this.getPhrase('keyboard')+'</div>'+
-                '<div class="'+v+'_helpinner"><ul></ul></div>'+
-                '<div style="font-size:0.8em;margin-top: 0.5em;">'+this.lang.title+': '+this.version+'</div>'+
-            '</div>');
-    
-            var hlp = S('.'+v+'_help');
-            var h = hlp.outerHeight();
-    
-            // Add the keyboard option list
-            hlp.find('ul').html(o);
-    
-            // Set the maximum height for the list and add a scroll bar if necessary
-            S('.'+v+'_helpinner').css({'overflow':'auto','max-height':(this.tall-h)+'px'});
-    
-            // Add the events for each keyboard option
-            for(var i = 0; i < this.keys.length ; i++){
-                if(this.keys[i].txt)
-                    S('.'+v+'_'+this.keys[i].txt)
-                        .on('click',{fn:this.keys[i].fn,me:this},function(e){
-                            e.preventDefault(); e.data.fn.call(e.data.me);
-                        });
-            }
-    
-            // Create a lightbox
-            this.createLightbox(S('.'+v+'_help'));
-    
-            S('.'+v+'_help, .'+v+'_bg').on('mouseout',{sky:this},function(e){ e.data.sky.mouseover = false; }).on('mouseenter',{sky:this},function(e){ e.data.sky.mouseover = true; });
-        }
-    }
     // Register keyboard commands and associated functions
     VirtualSky.prototype.registerKey = function(charCode,fn,txt){
         if(!is(fn,"function")) return this;
@@ -1813,10 +1588,17 @@
         }
 
         if(this.polartype){
+            let roundLeft = this.wide/2;
+            let roundTop = this.tall/blackRadiusTopPos;
+            let roundRadius = -0.5+this.tall/blackRadius;
+            if ($(window).width() < 768) {
+                roundTop = this.tall/blackRadiusTopPos+-45;
+                roundRadius = -45+this.tall/blackRadius;
+            }
             c.moveTo(this.wide/2,this.tall/2);
             c.closePath();
             c.beginPath();
-            c.arc(this.wide/2,this.tall/blackRadiusTopPos,-0.5+this.tall/blackRadius,0,Math.PI*2,true);  // yuvarlak mapÄ±n boyutlarÄ±
+            c.arc(roundLeft,roundTop,roundRadius,0,Math.PI*2,true);  // yuvarlak mapÄ±n boyutlarÄ±
             c.closePath();
             if(!this.transparent){
                 c.fillStyle = (this.hasGradient()) ? "rgba(0,15,30, 1)" : ((this.negative) ? black : black);

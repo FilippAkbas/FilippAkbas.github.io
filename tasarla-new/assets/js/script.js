@@ -3,6 +3,7 @@ let skyTotal = 269;
 let $filtreList  = $('.tasarla-option__tabs').find('li');
 let kvkkCheckbox = $('#kvkk-checkbox');
 let locationName = '';
+let tasarlaForm = document.querySelector('.tasarla-section__form');
 let tabsBtn = document.querySelector('#tabs-btn');
 let tabtsLink = document.querySelectorAll('.tasarla-option__link li a');
 let sizeList = document.querySelectorAll('.size-list li label input');
@@ -10,8 +11,10 @@ let borderList = document.querySelectorAll('.border-list li label input');
 let themaList = document.querySelectorAll('.thema-list li label input');
 let colorList = document.querySelectorAll('.color-list li label input');
 let iconList = document.querySelectorAll('.icon-list li label input');
+let goToCartBtn = document.querySelector('.next-btn');
 let negativeCheck = false;
 let uzayColorChecked = false;
+let selectedIcon = '';
 let skyclock = new Date(21-02-1999);
 let skyGrid = false;
 let skyConstellations = true;
@@ -19,6 +22,14 @@ let skyMoon = false;
 let SkyScalestars = 1.2;
 let SkyConstellationwidth = 1.2;
 let SkyNegative = false;
+
+console.log(window.innerWidth);
+
+if(window.innerWidth <= 768) {
+    document.querySelector('#tabsLink-1').textContent = 'Tema';
+    document.querySelector('#tabsLink-2').textContent = 'Boyut';
+    document.querySelector('#tabsLink-3').textContent = 'Gorunum';
+}
 
 $('.tasarla-option__link li a').click(function (e) {
     e.preventDefault();
@@ -280,9 +291,37 @@ for(let i = 0; i < themaList.length; i++) {
 }
 
 // Color List Change
+
+function checkBlackColorIcon() {
+    if(selectedIcon === 'babyFootprintInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/baby-footprint.svg';
+    }else if(selectedIcon === 'favoriteInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/favorite.svg';
+    }else if(selectedIcon === 'giftboxInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/giftbox.svg';
+    }else if(selectedIcon === 'ringInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/ring.svg';
+    }else if(selectedIcon === 'bouquetInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/bouquet.svg';
+    }else if(selectedIcon === 'cakeInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/cake.svg';
+    }else if(selectedIcon === 'emzikInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/emzik.svg';
+    }else if(selectedIcon === 'highHeelsInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/high-heels.svg';
+    }else if(selectedIcon === 'kepInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/kep.svg';
+    }else if(selectedIcon === 'placeholderInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/placeholder.svg';
+    }else if(selectedIcon === 'unicornInput') {
+        document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon/unicorn.svg';
+    }
+}
+
 for(let i = 0; i < colorList.length; i++) {
     colorList[i].addEventListener('click', ()=> {
         if(colorList[i].id === 'beyazcolor') {
+            uzayColorChecked = false;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#fff';
             document.querySelector('.canvas-area__content').style.borderColor = '#000';
             document.querySelector('.canvas-border__title').style.color = '#000';
@@ -293,6 +332,7 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
             document.querySelector('.canvas-border__size').style.color = '#000';
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            checkBlackColorIcon();
         }else if (colorList[i].id === 'uzaycolor') {
             uzayColorChecked = true;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#000';
@@ -305,7 +345,32 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#fff';
             document.querySelector('.canvas-border__size').style.color = '#fff';
             document.querySelector('.canvas-border__logo svg').style.fill = '#fff';
+            document.querySelector('.preview').style.color = "#505050";
+            if(selectedIcon === 'babyFootprintInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/baby-footprint-white.svg';
+            }else if(selectedIcon === 'favoriteInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/favorite-white.svg';
+            }else if(selectedIcon === 'giftboxInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/giftbox-white.svg';
+            }else if(selectedIcon === 'ringInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/ring-white.svg';
+            }else if(selectedIcon === 'bouquetInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/bouquet-white.svg';
+            }else if(selectedIcon === 'cakeInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/cake-white.svg';
+            }else if(selectedIcon === 'emzikInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/emzik-white.svg';
+            }else if(selectedIcon === 'highHeelsInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/high-heels-white.svg';
+            }else if(selectedIcon === 'kepInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/kep-white.svg';
+            }else if(selectedIcon === 'placeholderInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/placeholder-white.svg';
+            }else if(selectedIcon === 'unicornInput') {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/unicorn-white.svg';
+            }
         }else if (colorList[i].id === 'yildiztozucolor') {
+            uzayColorChecked = false;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#cfd2d3';
             document.querySelector('.canvas-area__content').style.borderColor = '#000';
             document.querySelector('.canvas-border__title').style.color = '#000';
@@ -316,7 +381,9 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
             document.querySelector('.canvas-border__size').style.color = '#000';
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            checkBlackColorIcon();
         }else if (colorList[i].id === 'lolipopcolor') {
+            uzayColorChecked = false;
             document.querySelector('.canvas-area__border').style.backgroundColor = '#fac8c9';
             document.querySelector('.canvas-area__content').style.borderColor = '#000';
             document.querySelector('.canvas-border__title').style.color = '#000';
@@ -327,6 +394,7 @@ for(let i = 0; i < colorList.length; i++) {
             document.querySelector('.canvas-border__location input.longitudeText').style.color = '#000';
             document.querySelector('.canvas-border__size').style.color = '#000';
             document.querySelector('.canvas-border__logo svg').style.fill = '#000';
+            checkBlackColorIcon();
         }
     })
 }
@@ -340,52 +408,112 @@ for(let i = 0; i < iconList.length; i++) {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
-            // if(uzayColorChecked === true) {
-            //     document.querySelector('.canvas-border__icon img').src = 'http://127.0.0.1:5500/assets/img/svg-icon/baby-footprint-white.svg';
-            // }
+            selectedIcon = 'babyFootprintInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/baby-footprint-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'favoriteInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
-            // if(uzayColorChecked === true) {
-            //     document.querySelector('.canvas-border__icon img').src = 'http://127.0.0.1:5500/assets/img/svg-icon/favorite-white.svg';
-            // }
+            selectedIcon = 'favoriteInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/favorite-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'giftboxInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'giftboxInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/giftbox-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'ringInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'ringInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/ring-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'bouquetInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'bouquetInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/bouquet-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'cakeInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'cakeInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/cake-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'emzikInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'emzikInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/emzik-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'highHeelsInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'highHeelsInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/high-heels-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'kepInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'kepInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/kep-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'placeholderInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'placeholderInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/placeholder-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }else if (iconList[i].id === 'unicornInput') {
             let url = iconList[i].parentNode.childNodes[3].childNodes[0].currentSrc;
             document.querySelector('.canvas-border__icon img').style.opacity = '1';
             document.querySelector('.canvas-border__icon img').src = url;
+            selectedIcon = 'unicornInput';
+            if(uzayColorChecked === true) {
+                document.querySelector('.canvas-border__icon img').src = '/assets/img/svg-icon-white/unicorn-white.svg';
+            } else {
+                document.querySelector('.canvas-border__icon img').src = url;
+            }
         }
     })
 }
@@ -443,6 +571,11 @@ function emailValidate() {
         });
     }
 }
+
+$('.tasarla-section__form').on('submit', (e)=> {
+    e.preventDefault();
+    emailValidate();
+});
 
 function PlanetMap() {
     planetarium = S.virtualsky({
