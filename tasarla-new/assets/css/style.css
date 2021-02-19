@@ -7,8 +7,11 @@ body {
     overflow-x: hidden;
 }
 
-.ul, li {
+ul, li {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-inline-start: 0px;
 }
 
 a {
@@ -114,7 +117,7 @@ img {
 
 .tasarla-section__option {
     flex-basis: 35%;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 20px;
 }
 
 .tasarla-section__canvas {
@@ -188,7 +191,7 @@ img {
 .canvas-border__location {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 }
 .canvas-border__location input {
     border: none;
@@ -467,6 +470,11 @@ img {
     text-align: center;
 }
 
+.option-tabs__email img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
 .option-tabs__email p {
     margin-bottom: 10px;
 }
@@ -509,6 +517,10 @@ img {
     bottom: 28%;
     z-index: 0;
     transform: rotate(-25deg) translate(-33%, -50%);
+}
+
+.english-design .preview {
+    transform: rotate(-25deg) translate(-23%, -50%);
 }
 
 .totalPrice {

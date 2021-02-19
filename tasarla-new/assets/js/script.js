@@ -23,12 +23,29 @@ let SkyScalestars = 1.2;
 let SkyConstellationwidth = 1.2;
 let SkyNegative = false;
 
+// standart text 
+let inputPlaceholder = 'Konum Giriniz';
+let tabsLink1Text = 'Görünüm';
+let tabsLink2Text = 'Detaylar';
+let tabsLink3Text = 'Boyutlar';
+let tabsBtn1Text = 'Boyutlar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+let tabsBtn2Text = 'Detaylar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+
 $('.totalPrice').text(skyTotal + ' ₺');
 
+if(document.querySelector('body').classList.contains('english-design')) {
+    inputPlaceholder = 'Enter a location';
+    tabsLink1Text = 'Design';
+    tabsLink2Text = 'Detais';
+    tabsLink3Text = 'Format';
+    tabsBtn1Text = 'Format <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+    tabsBtn2Text = 'Details <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+}
+
 if(window.innerWidth <= 768) {
-    document.querySelector('#tabsLink-1').textContent = 'Görünüm';
-    document.querySelector('#tabsLink-2').textContent = 'Detaylar';
-    document.querySelector('#tabsLink-3').textContent = 'Boyutlar';
+    document.querySelector('#tabsLink-1').textContent = tabsLink1Text;
+    document.querySelector('#tabsLink-2').textContent = tabsLink2Text;
+    document.querySelector('#tabsLink-3').textContent = tabsLink3Text;
 }
 
 $('.tasarla-option__link li a').click(function (e) {
@@ -132,7 +149,7 @@ $('.datepicker-here').datepicker({
             console.log(CalendarDate);
             console.log(newFormat);
 
-            $('.skymap__date').text(newFormat);
+            $('.canvas-border__date').text(newFormat);
             skyclock = CalendarDate;
             PlanetMap();
         }
@@ -175,9 +192,13 @@ let skylongitude = '';
 
 mapboxgl.accessToken = 'sk.eyJ1IjoibWFwaW5za3kiLCJhIjoiY2tkZzN1M29sMDM1ZDJ3bXYybTczN2lueCJ9.O0WMamY1TbAkCc7TEzv0nw';
 
+if(document.querySelector('body').classList.contains('english-design')) {
+    inputPlaceholder = 'Enter a Location';
+}
+
 let geocoder = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
-    placeholder: 'Konum Giriniz',
+    placeholder: inputPlaceholder,
 });
 
 geocoder.addTo('#searchTextField');
@@ -229,7 +250,7 @@ geocoder.on('result', (data,lat,lng) => {
 
     var placeText = data.result.text;
     locationName = placeText;
-    $('.canvas-border__text').val(placeText);
+    $('.canvas-border__text').text(placeText);
 
     PlanetMap()
 });
@@ -242,7 +263,7 @@ function thisTabs() {
                 document.querySelector('#tabs-2').style.display = 'block';
                 document.querySelector('#tabsLink-1').classList.remove('active');
                 document.querySelector('#tabsLink-2').classList.add('active');
-                tabsBtn.innerHTML = 'Boyutlar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+                tabsBtn.innerHTML = tabsBtn1Text;
                 return false;
             } else if(tabtsLink[i].id === 'tabsLink-2') {
                 document.querySelector('#tabs-2').style.display = 'none';
@@ -270,11 +291,11 @@ for(let i = 0;i < tabtsLink.length; i++) {
         if(tabtsLink[i].id === 'tabsLink-1') {
             document.querySelector('#tabs-btn').style.display = 'block';
             document.querySelector('#next-btn').style.display = 'none';
-            tabsBtn.innerHTML = 'Detaylar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+            tabsBtn.innerHTML = tabsBtn2Text;
         }else if(tabtsLink[i].id === 'tabsLink-2') {
             document.querySelector('#tabs-btn').style.display = 'block';
             document.querySelector('#next-btn').style.display = 'none';
-            tabsBtn.innerHTML = 'Boyutlar <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
+            tabsBtn.innerHTML = tabsBtn1Text;
         } else if (tabtsLink[i].id === 'tabsLink-3') {
             document.querySelector('#tabs-btn').style.display = 'none';
             document.querySelector('#next-btn').style.display = 'block';
