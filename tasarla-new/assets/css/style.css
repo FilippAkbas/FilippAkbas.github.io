@@ -254,7 +254,9 @@ img {
 .option-tabs__list li label {
     position: relative;
     margin-right: 25px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 5em;
     height: 5em;
 }
