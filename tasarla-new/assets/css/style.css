@@ -84,6 +84,10 @@ img {
     width: 250px;
 }
 
+#mapinsky-logo {
+    height: 21px;
+}
+
 .header-details {
     display: flex;
     align-items: center;
