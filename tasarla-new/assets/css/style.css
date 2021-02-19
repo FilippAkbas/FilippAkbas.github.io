@@ -630,6 +630,8 @@ img {
         width: 100%;
     }
     .tasarla-section__option {
+        width: 95%;
+        margin: 0 auto;
         padding: 0;
     }
     .canvas-border__canvas {
