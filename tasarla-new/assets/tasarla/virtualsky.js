@@ -258,7 +258,7 @@
         let RoundRadius = 2.35;
 
         if ($(window).width() < 768) {
-            RoundRadius = 3.15;
+            RoundRadius = 2.25;
         }
 
         if ($(window).width() > 1000 && $(window).width() < 1400 ) {
@@ -1592,8 +1592,8 @@
             let roundTop = this.tall/blackRadiusTopPos;
             let roundRadius = -0.5+this.tall/blackRadius;
             if ($(window).width() < 768) {
-                roundTop = this.tall/blackRadiusTopPos+-45;
-                roundRadius = -45+this.tall/blackRadius;
+                roundTop = this.tall/blackRadiusTopPos;
+                roundRadius = -0.5+this.tall/blackRadius;
             }
             c.moveTo(this.wide/2,this.tall/2);
             c.closePath();
