@@ -23,7 +23,7 @@ let SkyScalestars = 1.2;
 let SkyConstellationwidth = 1.2;
 let SkyNegative = false;
 
-console.log(window.innerWidth);
+$('.totalPrice').text(skyTotal + ' ₺');
 
 if(window.innerWidth <= 768) {
     document.querySelector('#tabsLink-1').textContent = 'Görünüm';
@@ -45,62 +45,62 @@ $('.tasarla-option__link li a').click(function (e) {
 $filtreList.click(function() {
     if($("#beyazBorder").prop("checked") && $("#15x21").prop("checked")) {
         skyTotal = $('#beyazBorder').attr('data-minismall-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($("#siyahBorder").prop("checked") && $("#15x21").prop("checked")) {
         skyTotal = $('#siyahBorder').attr('data-minismall-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($("#nonBorder").prop("checked") && $("#15x21").prop("checked")) {
         skyTotal = $('#nonBorder').attr('data-minismall-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($("#beyazBorder").prop("checked") && $("#30x40").prop("checked")) {
         skyTotal = $('#beyazBorder').attr('data-small-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($("#siyahBorder").prop("checked") && $("#30x40").prop("checked")) {
         skyTotal = $('#siyahBorder').attr('data-small-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($("#nonBorder").prop("checked") && $("#30x40").prop("checked")) {
         skyTotal = $('#nonBorder').attr('data-small-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($('#beyazBorder').prop("checked") && $('#40x50').prop("checked")) {
         skyTotal = $('#beyazBorder').attr('data-middle-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($('#siyahBorder').prop("checked") && $('#40x50').prop("checked")) {
         skyTotal = $('#siyahBorder').attr('data-middle-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($('#nonBorder').prop("checked") && $('#40x50').prop("checked")) {
         skyTotal = $('#nonBorder').attr('data-middle-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($('#beyazBorder').prop("checked") && $('#50x70').prop("checked")) {
         skyTotal = $('#beyazBorder').attr('data-big-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($('#siyahBorder').prop("checked") && $('#50x70').prop("checked")) {
         skyTotal = $('#siyahBorder').attr('data-big-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 
     if($('#nonBorder').prop("checked") && $('#50x70').prop("checked")) {
         skyTotal = $('#nonBorder').attr('data-big-price');
-        $('.totalPrice').text(skyTotal);
+        $('.totalPrice').text(skyTotal + '₺');
     }
 });
 
