@@ -26,9 +26,9 @@ let SkyNegative = false;
 console.log(window.innerWidth);
 
 if(window.innerWidth <= 768) {
-    document.querySelector('#tabsLink-1').textContent = 'Tema';
-    document.querySelector('#tabsLink-2').textContent = 'Boyut';
-    document.querySelector('#tabsLink-3').textContent = 'Gorunum';
+    document.querySelector('#tabsLink-1').textContent = 'Görünüm';
+    document.querySelector('#tabsLink-2').textContent = 'Detaylar';
+    document.querySelector('#tabsLink-3').textContent = 'Boyutlar';
 }
 
 $('.tasarla-option__link li a').click(function (e) {
@@ -542,6 +542,7 @@ for(let i = 0; i < borderList.length; i++) {
             document.querySelector('.canvas-area').style.backgroundColor = '#000';
         }else if (borderList[i].id === 'nonBorder') {
             document.querySelector('.canvas-area').style.backgroundColor = '#f0f4fb';
+            document.querySelector('.canvas-area').style.padding = '0';
         }
     })
 }
