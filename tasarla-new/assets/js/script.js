@@ -36,7 +36,7 @@ let currency = ' ₺';
 if(document.querySelector('body').classList.contains('english-design')) {
     inputPlaceholder = 'Enter a location';
     tabsLink1Text = 'Design';
-    tabsLink2Text = 'Detais';
+    tabsLink2Text = 'Details';
     tabsLink3Text = 'Format';
     tabsBtn1Text = 'Format <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
     tabsBtn2Text = 'Details <img src="assets/img/icon/arrow.svg" alt="Right Arrow">';
