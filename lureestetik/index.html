@@ -83,35 +83,56 @@
         <div class="swiper-wrapper">
           <!-- Slides -->
         <div class="swiper-slide">
-              <img src="assets/img/slider-2.png" alt="Slider image">
-              <div class="slider-content">
-                  <h1 class="slider-content__title">Daha İyi Görün <br>  Daha İyi Hisset </h1>
-                  <p class="slider-content__dsc">Yeni bir görünüm kazanmaya <br> hazır mısınız? </p>
-              </div>
+            <picture>
+            <source media="(min-width:465px)" srcset="assets/img/slider-2.png">
+            <source media="(max-width:465px)" srcset="assets/img/slider-2-mobile.jpg">
+            <img src="assets/img/slider-2.png" alt="Slider image">
+            </picture>
+            <img src="assets/img/slider-2.png" alt="Slider image">
+            <div class="slider-content">
+                <h1 class="slider-content__title">Daha İyi Görün <br>  Daha İyi Hisset </h1>
+                <p class="slider-content__dsc">Yeni bir görünüm kazanmaya <br> hazır mısınız? </p>
+            </div>
         </div>
         <div class="swiper-slide">
-              <img src="assets/img/slider-5.png" alt="Slider image">
-              <div class="slider-content">
-                  <h1 class="slider-content__title">Benzersiz Bir <br>  Hizmet Almanın <br>  Keyfini Çıkarın </h1>
-                  <p class="slider-content__dsc">Saç ve sakal ekimi konusunda <br> uzman kadromuzun güvenli ellerindesiniz... </p>
-              </div>
+            <picture>
+            <source media="(min-width:465px)" srcset="assets/img/slider-5.png">
+            <source media="(max-width:465px)" srcset="assets/img/slider-5-mobile.jpg">
+            <img src="assets/img/slider-5.png" alt="Slider image">
+            </picture>
+            <div class="slider-content">
+                <h1 class="slider-content__title">Benzersiz Bir <br>  Hizmet Almanın <br>  Keyfini Çıkarın </h1>
+                <p class="slider-content__dsc">Saç ve sakal ekimi konusunda <br> uzman kadromuzun güvenli ellerindesiniz... </p>
+            </div>
         </div>
         <div class="swiper-slide">
-              <img src="assets/img/slider-3.png" alt="Slider image">
-              <div class="slider-content">
-                  <h1 class="slider-content__title">Lüks Otellerde <br>  Konaklama </h1>
-                  <p class="slider-content__dsc">Anlaşmalı olduğumuz 4 ve 5 yıldızlı <br> otellerde konaklama imkanı... </p>
+            <picture>
+                <source media="(min-width:465px)" srcset="assets/img/slider-3.png">
+                <source media="(max-width:465px)" srcset="assets/img/slider-3-mobile.jpg">
+                <img src="assets/img/slider-3.png" alt="Slider image">
+            </picture>
+            <div class="slider-content">
+            <h1 class="slider-content__title">Lüks Otellerde <br>  Konaklama </h1>
+            <p class="slider-content__dsc">Anlaşmalı olduğumuz 4 ve 5 yıldızlı <br> otellerde konaklama imkanı... </p>
         </div>
         </div>
         <div class="swiper-slide">
-            <img src="assets/img/slider-1.png" alt="Slider image">
+            <picture>
+                <source media="(min-width:465px)" srcset="assets/img/slider-1.png">
+                <source media="(max-width:465px)" srcset="assets/img/slider-1-mobile.jpg">
+                <img src="assets/img/slider-1.png" alt="Slider image">
+            </picture>
             <div class="slider-content">
                 <h1 class="slider-content__title">VIP Transfer <br> Hizmeti</h1>
                 <p class="slider-content__dsc">Havaalanında sizi karşılıyor, <br> otelinizden hastaneye VIP araçlarla  <br> transferinizi sağlıyoruz</p>
             </div>
         </div>
         <div class="swiper-slide">
-            <img src="assets/img/slider-4.jpg" alt="Slider image">
+            <picture>
+                <source media="(min-width:465px)" srcset="assets/img/slider-4.png">
+                <source media="(max-width:465px)" srcset="assets/img/slider-4-mobile.jpg">
+                <img src="assets/img/slider-4.png" alt="Slider image">
+            </picture>
             <div class="slider-content white-color">
                 <h1 class="slider-content__title">Dünyanın En Güzel<br> Şehrinde Yeni Bir <br>  Başlangıç </h1>
                 <p class="slider-content__dsc">Hem İstanbul'un keyfini çıkarın <br>  hem hayalinizdeki görünüme <br>  kavuşun! </p>
@@ -133,7 +154,7 @@
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div class="banner-section__form">
-                        <form action="#" method="POST">
+                        <form action="send.php" method="POST">
                             <div class="input-group">
                                 <input type="radio" name="gender" id="women"> 
                                 <label for="women">Kadın</label>
@@ -490,6 +511,7 @@
 
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+<script  src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
     <!-- font awesome js  -->
     <script src="assets/js/all.min.js"></script>
     <!-- swiper slider js  -->

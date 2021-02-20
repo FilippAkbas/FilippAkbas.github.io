@@ -48,7 +48,7 @@ img {
 
 .header .container {
     background: url(../img/header.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: contain;
 }
 
@@ -82,15 +82,18 @@ img {
 
 .submenu {
     position: absolute;
+    background: #586e2a;
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
     top: 100%;
     padding: 10px;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #391c00;
     width: max-content;
     height: auto;
+    z-index: 50;
 }
 
 .submenu > div {
@@ -167,7 +170,7 @@ img {
 }
 
 .slider-section .slider-img {
-    height: 85vh;
+    height: 95vh;
 }
 
 .slider-section .slider-img img {
@@ -232,13 +235,13 @@ img {
 .about-section::after {
     content: '';
     position: absolute;
-    right: -455px;
-    top: -160px;
+    right: -0;
+    top: -260px;
     background: url(../img/open-koffe.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 700px;
-    height: 100%;
+    width: 280px;
+    height: 600px;
 }
 
 .about-section_line {
@@ -890,16 +893,9 @@ img {
     position: relative;
 }
 
-.sell-icon__group img:nth-child(1) {
-    top: -10px;
-}
-.sell-icon__group img:nth-child(3) {
-    top: -10px;
-}
-
 .sell-area img {
-    width: 40px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
     object-fit: contain;
     margin-bottom: 10px;
 }
