@@ -219,7 +219,9 @@
         text-align: center;
     }
     .slider-content {
-        right: -10%;
+        width: 100%;
+        right: 47%;
+        top: 35%;
     }
     .banner-content__text {
         width: 100%;

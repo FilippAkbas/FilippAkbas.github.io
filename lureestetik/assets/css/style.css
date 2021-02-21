@@ -316,6 +316,11 @@ section {
   margin-bottom: 10px;
 }
 
+.header-mobile__area li a img {
+  width: 25px;
+  object-fit: contain;
+}
+
 /* Slider css option  */
 
 .slider-section {
