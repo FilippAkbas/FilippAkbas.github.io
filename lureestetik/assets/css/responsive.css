@@ -392,6 +392,9 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .slider-content.white-color {
+        color: #000;
+    }
 }
 
 @media only screen and (max-width: 468px) {
