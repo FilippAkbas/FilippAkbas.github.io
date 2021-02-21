@@ -548,7 +548,7 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
-  background-image: url(../img/text-banner-bg.jpg);
+  background-image: url(../img/text-banner-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -570,10 +570,25 @@ section {
 }
 
 .date-benner__list-item {
+  position: relative;
   flex-basis: 30%;
   padding: 0 25px;
   display: flex;
   flex-direction: column;
+}
+
+.date-benner__list-item::after {
+  content: '';
+  position: absolute;
+  bottom: -47px;
+  right: 0;
+  left: -26px;
+  width: 110%;
+  height: 204px;
+  background: url(../img/text-banner-border.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
 }
 
 .date-benner__list-item .list-item__title {

@@ -210,7 +210,7 @@
     }
     .date-benner__list-item {
         flex-basis: 100%;
-        margin-top: 15px;
+        margin-top: 45px;
     }
     .prerioty-info__list li .list-title {
         font-size: 20px;
@@ -375,6 +375,15 @@
     }
     .blog-list li {
         text-align: left;
+    }
+    .date-banner__list {
+        background-image: url(../img/text-banner-bg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .date-benner__list-item::after {
+        left: -21px;
     }
 }
 
