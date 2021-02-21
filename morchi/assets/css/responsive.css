@@ -388,6 +388,10 @@
         grid-column: span 2;
     }
 
+    .block-list__item:nth-child(5)::after {
+        display: none;
+    }
+
     .block-list__item:nth-child(6)::after {
         right: 80%;
         width: 50px;
@@ -396,7 +400,7 @@
     .block-list__item:nth-child(3)::after {
         background: url(../img/contact-line-3.png);
         width: 100px;
-        height: 100px;
+        height: 110px;
         right: 0;
         top: 95%;
     }
