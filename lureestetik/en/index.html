@@ -19,27 +19,27 @@
     <link rel="stylesheet" href="../assets/css/responsive.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header header-fixed">
         <div class="header-logo">
           <a href="index.html"><img src="../assets/img/color-logo.png" alt="Color logo" /></a>
         </div>
         <nav class="header-menu">
-          <li><a href="en/index.html" class="">Home</a></li>
-          <li><a href="en/hakkimizda.html">About Us</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="hakkimizda.html">About Us</a></li>
           <li>
-              <a href="en/hizmetlerimiz.html">Our services</a>
+              <a href="hizmetlerimiz.html" class="item-big__submenu">Our services</a>
               <div class="menu-item__submenu big-submenu">
-                  <div><a href="en/fue-teknigi.html">Fue Yöntemi ile Saç Ekimi</a></div>
-                  <div><a href="en/sapphire-fue-teknigi-ile-sac-ekimi.html">Sapphire FUE Tekniği İle Saç Ekimi</a></div>
-                  <div><a href="en/dhi-teknigi.html">DHI Fue Tekniği İle Saç Ekimi</a></div>
-                  <div><a href="en/kadinlarda-sac-ekimi.html">Kadınlarda Saç Ekimi</a></div>
-                  <div><a href="en/sakal-ve-biyik-ekimi.html">Sakal ve Bıyık Ekimi</a></div>
+                  <div><a href="fue-teknigi.html">FUE Method</a></div>
+                  <div><a href="sapphire-fue-teknigi-ile-sac-ekimi.html">Hair Transplant with Sapphire FUE Technique</a></div>
+                  <div><a href="dhi-teknigi.html">DHI FUE Hair Transplant Technique</a></div>
+                  <div><a href="kadinlarda-sac-ekimi.html">Hair Transplantation in Women</a></div>
+                  <div><a href="sakal-ve-biyik-ekimi.html">Beard and Mustache Transplantation</a></div>
               </div>
           </li>
-          <li><a href="en/sac-ekim-sureci.html">Hair Transplant Process</a></li>
-          <li><a href="en/before-after.html">Before & After</a></li>
-          <li><a href="en/blog.html">Blog</a></li>
-          <li><a href="en/iletisim.html" class="active">Contact</a></li>
+          <li><a href="sac-ekim-sureci.html">Hair Transplant Process</a></li>
+          <li><a href="before-after.html">Before & After</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="iletisim.html">Contact</a></li>
           <li class="menu-item__lang">
             <a href="javascipt:void(0)">Language: <img src="../assets/img/tr.png" alt="Tr logo"></a>
             <div class="menu-item__submenu">
@@ -54,81 +54,102 @@
           ></a>
         </div>
         <div class="header-mobile">
-          <a href="javascript:void(0)" class="header-mobile__btn"><i class="fas fa-grip-lines"></i></a>
-          <div class="header-mobile__area">
-              <li class="close-mobile__btn"><a href="javascript:void(0)">&times;</a></li>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="hakkimizda.html">About Us</a></li>
-            <li>
-                <a href="hizmetlerimiz.html">Our services</a>
-            </li>
-            <li><a href="sac-ekim-sureci.html">Hair Transplant Process</a></li>
-            <li><a href="before-after.html">Before & After</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="iletisim.html">Contact</a></li>
-            <li class="menu-item__lang">
-              <a href="javascipt:void(0)">Language: <img src="../assets/img/tr.png" alt="Tr logo"></a>
-              <div class="menu-item__submenu">
-                <div><a href="../index.html"><img src="../assets/img/tr.png" alt="Turkish"> Turkish</a></div>
-                <div><a href="../en/index.html"><img src="../assets/img/gb.png" alt="English"> English</a></div>
-              </div>
-            </li>
-          </div>
-      </div>
+            <a href="javascript:void(0)" class="header-mobile__btn"><i class="fas fa-grip-lines"></i></a>
+            <div class="header-mobile__area">
+                <li class="close-mobile__btn"><a href="javascript:void(0)">&times;</a></li>
+              <li><a href="index.html" class="active">Anasayfa</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li>
+                  <a href="hizmetlerimiz.html">Hizmetlerimiz</a>
+              </li>
+              <li><a href="sac-ekim-sureci.html">Saç Ekim Süreci</a></li>
+              <li><a href="before-after.html">Before & After</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="iletisim.html">İletişim</a></li>
+              <li class="menu-item__lang">
+                <a href="javascipt:void(0)">Dil: <img src="assets/img/tr.png" alt="Tr logo"></a>
+                <div class="menu-item__submenu">
+                  <div><a href="../index.html"><img src="assets/img/tr.png" alt="Turkish"> Turkish</a></div>
+                  <div><a href="../en/index.html"><img src="assets/img/gb.png" alt="English"> English</a></div>
+                </div>
+              </li>
+            </div>
+        </div>
     </header>
     <section class="slider-section">
-      <!-- Slider main container -->
-      <div class="swiper-container" id="main-slider">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-        <div class="swiper-slide">
-              <img src="../assets/img/slider-2.png" alt="Slider image">
-              <div class="slider-content">
-                  <h1 class="slider-content__title">Daha İyi Görün <br>  Daha İyi Hisset </h1>
-                  <p class="slider-content__dsc">Yeni bir görünüm kazanmaya <br> hazır mısınız? </p>
-              </div>
-        </div>
-        <div class="swiper-slide">
-              <img src="../assets/img/slider-5.png" alt="Slider image">
-              <div class="slider-content">
-                  <h1 class="slider-content__title">Benzersiz Bir <br>  Hizmet Almanın <br>  Keyfini Çıkarın </h1>
-                  <p class="slider-content__dsc">Saç ve sakal ekimi konusunda <br> uzman kadromuzun güvenli ellerindesiniz... </p>
-              </div>
-        </div>
-        <div class="swiper-slide">
-              <img src="../assets/img/slider-3.png" alt="Slider image">
-              <div class="slider-content">
-                  <h1 class="slider-content__title">Lüks Otellerde <br>  Konaklama </h1>
-                  <p class="slider-content__dsc">Anlaşmalı olduğumuz 4 ve 5 yıldızlı <br> otellerde konaklama imkanı... </p>
-        </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="../assets/img/slider-1.png" alt="Slider image">
-            <div class="slider-content">
-                <h1 class="slider-content__title">VIP Transfer <br> Hizmeti</h1>
-                <p class="slider-content__dsc">Havaalanında sizi karşılıyor, <br> otelinizden hastaneye VIP araçlarla  <br> transferinizi sağlıyoruz</p>
+        <!-- Slider main container -->
+        <div class="swiper-container" id="main-slider">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <picture>
+                <source media="(min-width:465px)" srcset="../assets/img/slider-2.png">
+                <source media="(max-width:465px)" srcset="../assets/img/slider-2-mobile.jpg">
+                <img src="../assets/img/slider-2.png" alt="Slider image">
+                </picture>
+                <img src="../assets/img/slider-2.png" alt="Slider image">
+                <div class="slider-content">
+                    <h1 class="slider-content__title">Look Better <br> Feel Better  </h1>
+                    <p class="slider-content__dsc">Ready to get a new look? </p>
+                </div>
             </div>
-        </div>
-        <div class="swiper-slide">
-            <img src="../assets/img/slider-4.jpg" alt="Slider image">
-            <div class="slider-content white-color">
-                <h1 class="slider-content__title">Dünyanın En Güzel<br> Şehrinde Yeni Bir <br>  Başlangıç </h1>
-                <p class="slider-content__dsc">Hem İstanbul'un keyfini çıkarın <br>  hem hayalinizdeki görünüme <br>  kavuşun! </p>
+            <div class="swiper-slide">
+                <picture>
+                <source media="(min-width:465px)" srcset="../assets/img/slider-5.png">
+                <source media="(max-width:465px)" srcset="../assets/img/slider-5-mobile.jpg">
+                <img src="../assets/img/slider-5.png" alt="Slider image">
+                </picture>
+                <div class="slider-content">
+                    <h1 class="slider-content__title">Enjoy<br>  A Unique <br>  Service </h1>
+                    <p class="slider-content__dsc">You are in the safe hands of our expert <br> staff in hair and beard transplantation ... </p>
+                </div>
             </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source media="(min-width:465px)" srcset="../assets/img/slider-3.png">
+                    <source media="(max-width:465px)" srcset="../assets/img/slider-3-mobile.jpg">
+                    <img src="../assets/img/slider-3.png" alt="Slider image">
+                </picture>
+                <div class="slider-content">
+                    <h1 class="slider-content__title">Accommodation <br> in Luxury Hotels  </h1>
+                    <p class="slider-content__dsc">Accommodation in 4 and 5 star hotels  <br> we have contracted...  </p>
+            </div>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source media="(min-width:465px)" srcset="../assets/img/slider-1.png">
+                    <source media="(max-width:465px)" srcset="../assets/img/slider-1-mobile.jpg">
+                    <img src="../assets/img/slider-1.png" alt="Slider image">
+                </picture>
+                <div class="slider-content">
+                    <h1 class="slider-content__title">VIP Transfer <br>  Service </h1>
+                    <p class="slider-content__dsc">We welcome you at the airport and <br> provideyour transfer from your hotel <br>  to the hospital with VIP vehicles.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <picture>
+                    <source media="(min-width:465px)" srcset="../assets/img/slider-4.jpg">
+                    <source media="(max-width:465px)" srcset="../assets/img/slider-4-mobile.jpg">
+                    <img src="../assets/img/slider-4.jpg" alt="Slider image">
+                </picture>
+                <div class="slider-content white-color">
+                    <h1 class="slider-content__title">A New Beginning<br>  in The Most Beautiful <br> City Of The World </h1>
+                    <p class="slider-content__dsc">Enjoy Istanbul and attain your dream look! </p>
+                </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
         </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
+      </section>
     <section class="contact-banner-section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-6">
                     <div class="banner-section__dsc">
-                        <h2>Ücretsiz <br> Saç Analizi</h2>
-                        <p>Ücretsiz saç analizi için formu doldurabilir ya da bizimle <a href="tel:0552 397 58 73">0552&nbsp;397&nbsp;58&nbsp;73</a> numaralı telefondan iletişime geçebilirsiniz.</p>
+                        <h2>Free <br> Hair Analysis</h2>
+                        <p>You can fill the form or contact us at the number <a href="tel:0552 397 58 73">0552&nbsp;397&nbsp;58&nbsp;73</a> for free hair analysis</p>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-6">
@@ -136,33 +157,33 @@
                         <form action="#" method="POST">
                             <div class="input-group">
                                 <input type="radio" name="gender" id="women"> 
-                                <label for="women">Kadın</label>
+                                <label for="women">Male</label>
                                 <input type="radio" name="gender" id="man"> 
-                                <label for="man">Erkek</label>
+                                <label for="man">Female</label>
                             </div>
                             <div class="input-group">
                             </div>
                             <div class="input-group">
                                 <label for="name">
-                                    <input type="input" name="name" id="name" placeholder="Adınız Soyadınız">
+                                    <input type="input" name="name" id="name" placeholder="Your Name / Surname">
                                 </label>
                             </div>
                             <div class="input-group">
                                 <label for="surname">
-                                    <input type="input" name="surname" id="surname" placeholder="Email Adresiniz">
+                                    <input type="input" name="surname" id="surname" placeholder="Email Address">
                                 </label>
                             </div>
                             <div class="input-group">
                                 <label for="phone">
-                                    <input type="input" name="phone" id="phone" placeholder="Telefon Numaranız">
+                                    <input type="input" name="phone" id="phone" placeholder="Your Phone Number">
                                 </label>
                             </div>
                             <div class="input-group form-btn">
-                                <button type="submit">Gönder</button>
+                                <button type="submit">Send</button>
                             </div>
                             <div class="input-group full-width">
                                 <input type="checkbox" name="form-text" id="form-text">
-                                <label for="form-text"> Bu formu kullanarak, verilerinizin bu web sitesi tarafından saklanmasını ve işlenmesini kabul edersiniz. </label>
+                                <label for="form-text"> By using this form, you agree to the storage and processing of your data by this website.</label>
                             </div>
                         </form>
                     </div>
@@ -178,19 +199,19 @@
                         <div class="prerioty-info__list">
                             <li>
                                 <div class="list-icon"><i class="far fa-gem"></i></div>
-                                <div class="list-title">Uzman Kadro</div>
+                                <div class="list-title">Expert Staff</div>
                             </li>
                             <li>
                                 <div class="list-icon"><i class="far fa-comments"></i></div>
-                                <div class="list-title">Güleryüzlü Hizmet</div>
+                                <div class="list-title">Friendly Service</div>
                             </li>
                             <li>
                                 <div class="list-icon"><i class="far fa-id-card"></i></div>
-                                <div class="list-title">Tam Kapsamlı Hizmet</div>
+                                <div class="list-title">Comprehensive Service</div>
                             </li>
                             <li>
                                 <div class="list-icon"><i class="fas fa-child"></i></div>
-                                <div class="list-title">Muhteşem Sonuçlar</div>
+                                <div class="list-title">Spectacular Results</div>
                             </li>
                         </div>
                         <div class="prerioty-info__img">
@@ -200,9 +221,9 @@
                 </div>
                 <div class="col-md-12 col-lg-6">
                     <div class="prerioty-section__dsc">
-                        <h3>Hayallerinizdeki Görünüme Kavuşmaya Hazır Mısınız?</h3>
-                        <p>Siz özelsiniz ve en iyi hizmeti almayı hak ediyorsunuz. Lure profesyonelleri ile tanıştığınız andan itibaren benzersiz bir hizmet almanın ayrıcalığını hissedeceksiniz. Alanında uzman ekibimizle sağlığınız ve güzelliğiniz için en doğru medikal seçenekleri size sunacağız.</p>
-                        <a href="javascript:void(0)">Devamını Oku</a>
+                        <h3>Are you ready to get the look of your dreams?</h3>
+                        <p>You are special and you deserve the best service. From the moment you meet with Lure professionals, you will feel the privilege of receiving a unique service. We will offer you the right medical options for your health and beauty with our expert team.</p>
+                        <a href="javascript:void(0)">Read More</a>
                     </div>
                 </div>
             </div>
@@ -211,78 +232,78 @@
     <section class="about-section">
         <div class="container">
             <div class="section__title">
-                <h2>Ne Yapıyoruz?</h2>
-                <p>Hizmetlerimiz Hakkında</p>
+                <h2>What Do We Do?</h2>
+                <p>About Our Services</p>
             </div>
 
             <div class="about-section__content">
                 <div class="about-content__item">
                     <div class="item-number">01</div>
-                    <div class="item-title"><a href="fue-teknigi.html">Fue Yöntemi ile Saç Ekimi</a></div>
-                    <div class="item-dsc">Fue Tekniği “FolicularUniteExtraction” teriminin kısaltmasıdır. Günümüzde halen kullanılan en gelişmiş saç ekim tekniğidir. FUE saç ekimi; iki kulak arasındaki ve kulakların üstündeki saçlı bölgeden mikro…</div>
-                    <div class="item-btn"><a href="fue-teknigi.html">Detaylı Bilgi</a></div>
+                    <div class="item-title"><a href="en/fue-teknigi.html">FUE Method</a></div>
+                    <div class="item-dsc">FUE Method is the abbreviation of the term “Folicular Unit Extraction”. It is the most advanced hair transplant technique still used today. FUE Hair Transplant;…</div>
+                    <div class="item-btn"><a href="en/fue-teknigi.html">More information</a></div>
                 </div>
                 <div class="about-content__item">
                     <div class="item-number">02</div>
-                    <div class="item-title"><a href="sapphire-fue-teknigi-ile-sac-ekimi.html">Sapphire FUE Tekniği İle Saç Ekimi</a></div>
-                    <div class="item-dsc">Anti-bakteriyel özelliklere sahip pürüzsüz yüzeyi, sertlik, keskinlik ve dayanıklılık özelliklerinden dolayı kanal açma işlemi sırasında safir uç kullanımı daha az vibrasyon, travma ve daha az…</div>
-                    <div class="item-btn"><a href="sapphire-fue-teknigi-ile-sac-ekimi.html">Detaylı Bilgi</a></div>
+                    <div class="item-title"><a href="en/sapphire-fue-teknigi-ile-sac-ekimi.html">Hair Transplant with Sapphire FUE Technique</a></div>
+                    <div class="item-dsc">Due to its smooth surface with anti-bacterial properties, hardness, sharpness and durability, the use of sapphire tip during the grooving process provides less vibration, trauma…</div>
+                    <div class="item-btn"><a href="en/sapphire-fue-teknigi-ile-sac-ekimi.html">More information</a></div>
                 </div>
                 <div class="about-content__item">
                     <div class="item-number">03</div>
-                    <div class="item-title"><a href="dhi-teknigi.html">DHI Fue Tekniği İle Saç Ekimi</a></div>
-                    <div class="item-dsc">DHI FUE Saç Ekimi Tekniği, muayene sonucunda uygun olduğu takdirde, saç tıraşı yapılmadan saçlı alana ekim yapılabilme imkanı sağlayabildiği gibi uygun görülürse ekim bölgesi tıraş…</div>
-                    <div class="item-btn"><a href="dhi-teknigi.html">Detaylı Bilgi</a></div>
+                    <div class="item-title"><a href="en/dhi-teknigi.html">DHI FUE Hair Transplant Technique</a></div>
+                    <div class="item-dsc">If the DHI FUE Hair Transplantation Technique is suitable as a result of the examination, it can provide the opportunity to transplant to the hairy…</div>
+                    <div class="item-btn"><a href="en/dhi-teknigi.html">More information</a></div>
                 </div>
                 <div class="about-content__item">
                     <div class="item-number">04</div>
-                    <div class="item-title"><a href="kadinlarda-sac-ekimi.html">Kadınlarda Saç Ekimi</a></div>
-                    <div class="item-dsc">Kadınlarda özellikle ileriki yaşlarda ortaya çıkan saç dökülmesi, kozmetik bir sorun olmanın ötesinde özgüveni de olumsuz etkileyen bir problem olarak karşımıza çıkar. Sadece erkeklere özgü…</div>
-                    <div class="item-btn"><a href="kadinlarda-sac-ekimi.html">Detaylı Bilgi</a></div>
+                    <div class="item-title"><a href="en/kadinlarda-sac-ekimi.html">Hair Transplantation in Women</a></div>
+                    <div class="item-dsc">Hair loss, which occurs especially in women at later ages, is not only a cosmetic problem, but also a problem that negatively affects self-confidence. Hair…</div>
+                    <div class="item-btn"><a href="en/kadinlarda-sac-ekimi.html">More information</a></div>
                 </div>
                 <div class="about-content__item">
                     <div class="item-number">05</div>
-                    <div class="item-title"><a href="sakal-ve-biyik-ekimi.html">Sakal ve Bıyık Ekimi</a></div>
-                    <div class="item-dsc">Erkeklerde güçlü ve estetik görünüm sembollerinden bir de gür bıyık ve sakallardır. Genetik etkenler erkeklerde saç ve sakalın yoğunluğunu belirler. Ergenlik dönemine girdikten 3-4 yıl…</div>
-                    <div class="item-btn"><a href="sakal-ve-biyik-ekimi.html">Detaylı Bilgi</a></div>
+                    <div class="item-title"><a href="en/sakal-ve-biyik-ekimi.html">Beard and Mustache Transplantation</a></div>
+                    <div class="item-dsc">One of the symbols of strong and aesthetic appearance in men is a bushy mustache and beard. Genetic factors determine the density of hair and…</div>
+                    <div class="item-btn"><a href="en/sakal-ve-biyik-ekimi.html">More information</a></div>
                 </div>
             </div>
         </div>
     </section>
     <section class="randevu-banner-section">
         <div class="container">
-            <h2>Yeni Bir Görünüm Kazanmaya Hazır&nbsp;Mısın?</h2>
-            <p>Uzman kadrosu ve son teknoloji cihazları ile kaliteli hizmetin adresi; Lure Esthetic</p>
-            <a href="javascript:void(0)" class="btn">Randevu Al</a>
+            <h2>Are You Ready Get A New Look?</h2>
+            <p>The address of quality service with its expert staff, latest technology devices; Lure Esthetic</p>
+            <a href="javascript:void(0)" class="btn">Make An Appointment</a>
         </div>
     </section>
     <section class="date-banner-section">
         <div class="">
             <div class="section__title">
-                <h2>Saç Ekim Süreci</h2>
-                <p>Saç Ekim Süreci Nasıl Gerçekleşiyor?</p>
+                <h2>Hair Transplant Process</h2>
+                <p>How Does Hair Transplantation Process Take Place?</p>
             </div>
 
             <div class="date-banner__list">
                 <div class="date-benner__list-item">
                     <div class="list-item__title"><span>DAY 1</spa></div>
-                    <div class="list-item__text">İstanbul’da havalimanına inen misafirlerimiz VIP aracımızla ve kendilerine eşlik edecek şirket hostesimizle karşılanır. </div>
-                    <div class="list-item__text">4 ya da 5 yıldızlı lüks otelimize transfer edilir.</div>
+                    <div class="list-item__text">Our guests arriving at the airport in Istanbul are welcomed with our VIP vehicle and our company hostess to accompany them.</div>
+                    <div class="list-item__text">Our guests are transferred to our 4 or 5 star luxury hotel.</div>
                 </div>
                 <div class="date-benner__list-item">
                     <div class="list-item__title"><span>DAY 2</span></div>
-                    <div class="list-item__text">Sabah saatlerinde kan tahlili ve saç analizi yapılır.</div>
-                    <div class="list-item__text">Saç analizi sırasında, saç yapısı incelirken, misafirimiz için en uygun saç ekim tekniği ve yüz hattına uygun tasarım planlanır</div>
-                    <div class="list-item__text">Lokal anestezi uygulanarak 6 ila 8 saat arasında sürecek saç ekimi işlemine başlanır.</div>
-                    <div class="list-item__text">Saç ekiminin tamamlanmasının ardından misafirimizin uyku konforu için özel yastık ve ilaçlar verilir ve misafirimiz oteline uğurlanır.</div>
+                    <div class="list-item__text">Blood tests and hair analysis are done in the morning.  </div>
+                    <div class="list-item__text">While the hair structure is getting analyzied, the most suitable hair transplant technique and design suitable for the face line is planned for our guest.</div>
+                    <div class="list-item__text">By applying local anesthesia, the hair transplantation process is started, which will last between 6 and 8 hours. </div>
+                    <div class="list-item__text">After the hair transplant is completed, special pillows and medicines are provided for the comfort of our guest's sleep and our guest is sent off to his/her hotel.</div>
                 </div>
                 <div class="date-benner__list-item">
                     <div class="list-item__title"><span>DAY 3-4</spa></div>
-                    <div class="list-item__text">VIP araçlar ile otelinden alınan misafirimiz, hastaneye transfer edilir.</div>
-                    <div class="list-item__text">Saç ekimi işleminin ayrıntılı incelemesi yapılır.</div>
-                    <div class="list-item__text">İlk saç yıkama işlemi uzmanlarımız eşliğinde gerçekleştirilir.</div>
-                    <div class="list-item__text">Misafirlerimize, sonraki süreçte saçlarına nasıl bakım uygulanması gerektiği konusunda bilgi verilir.</div>
-                    <div class="list-item__text">Misafirlerimiz, uçuş saatine uygun olarak VIP araçla otelden alınarak havalimanına bırakılır ve uğurlanır.</div>
+                    <div class="list-item__text">Our guests taken from the hotel by VIP vehicles are transferred to the hospital. </div>
+                    <div class="list-item__text">A detailed examination of the hair transplantation process is made. </div>
+                    <div class="list-item__text">The first hair washing process is carried out in the presence of our experts.</div>
+                    <div class="list-item__text">Our guests are informed about how to care for their hair in the next process. </div>
+                    <div class="list-item__text">Our guests are picked up from the hotel by VIP vehicle in accordance with the flight time, and dropped off at the airport.</div>
                 </div>
             </div>
         </div>
@@ -291,7 +312,7 @@
         <div class="container">
             <div class="section__title">
                 <h2>Before & After</h2>
-                <p>Lure Estetik farkını hayatlarında hissedenler...</p>
+                <p>Those who feel the difference of Lure Esthetic in their lives ...</p>
             </div>
 
             <div class="difference-section__list">
@@ -313,8 +334,8 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-title">
-                <h2>Bize Her Zaman Ulaşabilirsiniz</h2>
-                <p>İster mail, isterseniz telefon yoluyla bizimle her zaman iletişime geçebilirsiniz.</p>
+                <h2>You Can Always Contact Us</h2>
+                <p>You can always contact us by mail or phone.</p>
             </div>
 
             <div class="contact-list">
@@ -326,7 +347,7 @@
                 <div class="contact-list__item">
                     <div class="list-item__icon"><i class="far fa-envelope"></i></div>
                     <div class="list-item__title"><a href="mailto:info@luresthetic.com">info@luresthetic.com</a></div>
-                    <div class="list-item__dsc">Bize Ulaşın</div>
+                    <div class="list-item__dsc">Contact Us</div>
                 </div>
                 <div class="contact-list__item">
                     <div class="list-item__icon"><i class="fas fa-phone-volume"></i></div>
@@ -339,7 +360,7 @@
         <div class="container">
             <div class="section__title">
                 <h2>Blog</h2>
-                <p>Saç ekimi ve saç bakımı hakkında merak ettikleriniz...</p>
+                <p>What you wonder about hair transplantation and hair care...</p>
             </div>
             <!-- Slider main container -->
             <div class="swiper-container" id="blog-slider">
@@ -353,7 +374,7 @@
                                 <div class="image-text">Saç Bakımı</div>
                             </div>
                             <div class="blog-content__title">
-                                <span class="title-date">2 Ocak 2021</span>
+                                <span class="title-date"> 2 January 2021 </span>
                                 <h3>Güçlü Saçlar İçin Gerekli Vitaminler</h3>
                             </div>
                             <div class="blog-content__dsc">
@@ -372,7 +393,7 @@
                                 <div class="image-text">Saç Bakımı</div>
                             </div>
                             <div class="blog-content__title">
-                                <span class="title-date">2 Ocak 2021</span>
+                                <span class="title-date"> 2 January 2021 </span>
                                 <h3>Saç Ekimi Acı Verir Mi, Korkmalı Mıyım?</h3>
                             </div>
                             <div class="blog-content__dsc">
@@ -391,7 +412,7 @@
                                 <div class="image-text">Saç Bakımı</div>
                             </div>
                             <div class="blog-content__title">
-                                <span class="title-date">2 Ocak 2021</span>
+                                <span class="title-date"> 2 January 2021 </span>
                                 <h3>Hangi Sıklıkta Saçlarımı Yıkamalıyım?</h3>
                             </div>
                             <div class="blog-content__dsc">
@@ -424,11 +445,11 @@
                         </div>
                         <div class="footer-menu">
                             <div class="footer-menu__list">
-                                <li><a href="javascript:void(0)">Fue Yöntemi ile Saç Ekimi</a></li>
-                                <li><a href="javascript:void(0)">Sapphire FUE Tekniği İle Saç Ekimi</a></li>
-                                <li><a href="javascript:void(0)">DHI Fue Tekniği İle Saç Ekimi</a></li>
-                                <li><a href="javascript:void(0)">Sakal ve Bıyık Ekimi</a></li>
-                                <li><a href="javascript:void(0)">Kadınlarda Saç Ekimi</a></li>
+                                <li><a href="javascript:void(0)">FUE Method</a></li>
+                                <li><a href="javascript:void(0)">Hair Transplant with Sapphire FUE Technique</a></li>
+                                <li><a href="javascript:void(0)">DHI FUE Hair Transplant Technique</a></li>
+                                <li><a href="javascript:void(0)">Beard and Mustache Transplantation</a></li>
+                                <li><a href="javascript:void(0)">Hair Transplantation in Women</a></li>
                             </div>
                         </div>
                     </div>
