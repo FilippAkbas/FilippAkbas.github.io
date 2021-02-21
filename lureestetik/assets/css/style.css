@@ -577,13 +577,13 @@ section {
   flex-direction: column;
 }
 
-.date-benner__list-item::after {
+.date-benner__list-item .list-item__text:last-child:after {
   content: '';
   position: absolute;
-  bottom: -47px;
+  bottom: -62px;
   right: 0;
-  left: -26px;
-  width: 110%;
+  left: -51px;
+  width: 125%;
   height: 204px;
   background: url(../img/text-banner-border.png);
   background-repeat: no-repeat;

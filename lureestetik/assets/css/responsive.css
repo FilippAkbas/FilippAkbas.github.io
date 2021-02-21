@@ -382,8 +382,8 @@
         background-size: cover;
         background-position: center center;
     }
-    .date-benner__list-item::after {
-        left: -21px;
+    .date-benner__list-item .list-item__text:last-child::after {
+        left: -45px;
     }
 }
 
