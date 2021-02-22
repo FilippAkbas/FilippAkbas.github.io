@@ -48,8 +48,8 @@ img {
 
 .header .container {
     background: url(../img/header.png);
-    background-repeat: repeat;
-    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 80%;
 }
 
 .header .nav .menu {

@@ -1029,17 +1029,21 @@ for (let i = 0; i < iconList.length; i++) {
 for (let i = 0; i < sizeList.length; i++) {
   sizeList[i].addEventListener("click", () => {
     if (sizeList[i].id === "15x21") {
-      document.querySelector(".canvas-border__size").textContent =
-        "15cm x 21cm";
+      document.querySelector(".canvas-border__size").textContent = "15cm x 21cm";
+      document.querySelector('#uzaycolor').setAttribute('disabled', true);
+      document.querySelector('#uzaycolor').classList.add('disabled');
+      if(uzayColorChecked === true) {
+        document.querySelector('#beyazcolor').setAttribute('checked', true);
+      }
     } else if (sizeList[i].id === "30x40") {
-      document.querySelector(".canvas-border__size").textContent =
-        "30cm x 40cm";
+      document.querySelector(".canvas-border__size").textContent = "30cm x 40cm";
+      document.querySelector('#uzaycolor').removeAttribute('disabled');
     } else if (sizeList[i].id === "40x50") {
-      document.querySelector(".canvas-border__size").textContent =
-        "40cm x 50cm";
+      document.querySelector(".canvas-border__size").textContent = "40cm x 50cm";
+      document.querySelector('#uzaycolor').removeAttribute('disabled');
     } else if (sizeList[i].id === "50x70") {
-      document.querySelector(".canvas-border__size").textContent =
-        "50cm x 70cm";
+      document.querySelector(".canvas-border__size").textContent = "50cm x 70cm";
+      document.querySelector('#uzaycolor').setAttribute('disabled');
     }
   });
 }

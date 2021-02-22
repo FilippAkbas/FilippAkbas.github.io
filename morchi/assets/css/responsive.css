@@ -225,7 +225,7 @@
     }
 
     .header .container {
-        background-size: 100% 55px;
+        background: none;
         margin: 0;
         padding: 0;
     }
@@ -240,8 +240,8 @@
 
     .mobile-menu {
         background: url(../img/header.png);
-        background-repeat: repeat;
-        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100% 105%;
         position: relative;
         width: 100%;
         margin: 0 auto;

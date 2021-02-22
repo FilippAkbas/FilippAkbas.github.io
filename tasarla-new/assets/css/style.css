@@ -336,7 +336,8 @@ img {
 }
 
 .option-list__input[disabled] + .input__box {
-    background-color: #ddd;
+    background-color: #ddd !important;
+    border-color: #ddd;
 }
 
 .option-tabs__title {
