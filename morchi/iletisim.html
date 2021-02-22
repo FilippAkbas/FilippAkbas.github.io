@@ -47,14 +47,7 @@
 
                 <div class="mobile-full-area">
                     <li class="menu-item"><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li class="menu-item">
-                        <a href="product.html">Ürünlerimiz</a>
-                        <div class="submenu">
-                            <div><a href="product.html">Türk Kahvesi</a></div>
-                            <div><a href="product-2.html">Filtre Kahvesi</a></div>
-                            <div><a href="product-3.html">Sıcak İçecekler</a></div>
-                        </div>
-                    </li>
+                    <li class="menu-item"><a href="product.html">Ürünlerimiz</a></li>
                     <li class="menu-item menu-item__sub"><a href="product.html">Türk Kahvesi</a></li>
                     <li class="menu-item menu-item__sub"><a href="product-2.html">Filtre Kahvesi</a></li>
                     <li class="menu-item menu-item__sub"><a href="product-3.html">Sıcak İçecekler</a></li>
@@ -163,20 +156,21 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-        let map;
-
+        // Initialize and add the map
         function initMap() {
-            map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8,
-                mapTypeId: 'hybrid',
-                scaleControl: true,
-                fullscreenControlOptions: {
-                    position: google.maps.ControlPosition.RIGHT_BOTTOM
-                },
-            });
+        // The location of Uluru
+        const uluru = { lat: -25.344, lng: 131.036 };
+        // The map, centered at Uluru
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 4,
+            center: uluru,
+        });
+        // The marker, positioned at Uluru
+        const marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+        });
         }
-        initMap();
     </script>
 </body>
 </html>

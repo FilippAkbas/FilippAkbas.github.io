@@ -113,7 +113,7 @@
     }
 
     .product-bloc__grid {
-        grid-gap: 130px 0;
+        grid-gap: 60px 0;
     }
 
     .product-bloc__grid::after {
@@ -151,6 +151,11 @@
         height: 65vh;
     }
 
+    .grid-item {
+        grid-template-rows: none;
+        grid-gap: 0 20px;
+    }
+
     .priority-section .priority-block {
         text-align: center;
     }
@@ -171,8 +176,9 @@
 
     .image-border::before {
         top: 0;
-        width: 120%;
-        height: 245%;
+        left: -15%;
+        width: 130%;
+        height: 230%;
     }
 
     .bloc-about__info {
@@ -238,14 +244,47 @@
         display: flex;
     }
 
+    .mobile-full-area .social-item {
+        position: absolute;
+        bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+
+    .mobile-full-area .social-item h3 {
+        color: #fff;
+        font-size: 20px;
+    }
+
+    .header-social {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-social div {
+        margin-right: 5px;
+    }
+
+    .header-social a {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .header-social a img {
+        width: 22px;
+        height: 17px;
+        object-fit: contain;
+    }
+
     .mobile-menu {
-        background: url(../img/header.png);
+        background: url(../img/mobile-bg.png);
         background-repeat: no-repeat;
-        background-size: 100% 105%;
+        background-size: 100% 100%;
         position: relative;
         width: 100%;
         margin: 0 auto;
-        padding: 10px 7% 15px 7%;
+        padding: 10px 7% 30px 7%;
         justify-content: space-between;
         align-items: center;
         color: #000;
@@ -262,18 +301,19 @@
         font-weight: bold;
     }
     .mobile-btn img {
-        width: 30px;
+        width: 35px;
         transform: rotate(90deg);
     }
     .mobile-item.lang-item {
         position: relative;
+        top: 0;
         font-size: 12px;
     }
     .mobile-item.lang-item a {
-        font-size: 12px;
+        font-size: 15px;
     }
     .mobile-item.lang-item img {
-        width: 15px;
+        width: 18px;
     }
     .mobile-full-area.active {
         position: fixed;
@@ -396,13 +436,17 @@
         right: 80%;
         width: 50px;
     }
+
+    .block-list__item:nth-child(3) {
+        order: 3;
+    }
     
     .block-list__item:nth-child(3)::after {
         background: url(../img/contact-line-3.png);
         width: 100px;
         height: 110px;
-        right: 0;
-        top: 95%;
+        left: -55%;
+        top: 105%;
     }
 
     .block-list__item:nth-child(6)::after {
@@ -412,7 +456,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         top: 30%;
-        right: 82%;
+        left: 82%;
         width: 68px;
         height: 3px;
         display: block;
@@ -451,5 +495,12 @@
     }
     .contact-image img {
     	max-height: 230px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .image-border::before {
+        height: 240%;
+        left: -12%;
     }
 }

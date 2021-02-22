@@ -702,6 +702,7 @@ img {
     padding: 15px;
     display: grid;
     grid-template-columns: 0.75fr 1fr;
+    grid-template-rows: 1fr 40px;
     grid-gap: 10px 40px;
 }
 
