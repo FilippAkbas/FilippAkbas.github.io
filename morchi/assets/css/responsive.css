@@ -1,3 +1,9 @@
+@media only screen and (min-width: 1400px) {
+    .grid-item__img img {
+        top: -40px;
+    }
+}
+
 @media only screen and (max-width: 1400px) {
     .about-section_line-top {
         top: -7.9%;
