@@ -855,9 +855,9 @@ img {
     left: 0;
     width: 100%;
     height: 30px;
-    background: url(../img/menu-bg.png);
-    background-repeat: repeat;
-    background-size: contain;
+    background: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
     z-index: 1;
 }
 
@@ -870,9 +870,9 @@ img {
     left: 0;
     width: 100%;
     height: 30px;
-    background: url(../img/menu-bg.png);
-    background-repeat: repeat;
-    background-size: contain;
+    background: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-size: 100% 95%;
     z-index: 1;
 }
 
