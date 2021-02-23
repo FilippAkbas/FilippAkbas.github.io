@@ -148,7 +148,25 @@
 
 @media only screen and (max-width: 768px) {
     .slider-section .slider-img {
-        height: 65vh;
+        height: 80vh;
+    }
+
+    .grid-item__dsc .dsc-info {
+        font-size: 16px;
+    }
+    .grid-item__dsc .dsc-number {
+        font-size: 75px;
+    }
+
+    .grid-item__dsc .dsc-title h2 {
+        font-size: 24px;
+    }
+    .grid-item__dsc .dsc-title span {
+        font-size: 24px;
+    }
+
+    .priority-section {
+        margin-bottom: 50px;
     }
 
     .grid-item {
@@ -191,11 +209,15 @@
     }
 
     .about-section_line-top {
-        top: -1.9%;
+        top: -1.8%;
     }
     
     .about-section_line-bottom {
-        bottom: -1.9%;
+        bottom: -1.8%;
+    }
+
+    .about-info__dsc {
+        margin-top: 40px;
     }
 
     .contact-box {
@@ -205,6 +227,7 @@
     .product-item {
         width: 95%;
         padding: 30px 15px;
+        height: 280px;
     }
 
     .footer-menu {
@@ -475,6 +498,7 @@
     }
     .contac-block__list {
         grid-template-columns: repeat(2, 1fr);
+        margin-top: 30px;
     }
     .single-sell {
         margin-bottom: 50px;
