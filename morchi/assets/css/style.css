@@ -33,7 +33,7 @@ img {
 }
 
 .pre-header {
-    height: 165px;
+    height: 130px;
 }
 
 /* header css option */
@@ -843,13 +843,13 @@ img {
 
 .contact-image {
     position: relative;
-    padding: 50px 0;
+    padding: 0;
 }
 
 .contact-image::after {
     content: '';
     position: absolute;
-    top: 40px;
+    top: 0;
     right: 0;
     left: 0;
     width: 100%;
@@ -857,13 +857,14 @@ img {
     background: url(../img/menu-bg.png);
     background-repeat: repeat;
     background-size: contain;
+    z-index: 1;
 }
 
 .contact-image::before {
     content: '';
     position: absolute;
     transform: rotate(180deg);
-    bottom: 40px;
+    bottom: -5%;
     right: 0;
     left: 0;
     width: 100%;
@@ -871,6 +872,7 @@ img {
     background: url(../img/menu-bg.png);
     background-repeat: repeat;
     background-size: contain;
+    z-index: 1;
 }
 
 .contact-image img {

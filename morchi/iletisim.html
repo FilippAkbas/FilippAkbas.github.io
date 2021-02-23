@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
@@ -70,7 +72,7 @@
     <section class="section-block__contact">
         <div class="container">
             <div class="contact-image">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d914.8608271854557!2d28.775350899297806!3d41.054423048839176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5d1910ba441%3A0x5cb08fd7a9a51da9!2zQXRha2VudCwgQXRha2VudCAzLiBFdGFwIE5vOjEgRDozNCwgMzQzMDcgS8O8w6fDvGvDp2VrbWVjZS_EsHN0YW5idWw!5e0!3m2!1str!2str!4v1611484659444!5m2!1str!2str" width="100%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div id='map' style='width: 100%; height: 300px;'></div>
             </div>
             <div class="contact-info">
                 <li>
@@ -153,26 +155,15 @@
     </footer>
     
     <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbgcXWqWW9u3Kb-JWyo-lg9lfCdtigUoA=initMap&libraries=&v=weekly" async></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
 
     <script>
-        // Initialize and add the map
-        function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -25.344, lng: 131.036 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
-            center: uluru,
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWtiYXNmaWxpcHAiLCJhIjoiY2p1andzbDQxMGc0NzRkbzQ1OWs4ZmV2ZSJ9.8zfZmh0xFQaNtM2wQ1YR5g';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/outdoors-v11'
         });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-            position: uluru,
-            map: map,
-        });
-        }
     </script>
 </body>
 </html>
