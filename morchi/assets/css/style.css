@@ -711,7 +711,7 @@ img {
 }
 
 .grid-item__img.small-img img {
-    height: 350px;
+    max-height: 350px;
 }
 
 .grid-item__img img {
