@@ -111,12 +111,12 @@ img {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    left: -10px;
+    left: -12px;
     background: url(../img/madde.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 11px;
-    height: 75%;
+    height: 12px;
 }
 
 .menu-logo img {

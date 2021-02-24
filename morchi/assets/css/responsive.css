@@ -368,16 +368,20 @@
         left: 7px;
         margin-left: 0;
     }
+    .mobile-item:nth-child(1) {flex-basis: 20%;display: flex;}
+    .mobile-item:nth-child(2) {flex-basis: 60%;display: flex;justify-content: center;}
+    .mobile-item:nth-child(3) {flex-basis: 20%;display: flex;justify-content: flex-end;}
     .mobile-item.lang-item {
         position: relative;
         top: 0;
         font-size: 12px;
     }
     .mobile-item.lang-item a {
-        font-size: 15px;
+        font-size: 14px;
     }
     .mobile-item.lang-item img {
         width: 18px;
+        height: 18px;
     }
     .mobile-full-area.active {
         position: fixed;
@@ -399,6 +403,7 @@
 
     .mobile-full-area.active .menu-item__sub a {
         color: #f8d6c5;
+        text-align: center;
     }
 
     .mobile-full-area.active .menu-item.lang-item {
