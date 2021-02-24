@@ -333,6 +333,7 @@ function thisTabs() {
         document.querySelector("#tabsLink-1").classList.remove("active");
         document.querySelector("#tabsLink-2").classList.add("active");
         tabsBtn.innerHTML = tabsBtn1Text;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         return false;
       } else if (tabtsLink[i].id === "tabsLink-2") {
         document.querySelector("#tabs-2").style.display = "none";
@@ -341,6 +342,7 @@ function thisTabs() {
         document.querySelector("#tabsLink-3").classList.add("active");
         document.querySelector("#tabs-btn").style.display = "none";
         document.querySelector("#next-btn").style.display = "block";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         return false;
       } else if (tabtsLink[i].id === "tabsLink-3") {
         return false;
