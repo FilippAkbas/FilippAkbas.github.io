@@ -111,12 +111,12 @@
             <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
             <p>Soru ve taleplerinizi bekliyoruz</p>
 
-            <div class="section-form">
+            <form action="iletisim.php" method="POST" class="section-form">
                 <input type="text" name="name" placeholder="Adınız Soyadınız*">
                 <input type="text" name="mail" placeholder="Email Adresinizl*">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Mesajınız*"></textarea>
-                <a href="#" class="btn">Gönder</a>
-            </div>
+                <button type="submit" class="btn">Gönder</button>
+            </form>
         </div>
     </section>
 
@@ -197,6 +197,10 @@
         <div class="container">
             2021 © 2021. All rights reserved. by <a href="https://binyilsonra.com/" target="_blank">Bin Yıl Sonra</a>
         </div>
+    </div>
+
+    <div class="absolute-social">
+        <a href="https://wa.me/05523975873" target="_blank"><li class="whatsapp"><img src="assets/img/whatsapp.svg" alt="Whatsapp"></li></a>
     </div>
 
     <script src="assets/js/jquery-3.5.1.min.js"></script>

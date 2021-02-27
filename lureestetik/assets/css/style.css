@@ -1310,3 +1310,60 @@ section {
   color: #fff;
   font-size: 14px;
 }
+
+.absolute-social {
+  position: fixed;
+  bottom: 4%;
+  right: 2%;
+  z-index: 100;
+}
+
+.absolute-social li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #4EC248;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  border: 3px solid #3f9d3a;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -ms-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
+  animation-name: whatsappAnim;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  
+}
+
+.absolute-social li.whatsapp img {
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes whatsappAnim {
+  0% {
+      border-width: 1px;
+  }
+  25% {
+      border-width: 5px;
+  }
+  50% {
+      border-width: 10px;
+  }
+  75% {
+      border-width: 5px;
+  }
+  100% {
+      border-width: 1px;
+  }
+}
