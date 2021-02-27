@@ -1,10 +1,18 @@
 <?php
-	$to      = 'filipp.akbas@gmail.com';
-	$subject = 'the subject';
-	$message = 'hello';
-	$headers = 'From: webmaster@example.com' . "\r\n" .
-	    'Reply-To: webmaster@example.com' . "\r\n" .
-	    'X-Mailer: PHP/' . phpversion();
-
-	mail($to, $subject, $message, $headers);
-?> 
+$fio = $_POST['fio'];
+$email = $_POST['email'];
+$fio = htmlspecialchars($fio);
+$email = htmlspecialchars($email);
+$fio = urldecode($fio);
+$email = urldecode($email);
+$fio = trim($fio);
+$email = trim($email);
+echo $fio;
+echo "<br>";
+echo $email;
+// if (mail("example@mail.ru", "Заявка с сайта", "ФИО:".$fio.". E-mail: ".$email ,"From: example2@mail.ru \r\n"))
+//  {     echo "сообщение успешно отправлено";
+// } else {
+//     echo "при отправке сообщения возникли ошибки";
+// }
+?>
