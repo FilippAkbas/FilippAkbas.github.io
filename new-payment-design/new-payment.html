@@ -287,7 +287,7 @@
         </div>
     </section>
     <div class="go-to-next-btn">
-        <button type="button" class="btn">Odeme Sayfasina gecelim</button>
+        <button type="button" class="btn">Sipariş Detayları</button>
     </div>
     <footer class="footer">
         <div class="footer-img">
@@ -430,8 +430,8 @@
                 if (validateEmail(kargoEmail.value)) {
                     Swal.fire({
                         type: 'success',
-                        title: 'Fatura Bilgiler Doğru!',
-                        text: 'E-Posta Adresin Doğru!',
+                        icon: "success",
+                        title: 'Onaylandı',
                         showConfirmButton: false,
                     });
                     tab1addedBtn.style.display = 'none';
@@ -451,6 +451,10 @@
 
         tab1addedBtn.addEventListener('click', ()=> {
             adresValidate();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         })
         tab1editbtn.addEventListener('click', ()=> {
             tab1addedBtn.style.display = 'flex';
