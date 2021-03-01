@@ -47,6 +47,13 @@
     }
     .item-img {
         flex-basis: 40%;
+        margin-right: 5px;
+    }
+    .item-text {
+        font-size: 13px;
+    }
+    .item-price span {
+        font-size: 13px;
     }
     .payment-grid {
         flex-direction: column;
