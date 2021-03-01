@@ -359,7 +359,7 @@
 
         tab1addedBtn.style.display = 'block';
         faturaOrKargo.style.display = 'block';
-        tab1null.style.display = 'flex';
+        tab1null.style.display = 'grid';
         tab1editbtn.style.display = 'none';
         tab1edided.style.display = 'none';
         faturaFirmaDairesi.parentNode.parentNode.style.display = 'none';
@@ -454,7 +454,7 @@
         })
         tab1editbtn.addEventListener('click', ()=> {
             tab1addedBtn.style.display = 'flex';
-            tab1null.style.display = 'flex';
+            tab1null.style.display = 'grid';
             faturaOrKargo.style.display = 'block';
             tab1edided.style.display = 'none';
             tab1editbtn.style.display = 'none';
@@ -734,27 +734,27 @@
     </script>
 
     <script>
-        let goToNextBtn = document.querySelector('#go-to-next-btn button');
+        // let goToNextBtn = document.querySelector('#go-to-next-btn button');
 
-        goToNextBtn.addEventListener('click', (e)=> {
-            e.preventDefault();
+        // goToNextBtn.addEventListener('click', (e)=> {
+        //     e.preventDefault();
 
-            $.ajax({
-                type: "post",
-                url: '#',
-                data: {
-                    test:'test'
-                },
-                success: function(data){
-                    console.log(data);
-                },
-                error: function() {
-                    console.log('error');
-                }
-            }).done(function (data) {
-                cuoponForm.submit();
-            });
-        });
+        //     $.ajax({
+        //         type: "post",
+        //         url: '#',
+        //         data: {
+        //             test:'test'
+        //         },
+        //         success: function(data){
+        //             console.log(data);
+        //         },
+        //         error: function() {
+        //             console.log('error');
+        //         }
+        //     }).done(function (data) {
+        //         cuoponForm.submit();
+        //     });
+        // });
     </script>
 </body>
 </html>

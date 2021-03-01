@@ -123,11 +123,8 @@ textarea {
     width: 30px;
 }
 
-.address__list {
-    display: flex;
-}
 .address__list.null-address {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
