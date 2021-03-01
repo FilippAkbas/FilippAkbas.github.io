@@ -36,8 +36,21 @@
     }
     .payment-grid {
         flex-direction: column;
+        padding: 10px;
     }
     .form-container {
         padding: 10px 0;
+    }
+    .form-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "name"
+        "surname"
+        "number"
+        "expiration"
+        "security";
+    }
+    .fatura-or-kargo {
+        padding: 10px;
     }
 }
