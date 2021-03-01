@@ -126,6 +126,15 @@ textarea {
 .address__list {
     display: flex;
 }
+.address__list.null-address {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.address__list-item:nth-child(2) {
+    grid-column: 1 / 4;
+    grid-row: 2 / 4;
+}
 
 .address__list-item {
     flex-basis: 50%;
