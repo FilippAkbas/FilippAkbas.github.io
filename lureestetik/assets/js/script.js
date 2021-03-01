@@ -2,17 +2,11 @@ const mainSlider = new Swiper("#main-slider", {
   // Optional parameters
   loop: true,
   slidesPerView: 1,
-  margin: "25px",
-
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
     clickable: true,
   },
-
-  // Navigation arrows
-  navigation: false,
 });
 
 const blogSlider = new Swiper("#blog-slider", {

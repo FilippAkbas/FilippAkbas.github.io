@@ -375,6 +375,13 @@ section {
   color: #fff;
 }
 
+.slider-content.white-color h1 {
+  color: #fff;
+}
+.slider-content.white-color p {
+  color: #fff;
+}
+
 .swiper-pagination-bullet-active {
   color: var(--main-color);
   background-color: var(--main-color);
@@ -738,6 +745,10 @@ section {
   background-color: var(--main-color);
   color: #fff;
   border-radius: 20px;
+}
+
+.image-text a {
+  color: #fff;
 }
 
 .blog-content__title {

@@ -234,8 +234,10 @@
     }
     .slider-content {
         width: 100%;
-        right: 47%;
-        top: 35%;
+        right: 0%;
+        top: 20%;
+        transform: none;
+        padding: 0 10px;
     }
     .banner-content__text {
         width: 100%;
@@ -408,6 +410,23 @@
     }
     .slider-content.white-color {
         color: #000;
+    }
+    .slider-content.white-color h1 {
+        color: #000;
+      }
+      .slider-content.white-color p {
+        color: #000;
+      }
+    .section__title h2 {
+        font-size: 42px;
+    }
+    .contact-title h2 {
+        font-size: 42px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .banner-section__dsc h2 {
+        font-size: 42px;
     }
 }
 
