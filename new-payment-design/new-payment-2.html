@@ -56,7 +56,7 @@
                       <span><span id="first-price">329</span>.00 ₺</span>
                     </li>
                     <li id="kargo-area">
-                      <span>Ucretsiz Kargo</span>
+                      <span>Ücretsiz Kargo</span>
                       <span>50.00 ₺</span>
                     </li>
                     <li>
@@ -74,11 +74,11 @@
             <div class="product-address-select">
               <label for="free-kargo">
                 <input type="radio" name="kargo-address" id="free-kargo">
-                <span>Ucretsiz Kargo</span>
+                <span>Ücretsiz Kargo</span>
               </label>
               <label for="express-kargo">
                 <input type="radio" name="kargo-address" id="express-kargo">
-                <span>Express Kargo</span>
+                <span>Ekspres Kargo</span>
               </label>
             </div>
           </div>
@@ -114,12 +114,12 @@
         for(let i = 0;i < kargoSelect.length; i++) {
           kargoSelect[i].addEventListener('click', ()=> {
                 if(kargoSelect[i].childNodes[1].id === 'free-kargo') {
-                    kargoArea.innerHTML = '<span>Ucretsiz Kargo</span><span>0.00 ₺</span>';
+                    kargoArea.innerHTML = '<span>Ücretsiz Kargo</span><span>0.00 ₺</span>';
                     let total = firstPrice + freeKargoPrice;
                     totalPrice.innerHTML = total;
                 }
                 if(kargoSelect[i].childNodes[1].id === 'express-kargo') {
-                    kargoArea.innerHTML = '<span>Express Kargo</span><span>50.00 ₺</span>';
+                    kargoArea.innerHTML = '<span>Ekspres Kargo</span><span>50.00 ₺</span>';
                     let total = firstPrice + expressKargoPrice;
                     totalPrice.innerHTML = total;
                 }
