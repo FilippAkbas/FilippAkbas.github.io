@@ -366,7 +366,8 @@
 
             if(!kargoAd.value || !kargoSoyad.value || !kargoUlke.value || !kargoSehir.value || !kargoIlce.value || !kargoAdres.value || !kargoTelefon.value || !kargoEmail.value) {
                 Swal.fire({
-                    title: '<h4><span class="red-star">*</span> ile işaretlenen alanlar boş bırakılamaz!</h4>'
+                    title: '<h4><span class="red-star">*</span> ile işaretlenen alanlar boş bırakılamaz!</h4>',
+                    timer: 1500
                 });
                 if(!kargoAd.value) {
                     kargoAd.style.borderColor = '#ff1100';
@@ -423,6 +424,7 @@
                         icon: "success",
                         title: 'Onaylandı',
                         showConfirmButton: false,
+                        timer: 1500
                     });
                     tab1addedBtn.style.display = 'none';
                     tab1null.style.display = 'none';
@@ -434,6 +436,7 @@
                         type: 'error',
                         text: 'E-Posta Adresin Hatalı!',
                         timer: 1000,
+                        timer: 1500
                     });
                 };
             }
