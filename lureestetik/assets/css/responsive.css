@@ -1,4 +1,15 @@
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: 1500px) {
+    .header-menu li a {
+        font-size: 14px;
+    }
+    .date-benner__list-item .list-item__text:last-child:after {
+        bottom: -65px;
+        left: -65px;    
+        background-size: 95% 100%;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
     .header-menu li a {
         font-size: 14px;
     }
