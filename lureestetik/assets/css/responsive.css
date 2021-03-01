@@ -12,16 +12,16 @@
         font-size: 36px;
     }
     p {
-        font-size: 14px;
+        font-size: 15px;
     }
     .prerioty-info__list li .list-title {
-        font-size: 18px;
+        font-size: 19px;
     }
     .prerioty-section__dsc h3 {
-        font-size: 30px;
+        font-size: 31px;
     }
     .prerioty-section__dsc p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .prerioty-section__dsc a {
         font-size: 16px;
@@ -31,33 +31,36 @@
         padding-bottom: 10px;
     }
     .section__title h2 {
-        font-size: 42px;
+        font-size: 70px;
     }
     .section__title p {
         font-size: 16px;
+        font-weight: 600;
     }
     .about-content__item .item-number {
-        font-size: 66px;
+        font-size: 78px;
     }
     .about-content__item .item-title a {
-        font-size: 24px;
+        font-size: 26px;
         line-height: 25px;
     }
     .about-content__item .item-dsc {
-        font-size: 14px;
+        font-size: 16px;
     }
     .item-btn a {
         font-size: 16px;
+        color: #006e99;
+        font-weight: 600;
     }
     .randevu-banner-section h2 {
-        font-size: 46px;
+        font-size: 70px;
     }
     .date-benner__list-item .list-item__text {
         font-size: 16px;
         line-height: 20px;
     }
     .contact-title h2 {
-        font-size: 42px;
+        font-size: 70px;
     }
     .list-item__dsc {
         font-size: 14px;
@@ -66,10 +69,10 @@
         font-size: 36px;
     }
     .blog-content__title h3 {
-        font-size: 26px;
+        font-size: 31px;
     }
     .blog-content__dsc p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .blog-content__btn a {
         font-size: 16px;
@@ -78,7 +81,7 @@
         font-size: 14px;
     }
     .footer-title h5 {
-        font-size: 20px;
+        font-size: 26px;
     }
     .footer-menu__list li {
         margin-bottom: 5px;
@@ -99,10 +102,10 @@
         margin-top: 20px;
     }
     .blog-dsc p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .about-banner__title h1 {
-        font-size: 46px;
+        font-size: 70px;
     }
     .about-banner__title p {
         font-size: 14px;
@@ -111,31 +114,31 @@
         font-size: 14px !important;
     }
     .section-title h2 {
-        font-size: 42px;
+        font-size: 60px;
     }
     .section-title p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .banner-content__text h2 {
-        font-size: 40px;
+        font-size: 70px;
     }
     .contact-banner-content h2 {
-        font-size: 36px;
+        font-size: 48px;
     }
     .contact-banner-content p {
-        font-size: 14px;
+        font-size: 15px;
     }
     .contact-banner-content a {
         font-size: 22px;
     }
     .hizmetler-block__title h3 {
-        font-size: 22px;
+        font-size: 31px;
     }
     .hizmetler-block__title p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .block-list li {
-        font-size: 14px;
+        font-size: 16px;
     }
     .blog-submenu__title h2 {
         font-size: 26px;

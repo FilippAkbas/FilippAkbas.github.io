@@ -49,6 +49,7 @@ h6 {
 
 p {
   font-family: var(--main-font);
+  font-size: 15px;
 }
 
 ul,
@@ -101,6 +102,7 @@ section {
 .input-group.full-width label {
   width: 85%;
   display: inline-block;
+  font-size: 16.4px;
 }
 
 .section__title {
@@ -132,6 +134,7 @@ section {
 .section-title p {
   font-size: 16px;
   color: #777;
+  font-weight: 600;
 }
 
 /* header css option */
@@ -179,12 +182,12 @@ section {
 }
 
 .header-menu li a {
-  color: #000;
+  color: #707186;
   padding: 5px 15px;
   border: 2px solid transparent;
   border-radius: 15px;
   transition: all 0.2s;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .header-menu li a:hover {
@@ -194,6 +197,7 @@ section {
 .header-menu li a.active {
   border: 2px solid var(--main-color);
   border-radius: 15px;
+  color: #000;
 }
 
 .menu-item__lang img {
@@ -242,6 +246,7 @@ section {
   display: flex;
   align-items: center;
   color: #fff;
+  font-size: 14px;
 }
 
 .menu-item__submenu div a:hover {
@@ -356,6 +361,16 @@ section {
   transform: translate(-50%, -50%);
 }
 
+.slider-content__title {
+  font-size: 50px;
+  color: #494949;
+}
+
+.slider-content__dsc {
+  font-size: 20px;
+  color: #707186;
+}
+
 .slider-content.white-color {
   color: #fff;
 }
@@ -374,7 +389,7 @@ section {
 }
 
 .banner-section__dsc h2 {
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 500;
 }
 
@@ -507,8 +522,10 @@ section {
 
 .about-content__item .item-number {
   font-size: 90px;
-  color: #ddd;
+  color: #e6e8eb;
   line-height: 65px;
+  font-family: var(--second-font);
+  font-weight: 600;
 }
 
 .about-content__item .item-title a {
@@ -539,7 +556,7 @@ section {
 
 .randevu-banner-section h2 {
   font-size: 60px;
-  width: 50%;
+  width: 60%;
 }
 
 /* date banner css option  */
@@ -656,6 +673,8 @@ section {
 
 .contact-title h2 {
   font-size: 46px;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .contact-title p {
@@ -792,13 +811,18 @@ section {
 
 .blog-list li .blog-img {
   flex-basis: 15%;
-  margin-right: 20px;
+  margin-right: 5px;
+}
+
+.blog-list li .blog-title a {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .blog-list li .blog-img img {
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
 }
 
@@ -870,7 +894,7 @@ section {
 }
 
 .blog-title h2 {
-  font-size: 36px;
+  font-size: 48px;
 }
 
 .blog-dsc {
@@ -1010,13 +1034,15 @@ section {
 
 .hizmetler-block__title p {
   font-size: 16px;
-  color: #545454;
+  color: #707186;
+  font-weight: 600;
 }
 
 .block-list li {
   list-style: disc;
   font-size: 16px;
-  color: #545454;
+  color: #707186;
+  font-weight: 600;
 }
 
 /* hizmetlerimiz css option  */
@@ -1039,8 +1065,8 @@ section {
 }
 
 .banner-content__text {
-  width: 25%;
-  margin-right: 15%;
+  width: 35%;
+  margin-right: 5%;
 }
 
 .banner-content__text h2 {
@@ -1051,6 +1077,9 @@ section {
 .banner-content__text p {
   color: #fff;
   margin-top: 25px;
+  font-size: 26px;
+  line-height: 35px;
+  font-weight: 600;
 }
 
 .banner-content__text .svg-inline--fa {
@@ -1096,6 +1125,10 @@ section {
 .contact-banner-content p {
   margin-bottom: 20px;
   font-size: 16px;
+}
+
+.contact-banner-content p:nth-child(3) {
+  font-weight: 600;
 }
 
 .contact-banner-content a {
@@ -1366,4 +1399,14 @@ section {
   100% {
       border-width: 1px;
   }
+}
+
+.accordion li a.toggle {
+  font-size: 26px;
+}
+
+.accordion .inner.show li {
+  font-size: 16px;
+  color: #707186;
+  font-weight: 500;
 }
