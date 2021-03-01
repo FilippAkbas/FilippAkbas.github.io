@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Payment</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/new-payment.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-logo">
+            <img src="assets/img/payment/mapsky-logo.png" alt="Logo">
+        </div>
+    </header>
+    <section class="payment-menu__list">
+        <li><a href="new-payment.html" id="tabs1" class="active">1.Adres & Kargo Bilgileri</a></li>
+        <li><a href="#"><img src="assets/img/payment/swoosh-right.svg" alt="right logo"></a></li>
+        <li><a href="new-payment-2.html" id="tabs2">2.Odeme Bilgileri</a></li>
+        <li><a href="#"><img src="assets/img/payment/swoosh-right.svg" alt="right logo"></a></li>
+        <li><a href="new-payment-3.html" id="tabs3">3.Odeme Bilgileri</a></li>
+    </section>
+    <section class="payment-section">
+        <div class="payment-box address-box">
+            <div class="address__list null-address">
+                <div class="address__list-item">
+                    <div class="address-grid">
+                        <div class="address-grid__item">
+                            <h3>Kargo bilgiler:</h3>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-ad">
+                                <span>Ad <span class="red-color">*</span></span>
+                                <input type="text" name="kargo-ad" id="kargo-ad" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-soyad">
+                                <span>Soyad <span class="red-color">*</span></span>
+                                <input type="text" name="kargo-soyad" id="kargo-soyad" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-ulke">
+                                <span>Ülke <span class="red-color">*</span></span>
+                                <select name="kargo-ulke" id="kargo-ulke">
+                                    <option value="seciniz" selected disabled>Seçiniz...</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-sehir">
+                                <span>Şehir <span class="red-color">*</span></span>
+                                <select name="kargo-sehir" id="kargo-sehir">
+                                    <option value="seciniz" selected disabled>Seçiniz...</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-ilce">
+                                <span>İlçe / Semt <span class="red-color">*</span></span>
+                                <select name="kargo-ilce" id="kargo-ilce">
+                                    <option value="seciniz" selected disabled>Seçiniz...</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-adres">
+                                <span>Adres <span class="red-color">*</span></span>
+                                <input type="text" name="kargo-adres" id="kargo-adres" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-telefon">
+                                <span>Telefon <span class="red-color">*</span></span>
+                                <input type="text" name="kargo-telefon" id="kargo-telefon" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="kargo-email">
+                                <span>E-posta adresi <span class="red-color">*</span></span>
+                                <input type="text" name="kargo-email" id="kargo-email" placeholder="">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="address__list-item">
+                    <div class="address-grid">
+                        <div class="address-grid__item">
+                            <h3>Fatura bilgiler:</h3>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-ad">
+                                <span>Ad <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-ad" id="fatura-ad" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-soyad">
+                                <span>Soyad <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-soyad" id="fatura-soyad" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-firma-adi">
+                                <span>Firma adı (isteğe bağlı) <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-firma-adi" id="fatura-firma-adi" placeholder="Kurumsal faturalar için">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-firma-dairesi">
+                                <span>Vergi Dairesi <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-firma-dairesi" id="fatura-firma-dairesi" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-firma-no">
+                                <span>Vergi No <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-firma-no" id="fatura-firma-no" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-ulke">
+                                <span>Ülke <span class="red-color">*</span></span>
+                                <select name="fatura-ulke" id="fatura-ulke">
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-sehir">
+                                <span>Şehir <span class="red-color">*</span></span>
+                                <select name="fatura-sehir" id="fatura-sehir">
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-ilce">
+                                <span>İlçe / Semt <span class="red-color">*</span></span>
+                                <select name="fatura-ilce" id="fatura-ilce">
+                                    <option value="1">1</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="address-grid__item" style="display: none;">
+                            <label for="fatura-posta">
+                                <span>Posta Kodu</span>
+                                <input type="text" name="fatura-posta" id="fatura-posta" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-adres">
+                                <span>Adres <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-adres" id="fatura-adres" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-telefon">
+                                <span>Telefon <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-telefon" id="fatura-telefon" placeholder="">
+                            </label>
+                        </div>
+                        <div class="address-grid__item">
+                            <label for="fatura-email">
+                                <span>E-posta adresi <span class="red-color">*</span></span>
+                                <input type="text" name="fatura-email" id="fatura-email" placeholder="">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fatura-or-kargo">
+                <label for="fatura-or-kargo">
+                    <input type="checkbox" name="fatura-or-kargo" id="fatura-or-kargo" checked>
+                    <span>Kargo bilgilerim fatura bilgilerimle aynı</span>
+                </label>
+            </div>
+            <div class="add-address">
+                <button type="button" class="btn">Kaydet</button>
+            </div>
+            <div class="address__list added-address">
+                <div class="address__list-item">
+                    <div class="address-grid">
+                        <div class="address-grid__item">
+                            <h3>Kargo bilgiler: </h3>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Ad:</span>
+                            <p class="kargo-ad-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Soyad:</span>
+                            <p class="kargo-soyad-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Ülke:</span>
+                            <p class="kargo-ulke-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Şehir:</span>
+                            <p class="kargo-sehir-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>İlçe / Semt:</span>
+                            <p class="kargo-ilce-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Adres:</span>
+                            <p class="kargo-adres-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Telefon:</span>
+                            <p class="kargo-telefon-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>E-posta adresi:</span>
+                            <p class="kargo-email-div">Name</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address__list-item">
+                    <div class="address-grid">
+                        <div class="address-grid__item">
+                            <h3>Fatura bilgiler: </h3>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Ad: </span>
+                            <p class="fatura-ad-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Soyad:</span>
+                            <p class="fatura-soyad-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Firma adı:</span>
+                            <p class="fatura-firma-adi-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Vergi Dairesi:</span>
+                            <p class="fatura-vergi-dairesi-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Vergi No:</span>
+                            <p class="fatura-vergi-no-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Ülke:</span>
+                            <p class="fatura-ulke-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Şehir:</span>
+                            <p class="fatura-sehir-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>İlçe / Semt:</span>
+                            <p class="fatura-ilce-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Posta Kodu:</span>
+                            <p class="fatura-posta-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Adres:</span>
+                            <p class="fatura-adres-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>Telefon:</span>
+                            <p class="fatura-telefon-div">Name</p>
+                        </div>
+                        <div class="address-grid__item">
+                            <span>E-posta adresi:</span>
+                            <p class="fatura-email-div">Name</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="eddit-address">
+                <a href="javascript:void(0)" class="save-btn">Duzenle</a>
+            </div>
+        </div>
+    </section>
+    <div class="go-to-next-btn">
+        <button type="button" class="btn">Odeme Sayfasina gecelim</button>
+    </div>
+    <footer class="footer">
+        <div class="footer-img">
+            <img src="assets/img/payment/cards.png" alt="Card img">
+        </div>
+        <div class="footer-copyright">mapinsky © 2020 - made with <img src="assets/img/icon/heart.svg" alt="heart"> and <img src="assets/img/icon/coffee.svg" alt="heart"> by efervesan || kreatif</div>
+    </footer>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.0/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        let tab1editbtn = document.querySelector('.eddit-address');
+        let faturaOrKargo = document.querySelector('.fatura-or-kargo');
+        let tab1null = document.querySelector('.null-address');
+        let tab1addedBtn = document.querySelector('.add-address');
+        let tab1edided = document.querySelector('.added-address');
+        let faturaOrKargoInput = document.querySelector('#fatura-or-kargo');
+        let proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        let targetUrl = 'https://efervesan-location.herokuapp.com/';
+        const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "text/html; charset=utf-8");
+            myHeaders.set('Access-Control-Allow-Origin', '*');
+
+        let faturaAd = document.querySelector('#fatura-ad');
+        let faturaSoyad = document.querySelector('#fatura-soyad');
+        let faturaFirmaAdi = document.querySelector('#fatura-firma-adi');
+        let faturaFirmaDairesi = document.querySelector('#fatura-firma-dairesi');
+        let faturaFirmaNo = document.querySelector('#fatura-firma-no');
+        let faturaUlke = document.querySelector('#fatura-ulke');
+        let faturaSehir = document.querySelector('#fatura-sehir');
+        let faturaIlce = document.querySelector('#fatura-ilce');
+        let faturaPosta = document.querySelector('#fatura-posta');
+        let faturaAdres = document.querySelector('#fatura-adres');
+        let faturaTelefon = document.querySelector('#fatura-telefon');
+        let faturaEmail = document.querySelector('#fatura-email');
+
+        let kargoAd = document.querySelector('#kargo-ad');
+        let kargoSoyad = document.querySelector('#kargo-soyad');
+        let kargoUlke = document.querySelector('#kargo-ulke');
+        let kargoSehir = document.querySelector('#kargo-sehir');
+        let kargoIlce = document.querySelector('#kargo-ilce');
+        let kargoAdres = document.querySelector('#kargo-adres');
+        let kargoTelefon = document.querySelector('#kargo-telefon');
+        let kargoEmail = document.querySelector('#kargo-email');
+
+        let faturaAdDiv = document.querySelector('.fatura-ad-div');
+        let faturaSoyadDiv = document.querySelector('.fatura-soyad-div');
+        let faturaFirmaAdiDiv = document.querySelector('.fatura-firma-adi-div');
+        let faturaFirmaDairesiDiv = document.querySelector('.fatura-vergi-dairesi-div');
+        let faturaFirmaNoDiv = document.querySelector('.fatura-vergi-no-div');
+        let faturaUlkeDiv = document.querySelector('.fatura-ulke-div');
+        let faturaSehirDiv = document.querySelector('.fatura-sehir-div');
+        let faturaIlceDiv = document.querySelector('.fatura-ilce-div');
+        let faturaPostaDiv = document.querySelector('.fatura-posta-div');
+        let faturaAdresDiv = document.querySelector('.fatura-adres-div');
+        let faturaTelefonDiv = document.querySelector('.fatura-telefon-div');
+        let faturaEmailDiv = document.querySelector('.fatura-email-div');
+
+        let kargoAdDiv = document.querySelector('.kargo-ad-div');
+        let kargoSoyadDiv = document.querySelector('.kargo-soyad-div');
+        let kargoUlkeDiv = document.querySelector('.kargo-ulke-div');
+        let kargoSehirDiv = document.querySelector('.kargo-sehir-div');
+        let kargoIlceDiv = document.querySelector('.kargo-ilce-div');
+        let kargoAdresDiv = document.querySelector('.kargo-adres-div');
+        let kargoTelefonDiv = document.querySelector('.kargo-telefon-div');
+        let kargoEmailDiv = document.querySelector('.kargo-email-div');
+
+        tab1addedBtn.style.display = 'block';
+        faturaOrKargo.style.display = 'block';
+        tab1null.style.display = 'flex';
+        tab1editbtn.style.display = 'none';
+        tab1edided.style.display = 'none';
+        faturaFirmaDairesi.parentNode.parentNode.style.display = 'none';
+        faturaFirmaNo.parentNode.parentNode.style.display = 'none';
+
+        // Valide Mail
+        function validateEmail(email) {
+            var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function adresValidate() {
+            let email = $("#kargo-email").val();
+
+            if(!kargoAd.value || !kargoSoyad.value || !kargoUlke.value || !kargoSehir.value || !kargoIlce.value || !kargoAdres.value || !kargoTelefon.value || !kargoEmail.value) {
+                Swal.fire({
+                    title: '<h4><span class="red-star">*</span> ile işaretlenen alanlar boş bırakılamaz!</h4>'
+                });
+                if(!kargoAd.value) {
+                    kargoAd.style.borderColor = '#ff1100';
+                } else if(!kargoSoyad.value) {
+                    kargoSoyad.style.borderColor = '#ff1100';
+                } else if(kargoUlke.options[kargoUlke.selectedIndex].text == 'Seçiniz...') {
+                    kargoUlke.style.borderColor = '#ff1100';
+                } else if(kargoSehir.options[kargoSehir.selectedIndex].text == 'Seçiniz...') {
+                    kargoSehir.style.borderColor = '#ff1100';
+                } else if(kargoIlce.options[kargoIlce.selectedIndex].text == 'Seçiniz...') {
+                    kargoIlce.style.borderColor = '#ff1100';
+                } else if(!kargoAdres.value) {
+                    kargoAdres.style.borderColor = '#ff1100';
+                } else if(!kargoTelefon.value) {
+                    kargoTelefon.style.borderColor = '#ff1100';
+                } else if(!kargoEmail.value) {
+                    kargoEmail.style.borderColor = '#ff1100';
+                }
+            } else {
+                faturaAdDiv.innerHTML = faturaAd.value;
+                faturaSoyadDiv.innerHTML = faturaSoyad.value;
+                faturaFirmaAdiDiv.innerHTML = faturaFirmaAdi.value;
+                faturaFirmaDairesiDiv.innerHTML = faturaFirmaDairesi.value;
+                faturaFirmaNoDiv.innerHTML = faturaFirmaNo.value;
+                faturaUlkeDiv.innerHTML = faturaUlke.value;
+                faturaSehirDiv.innerHTML = faturaSehir.value;
+                faturaIlceDiv.innerHTML = faturaIlce.value;
+                faturaPostaDiv.innerHTML = faturaPosta.value;
+                faturaAdresDiv.innerHTML = faturaAdres.value;
+                faturaTelefonDiv.innerHTML = faturaTelefon.value;
+                faturaEmailDiv.innerHTML = faturaEmail.value;
+
+                kargoAdDiv.innerHTML = kargoAd.value;
+                kargoSoyadDiv.innerHTML = kargoSoyad.value;
+                kargoUlkeDiv.innerHTML = kargoUlke.value;
+                kargoSehirDiv.innerHTML = kargoSehir.value;
+                kargoIlceDiv.innerHTML = kargoIlce.value;
+                kargoAdresDiv.innerHTML = kargoAdres.value;
+                kargoTelefonDiv.innerHTML = kargoTelefon.value;
+                kargoEmailDiv.innerHTML = kargoEmail.value;
+
+                kargoAd.style.borderColor = '#ced4da';
+                kargoSoyad.style.borderColor = '#ced4da';
+                kargoUlke.style.borderColor = '#ced4da';
+                kargoSehir.style.borderColor = '#ced4da';
+                kargoIlce.style.borderColor = '#ced4da';
+                kargoAdres.style.borderColor = '#ced4da';
+                kargoTelefon.style.borderColor = '#ced4da';
+                kargoEmail.style.borderColor = '#ced4da';
+
+                if (validateEmail(kargoEmail.value)) {
+                    Swal.fire({
+                        type: 'success',
+                        title: 'Fatura Bilgiler Doğru!',
+                        text: 'E-Posta Adresin Doğru!',
+                        showConfirmButton: false,
+                    });
+                    tab1addedBtn.style.display = 'none';
+                    tab1null.style.display = 'none';
+                    faturaOrKargo.style.display = 'none';
+                    tab1edided.style.display = 'flex';
+                    tab1editbtn.style.display = 'block';
+                } else {
+                    Swal.fire({
+                        type: 'error',
+                        text: 'E-Posta Adresin Hatalı!',
+                        timer: 1000,
+                    });
+                };
+            }
+        }
+
+        tab1addedBtn.addEventListener('click', ()=> {
+            adresValidate();
+        })
+        tab1editbtn.addEventListener('click', ()=> {
+            tab1addedBtn.style.display = 'flex';
+            tab1null.style.display = 'flex';
+            faturaOrKargo.style.display = 'block';
+            tab1edided.style.display = 'none';
+            tab1editbtn.style.display = 'none';
+        })
+
+        // kargo js option 
+        const fetchKargoUlke = (id) => {
+            fetch(targetUrl + 'countries', {
+                method: 'GET',
+                mode: 'cors',
+                headers: myHeaders,
+                body: null,
+                cache: 'default'
+            }).then(res => res.json()).then(data => {
+                let allData = data.data;
+                let listTxt = '';
+                allData.forEach((element) => {
+                    listTxt = listTxt = listTxt + '<option value="' + element.name + '" id="' + element._id + '">' + element.name + '</option>';
+                });
+                $('#kargo-ulke').html(listTxt);
+                let selectOption = '<option value="seciniz" selected disabled>Seçiniz...</option>';
+                selectOption.innerHTML = 'append';
+                $('#kargo-ulke').prepend(selectOption);
+            }).catch(error => {
+                console.log('Request failed', error);
+            });
+        }
+        fetchKargoUlke();
+        const fetchKargoSehir = (id) => {
+            fetch(targetUrl + 'cities', {
+                method: 'GET',
+                mode: 'cors',
+                headers: myHeaders,
+                body: null,
+                cache: 'default'
+            }).then(res => res.json()).then(data => {
+                let allData = data.data;
+                let listTxt = '';
+                allData.forEach((element) => {
+                    listTxt = listTxt = listTxt + '<option value="' + element.name + '" id="' + element._id + '">' + element.name + '</option>';
+                });
+                $('#kargo-sehir').html(listTxt);
+                let selectOption = '<option value="seciniz" selected disabled>Seçiniz...</option>';
+                selectOption.innerHTML = 'append';
+                $('#kargo-sehir').prepend(selectOption);
+            }).catch(error => {
+                console.log('Request failed', error);
+            });
+        }
+        const fetchKargoIlce = (id) => {
+            let ilceUrl = targetUrl + 'cities' + "/" + id + '/towns';
+            fetch(ilceUrl, {
+                method: 'GET',
+                mode: 'cors',
+                headers: myHeaders,
+                body: null,
+                cache: 'default'
+            }).then(res => res.json()).then(data => {
+                let allData = data.data;
+                let listTxt = '';
+                allData.forEach((element) => {
+                    listTxt = listTxt = listTxt + '<option value="' + element.name + '" id="' + element._id + '" data-expres="' + element.isExpress + '">' + element.name + '</option>';
+                });
+                $('#kargo-ilce').html(listTxt);
+                let selectOption = '<option value="seciniz" selected disabled>Seçiniz...</option>';
+                selectOption.innerHTML = 'append';
+                $('#kargo-ilce').prepend(selectOption);
+            }).catch(error => {
+                console.log('Request failed', error);
+            });
+        }
+        $('#kargo-ulke').on('change', function() {
+            let id = $(this).children(":selected").attr("id");
+            $('#fatura-ulke option[id=' + id + ']').prop('selected', true);
+            fetchKargoSehir(id);
+            fetchFaturaSehir(id);
+        });
+        $('#kargo-sehir').on('change', function() {
+            let id = $(this).children(":selected").attr("id");
+            $('#fatura-sehir option[id=' + id + ']').prop('selected', true);
+            fetchKargoIlce(id);
+            fetchFaturaIlce(id);
+        });
+        $('#kargo-ilce').on('change', function() {
+            let id = $(this).children(":selected").attr("id");
+            $('#fatura-ilce option[id=' + id + ']').prop('selected', true);
+        });
+
+        // fatura js option 
+        const fetchFaturaUlke = (id) => {
+            fetch(targetUrl + 'countries', {
+                method: 'GET',
+                mode: 'cors',
+                headers: myHeaders,
+                body: null,
+                cache: 'default'
+            }).then(res => res.json()).then(data => {
+                let allData = data.data;
+                let listTxt = '';
+                allData.forEach((element) => {
+                    listTxt = listTxt = listTxt + '<option value="' + element.name + '" id="' + element._id + '">' + element.name + '</option>';
+                });
+                $('#fatura-ulke').html(listTxt);
+                let selectOption = '<option value="seciniz" selected disabled>Seçiniz...</option>';
+                selectOption.innerHTML = 'append';
+                $('#fatura-ulke').prepend(selectOption);
+            }).catch(error => {
+                console.log('Request failed', error);
+            });
+        }
+        fetchFaturaUlke();
+        const fetchFaturaSehir = (id) => {
+            fetch(targetUrl + 'cities', {
+                method: 'GET',
+                mode: 'cors',
+                headers: myHeaders,
+                body: null,
+                cache: 'default'
+            }).then(res => res.json()).then(data => {
+                let allData = data.data;
+                let listTxt = '';
+                allData.forEach((element) => {
+                    listTxt = listTxt = listTxt + '<option value="' + element.name + '" id="' + element._id + '">' + element.name + '</option>';
+                });
+                $('#fatura-sehir').html(listTxt);
+                let selectOption = '<option value="seciniz" selected disabled>Seçiniz...</option>';
+                selectOption.innerHTML = 'append';
+                $('#fatura-sehir').prepend(selectOption);
+            }).catch(error => {
+                console.log('Request failed', error);
+            });
+        }
+        const fetchFaturaIlce = (id) => {
+            let ilceUrl = targetUrl + 'cities' + "/" + id + '/towns';
+            fetch(ilceUrl, {
+                method: 'GET',
+                mode: 'cors',
+                headers: myHeaders,
+                body: null,
+                cache: 'default'
+            }).then(res => res.json()).then(data => {
+                let allData = data.data;
+                let listTxt = '';
+                allData.forEach((element) => {
+                    listTxt = listTxt = listTxt + '<option value="' + element.name + '" id="' + element._id + '" data-expres="' + element.isExpress + '">' + element.name + '</option>';
+                });
+                $('#fatura-ilce').html(listTxt);
+                let selectOption = '<option value="seciniz" selected disabled>Seçiniz...</option>';
+                selectOption.innerHTML = 'append';
+                $('#fatura-ilce').prepend(selectOption);
+            }).catch(error => {
+                console.log('Request failed', error);
+            });
+        }
+        $('#fatura-ulke').on('change', function() {
+            let id = $(this).children(":selected").attr("id");
+            $('#fatura-ulke option[id=' + id + ']').prop('selected', true);
+            fetchFaturaSehir(id);
+        });
+        $('#fatura-sehir').on('change', function() {
+            let id = $(this).children(":selected").attr("id");
+            fetchFaturaIlce(id);
+        });
+
+        function keypressData() {
+            faturaAd.value = kargoAd.value;
+            faturaSoyad.value = kargoSoyad.value;
+            faturaUlke.value = kargoUlke.value;
+            faturaSehir.value = kargoSehir.value;
+            faturaIlce.value = kargoIlce.value;
+            faturaAdres.value = kargoAdres.value;
+            faturaTelefon.value = kargoTelefon.value;
+            faturaEmail.value = kargoEmail.value;
+            kargoAd.addEventListener('keypress', ()=> {
+                faturaAd.value = kargoAd.value;
+            });
+            kargoSoyad.addEventListener('keypress', ()=> {
+                faturaSoyad.value = kargoSoyad.value;
+            });
+            kargoAdres.addEventListener('keypress', ()=> {
+                faturaAdres.value = kargoAdres.value;
+            });
+            kargoTelefon.addEventListener('keypress', ()=> {
+                faturaTelefon.value = kargoTelefon.value;
+            });
+            kargoEmail.addEventListener('keypress', ()=> {
+                faturaEmail.value = kargoEmail.value;
+            });
+        }
+
+        function changeData() {
+            faturaAd.value = '';
+            faturaSoyad.value = '';
+            faturaFirmaAdi.value = '';
+            faturaFirmaDairesi.value = '';
+            faturaFirmaNo.value = '';
+            faturaUlke.value = '';
+            faturaSehir.value = '';
+            faturaIlce.value = '';
+            faturaPosta.value = '';
+            faturaAdres.value = '';
+            faturaTelefon.value = '';
+            faturaEmail.value = '';
+        }
+
+        if(faturaOrKargoInput.checked === true) {
+            keypressData();
+            faturaAd.setAttribute('disabled', true);
+            faturaSoyad.setAttribute('disabled', true);
+            faturaFirmaAdi.setAttribute('disabled', true);
+            faturaFirmaDairesi.setAttribute('disabled', true);
+            faturaFirmaNo.setAttribute('disabled', true);
+            faturaUlke.setAttribute('disabled', true);
+            faturaSehir.setAttribute('disabled', true);
+            faturaIlce.setAttribute('disabled', true);
+            faturaPosta.setAttribute('disabled', true);
+            faturaAdres.setAttribute('disabled', true);
+            faturaTelefon.setAttribute('disabled', true);
+            faturaEmail.setAttribute('disabled', true);
+        } else {
+            changeData();
+            faturaAd.removeAttribute('disabled');
+            faturaSoyad.removeAttribute('disabled');
+            faturaFirmaAdi.removeAttribute('disabled');
+            faturaFirmaDairesi.removeAttribute('disabled');
+            faturaFirmaNo.removeAttribute('disabled');
+            faturaUlke.removeAttribute('disabled');
+            faturaSehir.removeAttribute('disabled');
+            faturaIlce.removeAttribute('disabled');
+            faturaPosta.removeAttribute('disabled');
+            faturaAdres.removeAttribute('disabled');
+            faturaTelefon.removeAttribute('disabled');
+            faturaEmail.removeAttribute('disabled');
+        }
+
+        faturaOrKargoInput.addEventListener('click', ()=> {
+            if(faturaOrKargoInput.checked === true) {
+                keypressData();
+                faturaAd.setAttribute('disabled', true);
+                faturaSoyad.setAttribute('disabled', true);
+                faturaFirmaAdi.setAttribute('disabled', true);
+                faturaFirmaDairesi.setAttribute('disabled', true);
+                faturaFirmaNo.setAttribute('disabled', true);
+                faturaUlke.setAttribute('disabled', true);
+                faturaSehir.setAttribute('disabled', true);
+                faturaIlce.setAttribute('disabled', true);
+                faturaPosta.setAttribute('disabled', true);
+                faturaAdres.setAttribute('disabled', true);
+                faturaTelefon.setAttribute('disabled', true);
+                faturaEmail.setAttribute('disabled', true);
+            } else {
+                changeData();
+                faturaAd.removeAttribute('disabled');
+                faturaSoyad.removeAttribute('disabled');
+                faturaFirmaAdi.removeAttribute('disabled');
+                faturaFirmaDairesi.removeAttribute('disabled');
+                faturaFirmaNo.removeAttribute('disabled');
+                faturaUlke.removeAttribute('disabled');
+                faturaSehir.removeAttribute('disabled');
+                faturaIlce.removeAttribute('disabled');
+                faturaPosta.removeAttribute('disabled');
+                faturaAdres.removeAttribute('disabled');
+                faturaTelefon.removeAttribute('disabled');
+                faturaEmail.removeAttribute('disabled');
+            }
+        });
+
+        faturaFirmaAdi.addEventListener('mouseout', ()=> {
+            if(faturaFirmaAdi.value.length <= 0) {
+                faturaFirmaDairesi.parentNode.parentNode.style.display = 'none';
+                faturaFirmaNo.parentNode.parentNode.style.display = 'none';
+            } else {
+                faturaFirmaDairesi.parentNode.parentNode.style.display = 'flex';
+                faturaFirmaNo.parentNode.parentNode.style.display = 'flex';
+            }
+        });
+    </script>
+
+    <script>
+        let goToNextBtn = document.querySelector('#go-to-next-btn button');
+
+        goToNextBtn.addEventListener('click', (e)=> {
+            e.preventDefault();
+
+            $.ajax({
+                type: "post",
+                url: '#',
+                data: {
+                    test:'test'
+                },
+                success: function(data){
+                    console.log(data);
+                },
+                error: function() {
+                    console.log('error');
+                }
+            }).done(function (data) {
+                cuoponForm.submit();
+            });
+        });
+    </script>
+</body>
+</html>

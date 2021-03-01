@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Payment</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/payment-card.css" />
+    <link rel="stylesheet" href="assets/css/new-payment.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <img src="assets/img/payment/mapsky-logo.png" alt="Logo" />
+      </div>
+    </header>
+    <section class="payment-menu__list">
+      <li><a href="new-payment.html"  id="tabs1">1.Adres & Kargo Bilgileri</a></li>
+      <li><a href="#"><img src="assets/img/payment/swoosh-right.svg" alt="right logo"></a></li>
+      <li><a href="new-payment-2.html"  id="tabs2">2.Odeme Bilgileri</a></li>
+      <li><a href="#"><img src="assets/img/payment/swoosh-right.svg" alt="right logo"></a></li>
+      <li><a href="new-payment-3.html" id="tabs3" class="active">3.Odeme Bilgileri</a></li>
+    </section>
+    <section class="payment-section">
+      <div class="payment-box payment-grid">
+        <div class="payment-select__content">
+            <div class="payment-select-change">
+                <div class="payment-select__item">
+                    <label for="credi-cart">
+                      <input type="radio" name="name" id="credi-cart" class="cart-radio" checked>
+                      <span>Kredi Kartı</span>
+                    </label>
+                  </div>
+                  <div class="payment-select__item">
+                    <label for="havale-cart">
+                      <input type="radio" name="name" id="havale-cart" class="cart-radio">
+                      <span>Havale/EFT</span>
+                    </label>
+                  </div>
+            </div>
+          <div class="creditcard__area-card">
+            <div class="form-container cart-container">
+                <div class="field-container">
+                    <label for="name">Ad</label>
+                    <input id="name" name="name" maxlength="20" type="text">
+                </div>
+                <div class="field-container">
+                    <label for="surname">Soyad</label>
+                    <input id="surname" name="surname" maxlength="20" type="text">
+                </div>
+                <div class="field-container">
+                    <label for="cardnumber">Kart Numarası</label>
+                    <input id="cardnumber" name="cardnumber" type="text" inputmode="numeric" placeholder="•••• •••• •••• ••••">
+                    <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
+                </div>
+                <div class="field-container group-container">
+                    <div>
+                        <label for="expirationmm" class="card-title-flex">
+                            <div>
+                                <span>Ay</span>
+                            </div>
+                        </label>
+                        <label for="expirationyy" class="card-title-flex">
+                            <div>
+                                <span>Yıl</span>
+                            </div>
+                        </label>
+                    </div>
+                    <input id="expirationmm" name="ay" type="text" pattern="[0-9]*" inputmode="numeric">
+                    <input id="expirationyy" name="yil" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+                <div class="field-container">
+                    <label for="securitycode">Güvenlik Numarası(CVC)</label>
+                    <input id="securitycode" name="securecode" type="text" pattern="[0-9]*" inputmode="numeric">
+                </div>
+                <div class="bank_select">
+                  <h2>Taksit Seçenekleri</h2>
+                    <select id="opt" name="banka">
+                      <option value="#">Tüm Kartlar</option>
+                      <option value="Axess">Axess</option>
+                      <option value="Bonus">Bonus</option>
+                      <option value="Maximum">Maximum</option>
+                      <option value="Cardfinans">Cardfinans</option>
+                      <option value="Wordl">World</option>
+                      <option value="Paraf">Paraf</option>
+                      <option value="Advantage">Advantage</option>
+                      <option value="Combo">Combo</option>
+                    </select>
+                    <select id="opt2" name="taksit">
+                        <option value="1">Tek çekim ödeme Komisyonsuz</option>
+                        <option value="2">2 Taksit Komisyonsuz</option>
+                        <option value="3">3 Taksit Komisyonsuz</option>
+                    </select>
+                  </div>
+            </div>
+            <div class="form-container havale-container">
+                <p>Lütfen ilgili sipariş numarasını ödemenizin açıklama kısmına yazınız. Ödemeniz onaylanmadıkça siparişiniz gönderilmeyecektir.</p>
+                <div class="bank-info">
+                    <h4>BANKA BİLGİLERİMİZ</h4>
+                    <p>ALİST TURİZM İNŞAAT GAYRİMENKUL YATIRIM VE TİCARET LİMİTED ŞİRKETİ:</p>
+                    <p>Banka: <span>Garanti BBVA</span></p>
+                    <p>IBAN: <span>TR470006200038900006292357</span></p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment-select">
+          <div class="payment-select__item">
+            <div class="basket-list-price">
+                <li>
+                    <div class="list-price__text">Ürünlerin Toplamı</div>
+                    <div class="list-price__total"> 0.00 TL</div>
+                </li>
+                <li>
+                    <div class="list-price__text">Ücretsiz Kargo</div>
+                    <div class="list-price__total"> 0.00 TL</div>
+                </li>
+                <li>
+                    <div class="list-price__text">Toplam(KDV Dahil)</div>
+                    <div class="list-price__total"> 0.00 TL</div>
+                </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="go-to-next-btn">
+        <button type="button" class="btn">Odeme Sayfasina gecelim</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-img">
+        <img src="assets/img/payment/cards.png" alt="Card img" />
+      </div>
+      <div class="footer-copyright">
+        mapinsky © 2020 - made with <img src="assets/img/icon/heart.svg" alt="heart" /> and <img src="assets/img/icon/coffee.svg" alt="heart" /> by efervesan || kreatif
+      </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        let creditCart = document.querySelector('#credi-cart');
+        let havale = document.querySelector('#havale-cart');
+        let cartRadio = document.querySelectorAll('.cart-radio');
+        let havaleContainer = document.querySelector('.havale-container');
+        let cartContainer = document.querySelector('.cart-container');
+
+        havaleContainer.style.display = 'none';
+        cartContainer.style.display = 'grid';
+
+        for(let i = 0;i < cartRadio.length; i++) {
+            console.log(cartRadio[i]);
+            cartRadio[i].addEventListener('click', ()=> {
+                if(cartRadio[i].id === 'credi-cart') {
+                    havaleContainer.style.display = 'none';
+                    cartContainer.style.display = 'grid';
+                }
+                if(cartRadio[i].id === 'havale-cart') {
+                    havaleContainer.style.display = 'flex';
+                    cartContainer.style.display = 'none';
+                }
+            });
+        }
+    </script>
+  </body>
+</html>

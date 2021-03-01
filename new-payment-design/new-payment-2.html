@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Payment</title>
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/payment-card.css" />
+    <link rel="stylesheet" href="assets/css/new-payment.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <img src="assets/img/payment/mapsky-logo.png" alt="Logo" />
+      </div>
+    </header>
+    <section class="payment-menu__list">
+      <li><a href="new-payment.html" id="tabs1">1.Adres & Kargo Bilgileri</a></li>
+      <li><a href="#"><img src="assets/img/payment/swoosh-right.svg" alt="right logo"></a></li>
+      <li><a href="new-payment-2.html" id="tabs2" class="active">2.Adres & Kargo Bilgileri </a></li>
+      <li><a href="#"><img src="assets/img/payment/swoosh-right.svg" alt="right logo"></a></li>
+      <li><a href="new-payment-3.html" id="tabs3">3.Odeme Bilgileri</a></li>
+    </section>
+    <section class="payment-section">
+      <div class="payment-box product-grid">
+        <div class="payment-select">
+          <div class="payment-select__item">
+            <div class="basket-title"><h2>Sepet</h2></div>
+            <div class="basket-list">
+                <div class="basket-list__item">
+                    <div class="item-img"><img src="https://image.freepik.com/free-psd/3d-elegant-white-brass-scene-with-podium-product-placement-editable-color_167960-40.jpg" alt="img"></div>
+                    <div class="item-text">
+                      <span>Klasik Tema 40x50cm</span>
+                      <span>Beyaz</span>
+                    </div>
+                    <div class="item-price">
+                      <span>329.00 ₺</span>
+                    </div>
+                </div>
+                <div class="basket-list__item">
+                    <div class="item-img"><img src="https://image.freepik.com/free-psd/3d-elegant-white-brass-scene-with-podium-product-placement-editable-color_167960-40.jpg" alt="img"></div>
+                    <div class="item-text">
+                      <span>Klasik Tema 40x50cm</span>
+                      <span>Beyaz</span>
+                    </div>
+                    <div class="item-price">
+                      <span>329.00 ₺</span>
+                    </div>
+                </div>
+                <div class="basket-list__item">
+                  <div class="basket-total-list">
+                    <li>
+                      <span>Ara Toplam</span>
+                      <span><span id="first-price">329</span>.00 ₺</span>
+                    </li>
+                    <li id="kargo-area">
+                      <span>Ucretsiz Kargo</span>
+                      <span>50.00 ₺</span>
+                    </li>
+                    <li>
+                      <span>Toplam (KDV Dahil)</span>
+                      <span><span id="total-price">329</span>.00 ₺</span>
+                    </li>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <div class="product-info__item">
+            <div class="basket-title"><h2>Sipariş Notu</h2></div>
+            <textarea name="textarea" id="textarea" rows="3" placeholder="Sipariş Notu"></textarea>
+          </div>
+          <div class="product-info__item">
+            <div class="basket-title"><h2>Kargo Secimi</h2></div>
+            <div class="product-address-select">
+              <label for="free-kargo">
+                <input type="radio" name="kargo-address" id="free-kargo">
+                <span>Ucretsiz Kargo</span>
+              </label>
+              <label for="express-kargo">
+                <input type="radio" name="kargo-address" id="express-kargo">
+                <span>Express Kargo</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="go-to-next-btn">
+      <button type="button" class="btn">Odeme Sayfasina gecelim</button>
+    </div>
+    <footer class="footer">
+      <div class="footer-img">
+        <img src="assets/img/payment/cards.png" alt="Card img" />
+      </div>
+      <div class="footer-copyright">
+        mapinsky © 2020 - made with <img src="assets/img/icon/heart.svg" alt="heart" /> and <img src="assets/img/icon/coffee.svg" alt="heart" /> by efervesan || kreatif
+      </div>
+    </footer>
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        let kargoSelect = document.querySelectorAll('.product-address-select label');
+        let kargoArea = document.querySelector('#kargo-area');
+        let totalPrice = document.querySelector('#total-price');
+        let firstPrice = +document.querySelector('#first-price').textContent;
+        let freeKargoPrice = 0;
+        let expressKargoPrice = 50;
+
+        for(let i = 0;i < kargoSelect.length; i++) {
+          kargoSelect[i].addEventListener('click', ()=> {
+                if(kargoSelect[i].childNodes[1].id === 'free-kargo') {
+                    kargoArea.innerHTML = '<span>Ucretsiz Kargo</span><span>0.00 ₺</span>';
+                    let total = firstPrice + freeKargoPrice;
+                    totalPrice.innerHTML = total;
+                }
+                if(kargoSelect[i].childNodes[1].id === 'express-kargo') {
+                    kargoArea.innerHTML = '<span>Express Kargo</span><span>50.00 ₺</span>';
+                    let total = firstPrice + expressKargoPrice;
+                    totalPrice.innerHTML = total;
+                }
+            });
+        }
+    </script>
+  </body>
+</html>
