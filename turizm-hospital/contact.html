@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="sub-header">
+    <div class="sub-header__info">
+      <a href="tel:5656565656">Tel: +5 656 565 656</a>
+    </div>
+    <div class="sub-header__group">
+      <div class="login">
+        <a href="#">Login</a> / <a href="#">Sign Up</a>
+      </div>
+      <div>|</div>
+      <div class="lang">
+        <select name="lang" id="lang">
+          <option selected="true" disabled="disabled">Lang</option>
+          <option value="En">En</option>
+          <option value="Tr">Tr</option>
+          <option value="Fr">Fr</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="header-logo"><a href="index.html">Logo</a></div>
+    <nav class="menu">
+      <div class="nav-item"><a href="#" class="active">Home</a></div>
+      <div class="nav-item"><a href="#">About us</a></div>
+      <div class="nav-item"><a href="#">Search</a></div>
+      <div class="nav-item"><a href="contact.html">Contact</a></div>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="first-screen screen-area">
+      <div class="screen-title">
+        <h1>Who are you?</h1>
+      </div>
+
+      <div class="screen-content">
+        <div class="content-title"></div>
+        <div class="content-group">
+          <button id="doctor">I am doctor</button>
+          <button id="patient">I am patient</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="doctor-screen screen-area">
+      <div class="screen-title">
+        <h1>I am doctor</h1>
+      </div>
+
+      <div class="screen-content">
+        <div class="contact-bloc__form">
+          <label for="">
+            <span>Name</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Surname</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Subject</span>
+            <textarea name="12" id="12" cols="20" rows="5"></textarea>
+          </label>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="patient-screen screen-area">
+      <div class="screen-title">
+        <h1>I am patient</h1>
+      </div>
+
+      <div class="screen-content">
+        <div class="contact-bloc__form">
+          <label for="">
+            <span>Name</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Surname</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Subject</span>
+            <textarea name="12" id="12" cols="20" rows="5"></textarea>
+          </label>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

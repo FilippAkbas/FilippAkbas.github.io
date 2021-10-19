@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+
+label span {
+  font-size: 13px;
+  color: #747474;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+label input:focus,
+label textarea:focus {
+  outline: none !important;
+  border: 2px solid #0071c2;
+}
+
+button {
+  background-color: #0071c2;
+  border: none;
+  box-shadow: 1px 1px 1px #ddd;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  height: 80%;
+  color: #fff;
+}
+
+.sub-header {
+  background-color: #eee;
+  padding: 5px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-header__info a {
+  color: #000;
+  font-size: 14px;
+}
+
+.sub-header__group {
+  display: flex;
+  align-items: center;
+}
+
+.sub-header__group .login {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.sub-header__group .login a {
+  color: #000;
+}
+
+.sub-header__group .lang {
+  margin-left: 10px;
+}
+
+.sub-header__group .lang select {
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  font-size: 14px;
+  background-color: transparent;
+  width: 60px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.header-logo a {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0071c2;
+}
+
+.header .menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 15px;
+}
+
+.nav-item a {
+  position: relative;
+  color: #000;
+}
+
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0071c2;
+  opacity: 0;
+  transition: all .2s;
+}
+
+.nav-item a:hover::after { 
+  opacity: 1;
+}
+
+.nav-item a.active::after {
+  opacity: 1;
+}
+
+.slider-section {
+  position: relative;
+  margin: 0 3%;
+  padding: 40px;
+  border-radius: 10px;
+  color: #000;
+  background: url('../img/image-2.jpg') no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #b5f3e0;
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+.slider-section__title {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.slider-section__title h1 {
+  margin-bottom: 0;
+  font-size: 42px;
+}
+
+.slider-section__title p {
+  font-size: 14px;
+  color: #323232;
+}
+
+.slider-section__boking {
+  position: relative;
+  z-index: 10;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.3fr;
+  align-items: center;
+}
+
+.hot-news-section {
+  margin: 50px 0;
+}
+
+.hot-news__title {}
+
+.hot-news__title h2 {
+  font-size: 42px;
+  margin: 20px 0 0 0;
+}
+
+.hot-news__title p {
+  font-size: 14px;
+}
+
+.hot-news__title .title-icon {
+  text-align: left;
+  padding-right: 10%;
+}
+
+.hot-news__title .title-icon img {
+  width: 70px;
+}
+
+.hot-news__content {
+  background-color: #0071c2;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all .4s;
+}
+
+.hot-news__content:hover {
+  margin-top: -10px;
+}
+
+.hot-news__content a {
+  color: #fff;
+}
+
+.content-title {
+  line-height: 25px;
+}
+
+.content-desc {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.info-services-section .section-title h2 {
+  font-size: 32px;
+}
+
+.is-title {
+  height: 60px;
+}
+
+.is-title a {
+  display: inline-block;
+  color: #0e6bb3;
+  border-bottom: 2px solid #0e6bb3;
+  padding-bottom: 5px;
+}
+
+.is-title a h3 {
+  margin: 0;
+  line-height: 25px;
+  font-size: 18px;
+  height: 60px;
+}
+
+.is-content {
+  margin-bottom: 40px;
+  height: 130px;
+}
+
+.is-content p {
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.content-icon a {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-size: 14px;
+}
+
+.content-icon a img {
+  width: 20px;
+  margin-left: 15px;
+}
+
+.popular-hospital {
+  margin-bottom: 50px;
+}
+
+.best-hospital {
+  text-align: center;
+  border: 3px solid #0071c2;
+  padding: 50px 0;
+  border-radius: 10px;
+}
+
+.best-hospital__img img {
+  width: 80px;
+}
+
+.best-hospital__content h2 {
+  font-size: 32px;
+}
+
+.best-hospital-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.hospital-list__item {
+  display: flex;
+}
+
+.hospital-item__img {
+  width: 100%;
+  height: 150px;
+  margin-right: 10px;
+  flex-basis: 50%;
+}
+
+.hospital-item__img img {
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #0071c2;
+}
+
+.hospital-item__content {
+  flex-basis: 50%;
+}
+
+.hospital-item__content .content-title {
+  margin: 0 0 5px 0;
+}
+
+.hospital-item__content .content-title a {
+  color: #0071c2;
+}
+
+.hospital-item__content .hospital-location {
+  margin: 0;
+}
+
+.hospital-item__content .hospital-location a {
+  font-size: 14px;
+  color: #000;
+}
+
+.hospital-item__content .hospital-text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.main-page-contact {
+  margin-bottom: 50px;
+}
+
+.main-page-contact .container {
+  text-align: center;
+}
+
+.main-contact__block {
+  position: relative;
+  border: 2px solid #0071c2;
+  padding: 0 0 15px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.main-contact__block::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: #0071c2;
+  z-index: -1;
+}
+
+.contact-bloc__title {
+  font-size: 26px;
+  color: #fff;
+  line-height: 35px;
+  margin: 15px 0;
+}
+
+.contact-bloc__form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.contact-bloc__form label {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.contact-bloc__form label span {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.contact-bloc__form button {
+  background-color: #fff;
+  color:#0071c2;
+}
+
+.footer {
+  background: #0071c2;
+  color: #fff;
+  padding: 25px 0;
+}
+
+.footer-logo {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 25px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #fff;
+  line-height: 20px;
+}
+
+.footer-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.footer-list {}
+
+.list-item {
+  margin-bottom: 5px;
+}
+
+.list-item a {
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.list-item a img {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.adress-list li {
+  margin-bottom: 15px;
+  line-height: 20px;
+}
+
+.copyrating {
+  border-top: 1px solid #00000014;
+  padding-top: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+
+
+.contact-section {
+  width: 100%;
+  height: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+}
+
+.screen-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.screen-title {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-content {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.screen-content .contact-bloc__form label span {
+  color: #000;
+}
+
+.screen-content .contact-bloc__form button {
+  background-color: #0071c2;
+  color: #fff;
+}
+
+.content-group button {
+  padding: 25px;
+  font-size: 20px;
+}
+
+.content-group button:nth-child(1) {
+  margin-right: 15px;
+}
+
+.content-title { 
+  font-size: 20px;
+}
+
+.doctor-screen,
+.patient-screen {
+  display: none;
+}
