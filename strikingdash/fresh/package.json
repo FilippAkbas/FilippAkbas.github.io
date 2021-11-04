@@ -55,7 +55,7 @@
     "vue3-styled-components": "^1.2.1",
     "vuedraggable": "^4.0.1",
     "vuex": "^4.0.0",
-    "xlsx": "^0.16.9"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.11",
