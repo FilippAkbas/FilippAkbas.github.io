@@ -1,6 +1,6 @@
 <template>
   <div class="full-width-table">
-    <sdCards title="Backlink Profili" more>
+    <sdCards title="En Düşük Trafik Alan Sayfalar" more>
       <template #button>
         <div class="card-nav">
           <ul>
@@ -59,27 +59,27 @@ import { TrafficTableWrapper } from '../../style';
 
 const locationColumns = [
   {
-    title: 'Sayfalar',
+    title: 'Landing Pages',
     dataIndex: 'sayfalar',
     key: 'sayfalar',
   },
   {
-    title: 'Gelen Bağlantı Sayısı',
+    title: 'Session',
     dataIndex: 'gelen',
     key: 'gelen',
   },
   {
-    title: 'Bağlantı Veren Siteler',
+    title: 'Bounce Rate',
     dataIndex: 'siteler',
     key: 'siteler',
   },
   {
-    title: 'Oran (%)',
+    title: 'CTR',
     dataIndex: 'percentage',
     key: 'percentage',
   },
   {
-    title: 'Oran',
+    title: 'Goal Conv. Rate',
     dataIndex: 'value',
     key: 'value',
   },
@@ -100,7 +100,7 @@ const TrafficChannel = {
         ? [
             {
               key: '1',
-              sayfalar: 'www.618media.com',
+              sayfalar: 'Homepage',
               gelen: trafficState.value.direct.sessions,
               siteler: trafficState.value.direct.goals,
               percentage: (
@@ -116,7 +116,7 @@ const TrafficChannel = {
             },
             {
               key: '2',
-              sayfalar: 'www.618media.com',
+              sayfalar: 'Our Service',
               gelen: trafficState.value.email.sessions,
               siteler: trafficState.value.email.goals,
               percentage: (
@@ -132,7 +132,7 @@ const TrafficChannel = {
             },
             {
               key: '3',
-              sayfalar: 'www.618media.com',
+              sayfalar: 'List of Products',
               gelen: trafficState.value.search.sessions,
               siteler: trafficState.value.search.goals,
               percentage: (
@@ -148,7 +148,7 @@ const TrafficChannel = {
             },
             {
               key: '4',
-              sayfalar: 'www.618media.com',
+              sayfalar: 'Contact Us',
               gelen: trafficState.value.referral.sessions,
               siteler: trafficState.value.referral.goals,
               percentage: (
@@ -164,7 +164,7 @@ const TrafficChannel = {
             },
             {
               key: '5',
-              sayfalar: 'www.618media.com',
+              sayfalar: 'Products',
               gelen: trafficState.value.media.sessions,
               siteler: trafficState.value.media.goals,
               percentage: (

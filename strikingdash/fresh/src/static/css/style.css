@@ -3102,3 +3102,13 @@ html[dir='rtl'] .ant-comment-avatar{
 .ps__rail-y .ps__thumb-y{
   background-color: rgb(241, 242, 246);
 }
+
+/* custom css  */
+
+.ant-card-small > .ant-card-body {
+  padding: 1px !important;
+}
+
+.ant-card-small > .ant-card-body > div {
+  padding: 10px 10px 10px;
+}

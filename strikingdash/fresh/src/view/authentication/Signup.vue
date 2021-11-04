@@ -4,17 +4,17 @@
     <div class="auth-contents">
       <a-form name="register" :model="formState" @finish="handleSubmit" layout="vertical">
         <sdHeading as="h3"> Sign Up to <span class="color-secondary">Admin</span> </sdHeading>
-        <a-form-item label="Name" name="name">
-          <a-input v-model:value="formState.name" placeholder="Full name" />
+        <a-form-item label="İsim" name="name">
+          <a-input v-model:value="formState.name" placeholder="İsim" />
         </a-form-item>
-        <a-form-item name="username" label="Username">
-          <a-input v-model:value="formState.username" placeholder="Username" />
+        <a-form-item name="username" label="Soyisim">
+          <a-input v-model:value="formState.username" placeholder="Soyisim" />
         </a-form-item>
-        <a-form-item name="email" label="Email Address">
+        <a-form-item name="email" label="E-Posta">
           <a-input type="email" v-model:value="formState.email" placeholder="name@example.com" />
         </a-form-item>
-        <a-form-item label="Password" name="password">
-          <a-input type="password" v-model:value="formState.password" placeholder="Password" />
+        <a-form-item label="Şifre" name="password">
+          <a-input type="password" v-model:value="formState.password" placeholder="Şifre" />
         </a-form-item>
         <div class="auth-form-action">
           <a-checkbox @change="onChange">

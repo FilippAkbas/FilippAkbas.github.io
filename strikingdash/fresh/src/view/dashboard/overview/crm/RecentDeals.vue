@@ -1,31 +1,10 @@
 <template>
   <div class="full-width-table">
-    <sdCards title="Recent Deals" bodypadding="0px">
+    <sdCards title="Paylaşılacak Üyeler" bodypadding="0px">
       <template #button>
-        <div class="card-nav">
-          <ul>
-            <li :class="products === 'today' ? 'active' : 'deactivate'">
-              <router-link @click="e => handleActiveChangeProducts(e, 'today')" to="#">
-                Today
-              </router-link>
-            </li>
-            <li :class="products === 'week' ? 'active' : 'deactivate'">
-              <router-link @click="e => handleActiveChangeProducts(e, 'week')" to="#">
-                Week
-              </router-link>
-            </li>
-            <li :class="products === 'month' ? 'active' : 'deactivate'">
-              <router-link @click="e => handleActiveChangeProducts(e, 'month')" to="#">
-                Month
-              </router-link>
-            </li>
-            <li :class="products === 'year' ? 'active' : 'deactivate'">
-              <router-link @click="e => handleActiveChangeProducts(e, 'year')" to="#">
-                Year
-              </router-link>
-            </li>
-          </ul>
-        </div>
+        <sdButton class="btn-add_new" size="default" key="1" type="default" :outlined="true">
+          <sdFeatherIcons type="plus" size="14" /> Add Users
+        </sdButton>
       </template>
       <RecentDealsWrapper>
         <div class="table-bordered recent-deals-table table-responsive">
@@ -71,7 +50,7 @@ const RecentDeals = {
     const sellingData = computed(() =>
       recentDealState.value
         ? recentDealState.value.map(value => {
-            const { key, name, date, price, img } = value;
+            const { key, name, date, img } = value;
             return {
               key,
               name: (
@@ -83,7 +62,6 @@ const RecentDeals = {
                   </div>
                 </div>
               ),
-              amount: <span class="deal-amount">{price}</span>,
             };
           })
         : [],

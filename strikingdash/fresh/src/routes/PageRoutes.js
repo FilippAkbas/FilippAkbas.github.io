@@ -5,6 +5,26 @@ export default [
     component: () => import(/* webpackChunkName: "Blank" */ '@/view/pages/BlankPage.vue'),
   },
   {
+    path: '/page/ayarlar',
+    name: 'ayarlar',
+    component: () => import(/* webpackChunkName: "ayarlar" */ '@/view/pages/ayarlar.vue'),
+  },
+  {
+    path: '/page/backlink',
+    name: 'backlink',
+    component: () => import(/* webpackChunkName: "backlink" */ '@/view/pages/backlink.vue'),
+  },
+  {
+    path: '/page/dashboardnew',
+    name: 'dashboardnew',
+    component: () => import(/* webpackChunkName: "dashboardnew" */ '@/view/pages/dashboardnew.vue'),
+  },
+  {
+    path: '/page/projectnew',
+    name: 'projectnew',
+    component: () => import(/* webpackChunkName: "project" */ '@/view/pages/projectnew.vue'),
+  },
+  {
     path: '/page/testimonials',
     name: 'testimonials',
     component: () => import(/* webpackChunkName: "Testimonials" */ '@/view/pages/Testimonials.vue'),

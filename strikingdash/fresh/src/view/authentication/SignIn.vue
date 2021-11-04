@@ -1,52 +1,19 @@
 <template>
   <AuthWrapper>
-    <p class="auth-notice">Don&rsquo;t have an account? <router-link to="/auth/register">Sign up now</router-link></p>
     <div class="auth-contents">
       <a-form @finish="handleSubmit" :model="formState" layout="vertical">
-        <sdHeading as="h3"> Sign in to <span class="color-secondary">Admin</span> </sdHeading>
-        <a-form-item name="username" label="Username or Email Address">
-          <a-input type="email" v-model:value="formState.email" />
+        <sdHeading as="h3"> Giriş </sdHeading>
+        <a-form-item name="username" label="Username/E-mail">
+          <a-input type="email" v-model:value="formState.email" placeholder="Username" />
         </a-form-item>
         <a-form-item name="password" initialValue="123456" label="Password">
           <a-input type="password" v-model:value="formState.password" placeholder="Password" />
         </a-form-item>
-        <div class="auth-form-action">
-          <a-checkbox @change="onChange">Keep me logged in</a-checkbox>
-          <router-link class="forgot-pass-link" to="/auth/forgotPassword">
-            Forgot password?
-          </router-link>
-        </div>
         <a-form-item>
           <sdButton class="btn-signin" htmlType="submit" type="primary" size="large">
-            {{ isLoading ? 'Loading...' : 'Sign In' }}
+            {{ isLoading ? 'Loading...' : 'Giriş' }}
           </sdButton>
         </a-form-item>
-        <p class="form-divider">
-          <span>Or</span>
-        </p>
-        <ul class="social-login">
-          <li>
-            <a class="google-signup" href="#">
-              <img :src="require('@/static/img/google.png')" alt="" />
-              <span>Sign in with Google</span>
-            </a>
-          </li>
-          <li>
-            <a class="facebook-sign" href="#">
-              <FacebookOutlined />
-            </a>
-          </li>
-          <li>
-            <a class="twitter-sign" href="#">
-              <TwitterOutlined />
-            </a>
-          </li>
-        </ul>
-        <div class="auth0-login">
-          <a href="#" @click="() => lock.show()">
-            Sign In with Auth0
-          </a>
-        </div>
       </a-form>
     </div>
   </AuthWrapper>
