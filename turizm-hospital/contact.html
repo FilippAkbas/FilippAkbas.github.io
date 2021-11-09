@@ -13,54 +13,67 @@
 
 <body>
 
-  <div class="sub-header">
-    <div class="sub-header__info">
-      <a href="tel:5656565656">Tel: +5 656 565 656</a>
-    </div>
-    <div class="sub-header__group">
-      <div class="login">
-        <a href="#">Login</a> / <a href="#">Sign Up</a>
-      </div>
-      <div>|</div>
-      <div class="lang">
-        <select name="lang" id="lang">
-          <option selected="true" disabled="disabled">Lang</option>
-          <option value="En">En</option>
-          <option value="Tr">Tr</option>
-          <option value="Fr">Fr</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
   <header class="header">
     <div class="header-logo"><a href="index.html">Logo</a></div>
     <nav class="menu">
-      <div class="nav-item"><a href="#" class="active">Home</a></div>
-      <div class="nav-item"><a href="#">About us</a></div>
+      <div class="nav-item"><a href="index.html">Home</a></div>
+      <div class="nav-item"><a href="about.html">About us</a></div>
       <div class="nav-item"><a href="#">Search</a></div>
-      <div class="nav-item"><a href="contact.html">Contact</a></div>
+      <div class="nav-item"><a href="contact.html"  class="active">Contact</a></div>
     </nav>
+    <div class="menu-right">
+      <div class="menu-right__contact">
+        <div class="icon">
+          <img src="assets/img/location.png" alt="Location">
+        </div>
+        <div class="text">
+          <span>Contact</span>
+          <a href="#">+1 315 369 5943</a>
+        </div>
+      </div>
+      <div class="menu-right__login">
+        <a href="#">Login / Signup</a>
+      </div>
+    </div>
+    <div class="mobile-burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <section class="contact-section">
     <div class="first-screen screen-area">
       <div class="screen-title">
-        <h1>Who are you?</h1>
+        <h1>We can help you?</h1>
       </div>
 
       <div class="screen-content">
         <div class="content-title"></div>
         <div class="content-group">
-          <button id="doctor">I am doctor</button>
-          <button id="patient">I am patient</button>
+          <button id="quest-yes">Yes, sure</button>
+          <button id="quest-no">No, i know</button>
         </div>
       </div>
     </div>
 
-    <div class="doctor-screen screen-area">
+    <div class="first-1-screen screen-area">
       <div class="screen-title">
-        <h1>I am doctor</h1>
+        <h1>Are you sick?</h1>
+      </div>
+
+      <div class="screen-content">
+        <div class="content-title"></div>
+        <div class="content-group">
+          <button id="sick-quest-yes">Yes</button>
+          <button id="sick-quest-no">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="first-1-1-screen screen-area">
+      <div class="screen-title">
+        <h1>Describe your disease</h1>
       </div>
 
       <div class="screen-content">
@@ -82,11 +95,34 @@
       </div>
     </div>
 
-    <div class="patient-screen screen-area">
+    <div class="first-1-2-screen screen-area">
       <div class="screen-title">
-        <h1>I am patient</h1>
+        <h1>What we can do for you</h1>
       </div>
 
+      <div class="screen-content">
+        <div class="contact-bloc__form">
+          <label for="">
+            <span>Name</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Surname</span>
+            <input type="text">
+          </label>
+          <label for="">
+            <span>Subject</span>
+            <textarea name="12" id="12" cols="20" rows="5"></textarea>
+          </label>
+          <button>Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-screen screen-area">
+      <div class="screen-title">
+        <h1>Contact with us</h1>
+      </div>
       <div class="screen-content">
         <div class="contact-bloc__form">
           <label for="">

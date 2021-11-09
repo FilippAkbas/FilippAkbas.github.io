@@ -1,16 +1,30 @@
-let doctorBtn = document.querySelector('#doctor');
-let patientBtn = document.querySelector('#patient');
-
 let firstScreen = document.querySelector('.first-screen');
-let doctorScreen = document.querySelector('.doctor-screen');
-let patientScreen = document.querySelector('.patient-screen');
+let first_1_screen = document.querySelector('.first-1-screen');
+let first_1_1_screen = document.querySelector('.first-1-1-screen ');
+let first_1_2_screen = document.querySelector('.first-1-2-screen');
+let contactScreen = document.querySelector('.contact-screen');
 
-doctorBtn.addEventListener('click', ()=> {
+let yesBtn = document.querySelector('#quest-yes');
+let noBtn = document.querySelector('#quest-no');
+let sickYesBtn = document.querySelector('#sick-quest-yes');
+let sickNoBtn = document.querySelector('#sick-quest-no');
+
+yesBtn.addEventListener('click', ()=> {
   firstScreen.style.display = 'none';
-  doctorScreen.style.display = 'flex';
+  first_1_screen.style.display = 'flex';
 });
 
-patientBtn.addEventListener('click', ()=> {
+noBtn.addEventListener('click', ()=> {
   firstScreen.style.display = 'none';
-  patientScreen.style.display = 'flex';
+  contactScreen.style.display = 'flex';
+});
+
+sickYesBtn.addEventListener('click', ()=> {
+  first_1_screen.style.display = 'none';
+  first_1_1_screen.style.display = 'flex';
+});
+
+sickNoBtn.addEventListener('click', ()=> {
+  first_1_screen.style.display = 'none';
+  first_1_2_screen.style.display = 'flex';
 });
