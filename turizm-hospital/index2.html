@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets-sinan/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets-sinan/js/lib/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets-sinan/js/lib/owl-carousel/assets/owl.theme.default.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"> Logo</a>
+        <ul>
+            <li><a href="#"></a>Home</li>
+            <li><a href="#"></a>About</li>
+            <li><a href="#"></a>Booking</li>
+            <li><a href="#"></a>Contact</li>
+        </ul>
+    </header>
+
+    <section class="banner">
+        <div class="imgBx">
+            <img src="assets-sinan/img/images_new/img1.jpg" class="active">
+            <img src="assets-sinan/img/images_new/img2.jpg">
+            <img src="assets-sinan/img/images_new/img3.jpg">
+            <img src="assets-sinan/img/images_new/img4.jpg">
+            <img src="assets-sinan/img/images_new/img5.jpg">
+            <img src="assets-sinan/img/images_new/img6.jpg">
+        </div>
+        <div class="contentBox">
+            <div class="active">
+                <h2>Slide Text One</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut velit, quae ea omnis laborum, accusamus unde minus illo repudiandae beatae ipsum dolor quos cupiditate aliquid fuga reiciendis autem adipisci neque.</p>
+                <a href="">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Two</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut velit, quae ea omnis laborum, accusamus unde minus illo repudiandae beatae ipsum dolor quos cupiditate aliquid fuga reiciendis autem adipisci neque.</p>
+                <a href="">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Three</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut velit, quae ea omnis laborum, accusamus unde minus illo repudiandae beatae ipsum dolor quos cupiditate aliquid fuga reiciendis autem adipisci neque.</p>
+                <a href="">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Four</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut velit, quae ea omnis laborum, accusamus unde minus illo repudiandae beatae ipsum dolor quos cupiditate aliquid fuga reiciendis autem adipisci neque.</p>
+                <a href="">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Five</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut velit, quae ea omnis laborum, accusamus unde minus illo repudiandae beatae ipsum dolor quos cupiditate aliquid fuga reiciendis autem adipisci neque.</p>
+                <a href="">Details</a>
+            </div>
+            <div>
+                <h2>Slide Text Six</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut velit, quae ea omnis laborum, accusamus unde minus illo repudiandae beatae ipsum dolor quos cupiditate aliquid fuga reiciendis autem adipisci neque.</p>
+                <a href="">Details</a>
+            </div>
+        </div>
+        <ul class="controls">
+            <li onclick="prevSlide();prevSlideText()"></li>
+            <li onclick="nextSlide(); nextSlideText()"></li>
+        </ul>
+    </section>
+    
+<script src="assets-sinan/js/jquery-3.6.0.min.js"></script>
+<script src="assets-sinan/js/lib/owl-carousel/owl.carousel.min.js"></script>
+<script src="assets-sinan/js/script.js"></script>
+
+<script type="text/javascript">
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:0, 
+        items: 1,
+        autoplay: true,
+        autoplayTimeout: 3000,
+    })
+</script>
+</body>
+</html>
