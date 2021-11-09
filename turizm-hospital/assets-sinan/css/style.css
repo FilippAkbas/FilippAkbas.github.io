@@ -7,11 +7,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body
-{
-    background: #f00;
-}
-
 header{
     position: fixed;
     top: 0;
@@ -21,13 +16,8 @@ header{
     justify-content: space-between;
     z-index: 1000;
     padding: 50px 100px;
-/*     
-    position:relative;
-    width:100%; */
     height:28px;
-    /* background:#ffb400; */
     background: rgba(0, 0, 0, 0.2);
-
 }
 
 
@@ -58,8 +48,6 @@ header li{
     list-style: none;
     margin-left: 40px;
     color: #fff;
-    
-
 }
 
 header ul li a{
@@ -67,105 +55,35 @@ header ul li a{
     text-decoration: none;
 }
 
-.banner {
+.owl-carousel {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-item {
     position: relative;
-    width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 }
 
-.banner .imgBx{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.banner .imgBx img{
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    background-position: center;
-}
-
-.banner .imgBx img.active{
-
-    opacity: 1;
-}
-
-.controls {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    width: 80px;
-}
-
-.controls li{
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-.controls li:hover{
-
-    background: #ffeb3f;
-}
-
-.controls li:before{
-
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-left: 3px solid #111;
-    border-bottom: 3px solid #111;
-    transform: rotate(45deg);
-}
-
-.controls li:nth-child(2):before{
-    transform: rotate(225deg);
-}
-
-.contentBox{
+.contentBox {
     position: absolute;
     bottom: 0;
-    max-width: 700px;
-}
-
-.contentBox div{
-    display: none;
-}
-
-.contentBox div.active{
-    display: block;
-    padding: 40px;
-    padding-left: 100px;
+    left: 0;
     background: rgba(0, 0, 0, 0.2);
+    width: 50%;
+    padding: 40px 100px;
+    color: #fff;
 }
 
-.contentBox div h2{
-    color: #fff;
+.contentBox h2 {
     font-size: 2em;
 }
 
-.contentBox div p{
-    color: #fff;
+.contentBox p {
     font-size: 1em;
 }
 
-.contentBox div a{
+.contentBox a {
     color: #111;
     font-size: 1em;
     display: inline-block;
@@ -176,4 +94,59 @@ header ul li a{
     text-decoration: none;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+.owl-carousel .owl-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    right: calc(-2% - 1px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.owl-nav button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+}
+
+.nav-btn:hover {
+    background-color: yellow;
+}
+
+.nav-btn.prev-slide,
+.nav-btn.next-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn.prev-slide::after {
+    content: '';
+    background: url('../img/left-arrow.png') no-repeat center / contain;
+    width: 20px;
+    height: 20px;
+}
+
+.nav-btn.next-slide::after {
+    content: '';
+    background: url('../img/right-arrow.png') no-repeat center / contain;
+    width: 20px;
+    height: 20px;
 }
