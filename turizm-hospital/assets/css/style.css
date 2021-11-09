@@ -241,6 +241,13 @@ button {
 .slider-img {
   position: relative;
   z-index: 0;
+  height: 100%;
+}
+
+.slider-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .slider-content {
