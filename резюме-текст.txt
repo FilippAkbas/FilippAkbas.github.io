@@ -1,0 +1,10 @@
+Доброе время суток! 
+Я хотел бы отликнуться на вакансию Верстальщик. Имею опыт в 1.5 года работы верстальщиком. 
+На хорошом уровне знаком с Adobe Photoshop, Illustrator, InDesign, Figma. 
+Работал с фреймворком VUE. Имею опыт работы с Laravel, Wordpress.
+В верстке использую CSS/SCSS/SASS (Использую технику БЭМ но подстроенную под себя), HTML/PUG, хорошо знаком с git. 
+Вот примеры моих работ которые были написанны мною. https://www.luresthetic.com ,https://www.morchi.co/, https://mapinsky.com/ (Написан на Laravel, верстка моя с 0), https://mormu.com/
+
+Мой GitHub: https://github.com/filippAkbas
+Мой сайт с примерами моих работ и наработок / портфолио: https://filippakbas.github.io/
+Мой портфолио hh: https://hh.ru/resume/126580bdff09562e890039ed1f346534486973

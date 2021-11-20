@@ -25,6 +25,44 @@ a {
     margin: 0 auto;
 }
 
+.main__portfolio {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main__portfolio-img {
+    position: relative;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.main__portfolio-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    object-position: 100% 25%;
+    border-radius: 50%;
+    border: 5px solid #CC99FE;
+}
+
+.main__portfolio-text {}
+
+.main__portfolio-text h2 {
+    margin: 0px 0;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.main__portfolio-text h2 span {
+    color: #800080;
+}
+
+.main__portfolio-text p {
+    font-weight: 600;
+    line-height: 25px;
+}
+
 .main .main__contact {
     width: 100%;
     display: flex;
@@ -49,6 +87,22 @@ a {
 
 .main .main__contact ul li:last-child { 
     margin-right: 0; 
+}
+
+.main .main__contact ul li a {
+    background-color: #CC99FE;
+    color: #922b2b;
+    border: 2px solid#800080;
+    box-shadow: #800080 3px 3px 1px 0px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all .4s;
+}
+
+.main .main__contact ul li a:hover {
+    box-shadow: none;
 }
 
 .main .main__title {
