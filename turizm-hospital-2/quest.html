@@ -188,7 +188,6 @@
       function GetCountry() {
         let address =
           "https://sys.bookingsurgery.com/API/dataget.asmx/CountryList?_APIKey=jTtzjRI6EfuMI9g4t6nfkTs4oI15ohSC";
-        console.log(address);
         fetch(address, {
           method: "POST",
           mode: "no-cors",
@@ -197,21 +196,23 @@
             "Access-Control-Allow-Origin": "*",
           },
         })
-          .then((data) => data.json())
-          .then((dataCountry) => {
-            let option = document.createElement("option");
-            option.text = "Country";
-            option.value = "";
-            option.disabled = true;
-            option.selected = true;
-            CountryOption.add(option);
-            // for(i = 0; i < dataCountry.length; i++) {
-            //     option = document.createElement("option");
-            //     option.text = dataCountry[i].sehir_adi;
-            //     option.value = dataCountry[i].sehir_ID;
-            //     CountryOption.add(option);
-            // }
+          .then((data) => {
+            console.log(data);
           })
+          // .then((dataCountry) => {
+          //   let option = document.createElement("option");
+          //   option.text = "Country";
+          //   option.value = "";
+          //   option.disabled = true;
+          //   option.selected = true;
+          //   CountryOption.add(option);
+          //   // for(i = 0; i < dataCountry.length; i++) {
+          //   //     option = document.createElement("option");
+          //   //     option.text = dataCountry[i].sehir_adi;
+          //   //     option.value = dataCountry[i].sehir_ID;
+          //   //     CountryOption.add(option);
+          //   // }
+          // })
           .catch((error) => {
             alert("Dont Get Country data" + error);
           });
