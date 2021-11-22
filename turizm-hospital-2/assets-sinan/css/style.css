@@ -60,7 +60,7 @@ header li{
 
 header ul li a{
     position: relative;
-    color: #FF3F3F;
+    color: #1a327b;
     text-decoration: none;
     overflow: hidden;
 }
@@ -72,8 +72,8 @@ header ul li a::after {
     right: 0;
     left: 0;
     width: 0%;
-    height: 1px;
-    background-color: #FF3F3F;
+    height: 2px;
+    background-color: #1a327b;
     transition: all .4s;
     opacity: 0;
 }
