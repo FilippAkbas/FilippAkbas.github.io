@@ -1,0 +1,185 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="assets-sinan/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <header class="relative-header">
+      <a href="#" class="logo"><img src="assets/img/logo/logo.png" style="width: 250; height: 80;"></a>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="quest.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </header>
+
+  <section class="breadcrumbs">
+    <div class="container">
+      <h2 class="breadcrumbs__title">Booking</h2>
+      <ul class="breadcrumbs__list">
+        <li><a href="javascript:void(0)">Home</a></li>
+        <li>></li>
+        <li><a href="javascript:void(0)" class="active">Booking</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="quest">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="quest-title">Get a Free Quote</h2>
+          <form action="#" method="post" class="quest-form">
+            <label class="form-item">
+              <select name="thema" id="thema">
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Ms.</option>
+              </select>
+            </label>
+            <label class="form-item">
+              <input type="text" placeholder="Age">
+            </label>
+            <label class="form-item">
+              <input type="text" placeholder="Your Full Name">
+            </label>
+            <label class="form-item">
+              <input type="number" placeholder="Phone">
+            </label>
+            <label class="form-item">
+              <select name="country" id="country">
+                <option selected disabled>Country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+              </select>
+            </label>
+            <label class="form-item">
+              <select name="city" id="city">
+                <option selected disabled>City</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+              </select>
+            </label>
+            <label class="form-item">
+              <input type="text" placeholder="Email Address">
+            </label>
+            <label class="form-item">
+              <textarea name="message" id="message" rows="10" placeholder="Message"></textarea>
+            </label>
+            <label class="form-item">
+              <select name="city" id="city">
+                <option>Choose a Treatment</option>
+                <option>Hair Transplantation</option>
+                <option>Eye Surgery</option>
+                <option>Plastic Surgery</option>
+                <option>Orthopedics &amp; Traumatology</option>
+                <option>Weightloss Surgery</option>
+                <option>Cardiovascular Surgery</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="form-item button-item">
+              <button type="submit">Send Message</button>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="footer-logo">
+            Logo
+          </div>
+          <div class="footer-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur tempore, voluptatem dolorum sint iure architecto?
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-title">Pages</h5>
+          <ul class="footer-list">
+            <li class="list-item"><a href="about.html"> <img src="assets/img/next-white.png" alt="next img"> About Us</a></li>
+            <li class="list-item"><a href="contact.html"> <img src="assets/img/next-white.png" alt="next img"> Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5 class="footer-title">Contact</h5>
+          <ul class="footer-list adress-list">
+            <li class="list-item"><a href="#">
+                3556 Beech Street, San Francisco,
+                California, CA 94108</a></li>
+            <li class="list-item"><a href="tel: +1 315 369 5943"> +1 315 369 5943</a></li>
+            <li class="list-item"><a href="mailto: doccure@example.com"> doccure@example.com</a></li>
+          </ul>
+        </div>
+        <div class="col-md-12">
+          <div class="copyrating">
+            © 2021 SiteName. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+      (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/618b7d196885f60a50bb21c5/1fk4e1b2k';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+      })();
+  </script>
+    <!--End of Tawk.to Script-->
+
+  <script>
+    let CountryOption = document.querySelector("#country");
+
+    // GetCountry();
+    // CountryOption.addEventListener("change", function(event) {
+    //     let cityId = CountryOption.value;
+    //     fnIlceler(strSehir_ID);
+    // });
+    // function GetCountry() {
+    //     let address = "https://sys.bookingsurgery.com/API/dataget.asmx/CountryList?_APIKey=jTtzjRI6EfuMI9g4t6nfkTs4oI15ohSC";
+    //     console.log(address);
+    //     fetch(address).then(data => data.json()).then((dataCountry) => {
+    //         let option = document.createElement("option");
+    //         option.text = "Country";
+    //         option.value = "";
+    //         option.disabled = true;
+    //         option.selected = true;
+    //         CountryOption.add(option);
+    //         // for(i = 0; i < dataCountry.length; i++) {
+    //         //     option = document.createElement("option");
+    //         //     option.text = dataCountry[i].sehir_adi;
+    //         //     option.value = dataCountry[i].sehir_ID;
+    //         //     CountryOption.add(option);
+    //         // }
+    //     }).catch(error => { 
+    //         alert("Dont Get Country data" + error);
+    //     });
+    // }
+  </script>
+</body>
+</html>
