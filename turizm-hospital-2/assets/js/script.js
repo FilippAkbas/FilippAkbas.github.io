@@ -12,11 +12,11 @@ burger.addEventListener('click', ()=> {
     }
 });
 
-window.addEventListener('scroll', ()=> {
-  const scroll = document.documentElement.scrollTop;
-  if (scroll > 0) {
-    header.classList.add("no-fixed");
-  } else {
-    header.classList.remove("no-fixed");
-  }
-})
+// window.addEventListener('scroll', ()=> {
+//   const scroll = document.documentElement.scrollTop;
+//   if (scroll > 0) {
+//     header.classList.add("no-fixed");
+//   } else {
+//     header.classList.remove("no-fixed");
+//   }
+// })

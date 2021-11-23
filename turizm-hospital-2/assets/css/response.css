@@ -16,7 +16,7 @@
     right: -100%;
     width: 90%;
     height: 100vh;
-    background-color: #ffffffd4;
+    background-color: #fff;
     z-index: 999;
     display: flex;
     flex-direction: column;
@@ -42,6 +42,10 @@
   .contentBox {
     width: 100%;
     padding: 20px 10px;
+    background: #fff;
+  }
+  .owl-carousel .owl-item img {
+    height: 68%;
   }
   header {
     position: fixed;
@@ -53,7 +57,7 @@
     flex-basis: 100% !important;
   }
   .breadcrumbs {
-    height: 60vh;
+    height: 50vh !important;
   }
   .contentBox h2 {
     font-size: 1.5em;
