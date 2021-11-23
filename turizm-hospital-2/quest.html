@@ -46,9 +46,7 @@
             <form action="#" method="post" class="quest-form">
               <label class="form-item">
                 <select name="gender" class="dynamic-data" id="gender">
-                  <option>Mr.</option>
-                  <option>Mrs.</option>
-                  <option>Ms.</option>
+                  <option>Data Error</option>
                 </select>
               </label>
               <label class="form-item">
@@ -62,18 +60,12 @@
               </label>
               <label class="form-item">
                 <select name="country" class="dynamic-data" id="country">
-                  <option selected disabled>Country</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                  <option value="Albania">Albania</option>
-                  <option value="Algeria">Algeria</option>
+                  <option>Data Error</option>
                 </select>
               </label>
               <label class="form-item">
                 <select name="city" class="dynamic-data" id="city">
-                  <option selected disabled>City</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                  <option value="Albania">Albania</option>
-                  <option value="Algeria">Algeria</option>
+                  <option>Data Error</option>
                 </select>
               </label>
               <label class="form-item">
@@ -88,15 +80,8 @@
                 ></textarea>
               </label>
               <label class="form-item">
-                <select name="city" id="city">
-                  <option>Choose a Treatment</option>
-                  <option>Hair Transplantation</option>
-                  <option>Eye Surgery</option>
-                  <option>Plastic Surgery</option>
-                  <option>Orthopedics &amp; Traumatology</option>
-                  <option>Weightloss Surgery</option>
-                  <option>Cardiovascular Surgery</option>
-                  <option>Other</option>
+                <select name="treatment" class="dynamic-data" id="treatment">
+                  <option>Data Error</option>
                 </select>
               </label>
               <label class="form-item button-item">
@@ -184,12 +169,15 @@
     let gender = $('#gender');
     let country = $('#country');
     let city = $('#city');
+    let treatment = $('#treatment');
 
     $('.dynamic-data').empty();
 
-    $('#gender,#country').append('<option selected="true" value="0" >Choose</option>');
+    $('#gender,#country').append('<option selected="true" value="0">Choose</option>');
 
-    city.append('<option selected="true" value="0" >Choose a country</option>');
+    city.append('<option selected="true" value="0">Choose a country</option>');
+
+    treatment.append('<option selected="true" value="0">Choose a Treatment</option>');
 
     $('.dynamic-data').prop('selectedIndex', 0);
 
@@ -202,6 +190,12 @@
     $.getJSON(api + 'CountryList' + apikey, function (data) {
       $.each(data, function (key, entry) {
         country.append($('<option></option>').attr('value', entry.deger).text(entry.tanim));
+      })
+    });
+
+    $.getJSON(api + 'TreatmentsList' + apikey + '&_LanguageShortCode=en', function (data) {
+      $.each(data, function (key, entry) {
+        treatment.append($('<option></option>').attr('value', entry.deger).text(entry.tanim));
       })
     });
 
@@ -218,7 +212,7 @@
           })
         });
       }
-      
+
       city.prop('selectedIndex', 0);
     });
   </script>
