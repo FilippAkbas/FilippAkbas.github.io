@@ -8,7 +8,7 @@
 }
 
 header{
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,9 +38,23 @@ header .logo{
     text-decoration: none;
     top: -25px;
     margin-left:auto;
-      margin-right:auto;
+    margin-right:auto;
+    width:90%;
+}
 
-      width:90%;
+header.no-fixed {
+    position: fixed;
+    background-color: #fff;
+}
+
+header .logo img {
+    width: 200px;
+    height: 60px;
+}
+
+.logo img {
+    width: 200px;
+    height: 60px;
 }
 
 header ul{
@@ -48,8 +62,6 @@ header ul{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 }
 
 header li{
@@ -177,4 +189,32 @@ header ul li a:hover::after {
     background: url('../img/right-arrow.png') no-repeat center / contain;
     width: 20px;
     height: 20px;
+}
+
+.mobile-burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    height: 16px;
+    z-index: 9999;
+}
+.mobile-burger.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 7px; 
+}
+.mobile-burger.active span:nth-child(2) {
+    transform: rotate(45deg); 
+}
+.mobile-burger.active span:nth-child(3) {
+    display: none; 
+}
+.mobile-burger span {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #343434;
+    margin-bottom: 5px; 
+}
+.mobile-burger span:nth-child(3) {
+    margin-bottom: 0; 
 }
