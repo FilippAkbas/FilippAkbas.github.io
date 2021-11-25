@@ -113,7 +113,6 @@ input{
 }
 
 .card__bg {
-
   width: auto;
   height: auto;
   background: rgb(88,88,88);
@@ -126,8 +125,12 @@ input{
   width: fit-content;
 }
 
-
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
 button{
   cursor: pointer;
@@ -572,7 +575,7 @@ button{
   margin-bottom: 50px;
 }
 
-.discount__group > a {
+.discount__group > .conntect-btn {
   background-color: #dad8d7;
   padding: 10px 25px;
   border-radius: 5px;
@@ -581,6 +584,7 @@ button{
   display: inline-block;
   margin-top: 20px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .discount__group .total-number {

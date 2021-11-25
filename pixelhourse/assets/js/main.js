@@ -19,6 +19,31 @@ if(navClose){
     })
 }
 
+/*===== add/remove =====*/
+
+let addNumber = document.querySelector('#add');
+let removeNumber = document.querySelector('#remove');
+let numberInput = document.querySelector('#number-input');
+let numberInputValue = +document.querySelector('#number-input').value;
+let totalNumber = document.querySelector('.total-number span');
+let defPrice = 0.44;
+let number = 0;
+let total = 0;
+
+addNumber.addEventListener('click', () => {
+    number++;
+    numberInput.value = number;
+    total = number*defPrice;
+    totalNumber.innerHTML = total;
+});
+
+removeNumber.addEventListener('click', function () {
+    number--;
+    numberInput.value = number;
+    total = number*defPrice;
+    totalNumber.innerHTML = total;
+});
+
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
