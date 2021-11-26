@@ -26,7 +26,7 @@ let removeNumber = document.querySelector('#remove');
 let numberInput = document.querySelector('#number-input');
 let numberInputValue = +document.querySelector('#number-input').value;
 let totalNumber = document.querySelector('.total-number span');
-let defPrice = 0.44;
+let defPrice = 0.22;
 let number = 0;
 let total = 0;
 
