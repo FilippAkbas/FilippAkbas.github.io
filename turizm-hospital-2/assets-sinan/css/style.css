@@ -63,13 +63,45 @@ header ul{
     align-items: center;
 }
 
-header li{
+header li {
     position: relative;
     list-style: none;
     margin-left: 40px;
 }
 
-header ul li a{
+header li:hover .dropdown-menu {
+    top: 25px;
+    opacity: 1;
+    z-index: 100;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: -100%;
+    left: -15px;
+    background-color: #fff;
+    color: #000;
+    padding: 10px 0 0;
+    border-radius: 0 0 5px 5px;
+    transition: all .4s;
+    opacity: 0;
+    z-index: -1;
+}
+
+.dropdown-menu > div {
+    padding: 5px 20px;
+}
+
+.dropdown-menu > div a {
+    color: #000;
+    display: inline-block;
+}
+
+.dropdown-menu > div:hover {
+    background-color: #ddd;
+}
+
+header ul li a {
     position: relative;
     color: #1a327b;
     text-decoration: none;

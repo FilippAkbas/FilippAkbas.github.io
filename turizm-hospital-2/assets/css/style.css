@@ -609,6 +609,8 @@ button {
   height: 250px;
 }
 
+.breadcrumbs.full-hight {}
+
 .breadcrumbs::after {
   content: '';
   position: absolute;
@@ -636,6 +638,12 @@ button {
   color: #fff;
   z-index: 10;
   font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.breadcrumbs__text {
+  color: #fff;
+  z-index: 10;
 }
 
 .breadcrumbs__list {
@@ -698,6 +706,24 @@ button {
 
 /* contact css option  */
 
+.screen-1 {}
+
+.screen-2,
+.screen-3,
+.screen-4,
+.screen-5,
+.screen-6,
+.screen-7,
+.screen-8,
+.screen-9,
+.screen-10,
+.screen-11,
+.screen-12,
+.screen-13,
+.screen-14 {
+  display: none;
+}
+
 .contact {}
 
 .contact-title {
@@ -722,34 +748,70 @@ button {
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px 20px;
 }
 
 .contact-form .form-item {
-  flex-basis: 50%;
+  grid-column: span 1;
+  align-self: center;
+  justify-content: center;
   margin-bottom: 15px;
   padding: 0 10px;
 }
 
-.contact-form .form-item:nth-child(1) {
-  flex-basis: 100%;
+.contact-form .form-item span {
+  margin-bottom: 5px;
+  font-weight: 600;
 }
 
-.contact-form .form-item:nth-child(6) {
-  flex-basis: 100%;
+.contact-form .form-item input {
+  width: 100%;
 }
 
-.contact-form .form-item:nth-child(7) {
-  flex-basis: 100%;
+.contact-form .form-item .radio-list {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 0.3fr 1fr;
+  align-items: center;
+  text-align: center;
+  grid-gap: 20px 0;
+}
+
+.contact-form .form-item.risk-factors p {}
+
+.contact-form .form-item.risk-factors p label {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
-.contact-form .form-item:nth-child(8) {
-  flex-basis: 100%;
+.contact-form .form-item.risk-factors p label input {
+  width: auto !important;
+  margin-left: 10px;
+}
+
+.contact-form .form-item p {
+  display: flex;
+  align-items: center;
+}
+
+.contact-form .form-item.part-item {
+  grid-column: span 1;
+}
+
+.contact-form .form-item.full-item {
+  grid-column: span 2;
+}
+
+.contact-form .form-item.row-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .contact-form .form-item:nth-child(7) input {
@@ -760,8 +822,40 @@ button {
   margin: 0;
 }
 
+.family-labels label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.family-labels label span {
+  flex-basis: 35%;
+}
+
+.family-labels label input,
+.family-labels label textarea {
+  flex-basis: 65%;
+  width: auto !important;
+}
+
+.family-labels label button {
+  width: 100%;
+}
+
 .button-item {
-  text-align: right;  
+  display: flex;
+  flex-direction: row;
+  text-align: right; 
+  width: 100%; 
+}
+
+.button-item button {
+  width: 100%;
+  margin: 0 15px;
+}
+
+.quest-prev-btn {
+  background-color: #f84b4b;
 }
 
 .adress-list {
@@ -787,6 +881,18 @@ button {
 
 .adress-list li .img i {
   color: #1a327b;
+}
+
+.list-diets {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 0.6fr;
+  align-items: center;
+  grid-gap: 20px;
+}
+
+.list-diets li {
+  display: flex;
+  align-items: center;
 }
 
 /* quest css option  */

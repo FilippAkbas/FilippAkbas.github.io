@@ -74,4 +74,22 @@
   .contentBox a {
     padding: 6px 20px;
   }
+  .button-item {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 456px) {
+  .breadcrumbs.full-hight {
+    height: 100vh !important;
+  }
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-form .form-item.part-item {
+    grid-column: span 2;
+  }
+  .contact-form .form-item .radio-list {
+    width: 100%;
+  }
 }
