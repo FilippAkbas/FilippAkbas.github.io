@@ -1,0 +1,225 @@
+body {
+    background: #000;
+    color: #fff;
+}
+header {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 15px 35px;
+}
+footer {
+    background: #000;
+    text-align: center;
+    padding: 25px 0;
+    color: #fff;
+}
+#breadcrumb .container {
+    display: flex;
+    align-items: center;
+}
+#breadcrumb li {
+    list-style: none;
+    margin-right: 10px;
+}
+#breadcrumb li:last-child {
+    margin-right: 0px;
+}
+#breadcrumb li,
+#breadcrumb li a {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+#breadcrumb li.gold_text,
+#breadcrumb li a.gold_text {
+    color: #B18636;
+}
+
+/* Faq Section */
+#faq_section {
+    position: relative;
+}
+.faq_title {
+    font-family: 'Brutal Type';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 50px 0;
+}
+.faq_title span {
+    display: block;
+    color: #B18636;
+    font-weight: 700;
+}
+.close .item_content{
+    height:0px;
+    transition:height 1s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+}
+.close .item_title svg path {
+    fill: #B18636;
+}
+.open .item_title svg path {
+    fill: #fff;
+}
+.open .item_title {
+    color: #B18636;
+}
+.open .item_title svg {
+    transform: rotate(180deg);
+    transition: all .5s;
+}
+.open .item_content{
+    width: 100%;
+    display:block;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+}
+.faq_list {
+    padding: 0;
+    margin: 0;
+}
+.faq_item {
+    list-style: none;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+.faq_item .item_title {
+    font-family: 'Brutal Type';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.faq_item .item_title span {
+    margin-right: 24px;
+}
+.faq_item .item_content {
+    padding: 0 0 0 45px;
+}
+.faq_item .item_content p {
+    font-family: 'Brutal Type';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+/* Feedback Css */
+
+#feedback {
+    padding: 50px 0;
+}
+.feedback_title {
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    margin: 0 0 -120px 0;
+}
+.feedback_title h2 {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 160px;
+    line-height: 160px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: #000 1px 0 10px;
+}
+.feedback_title p {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    opacity: 0.7;
+    margin: 0;
+    text-shadow: #000 1px 0 10px;
+}
+.feedback_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    margin: 0 auto;
+}
+.feedback_form label {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.feedback_form input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    font-family: 'Brutal Type';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.feedback_form button {
+    width: 100%;
+    background: #B18636;
+    border-radius: 50px;
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 54px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: all .4s;
+}
+.feedback_form button:hover {
+    border: 3px solid #fff;
+}

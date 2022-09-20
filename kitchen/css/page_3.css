@@ -1,0 +1,89 @@
+.review_form {
+    padding-bottom: 50px;
+}
+.review_form .col_50:nth-child(1) {
+    padding: 0 10%;
+}
+.contact_review {
+    padding: 0 5%;
+}
+.contact_review .review_autor {
+    border-top: 1px solid #B18636;
+    margin-bottom: 50px;
+}
+.contact_review .review_autor p {
+    font-family: 'Gotham Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.contact_review .review_autor .autor {
+    font-family: 'Gotham Pro';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #B18636;
+    text-align: right;
+}
+.contact_review .contact_review_text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #FFFFFF;
+    opacity: 0.65;
+}
+.old_fashin .col_50 {
+    border: 1px solid rgba(255,255,255,.1);
+    padding: 50px;
+}
+.old_fashin_title {
+    display: block;
+    font-family: 'Brutal Type';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 38px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 0 30px 0;
+}
+.old_fashin_title span {
+    color: #B18636;
+}
+.old_fashin_text {
+    font-family: 'Gotham Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: rgba(255,255,255,.65);
+    margin-bottom: 30px;
+}
+.old_fashin_btn {
+    font-family: 'Brutal Type';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.new_fashin {
+    padding: 0 !important;
+}
+.new_fashin .old_fashin_title {
+    padding: 50px 0 0 0;
+}
+.new_fashin .old_fashin_text {
+    padding: 0px 50px 0 50px;
+}
+.new_fashin .old_fashin_btn {
+    background: rgba(177,134,54,0.65);
+    height: 100%;
+    padding: 20px 0 10px 20px;
+}
