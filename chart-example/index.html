@@ -8,56 +8,95 @@
 </head>
 <body>
 
-    <div>
-        <canvas id="myChart"></canvas>
-      </div>
+      <canvas id="myChart" width="400" height="150"></canvas>
       
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       
       <script>
-        new Chart(document.getElementById("myChart"), {
-          type: 'line',
-          data: {
-            datasets: [{
-              data: [
-                {x: '2016-08-25', y: 20}, 
-                {x: '2017-02-25', y: 30}, 
-                {x: '2018-06-25', y: 50}, 
-                {x: '2019-02-25', y: 40}, 
-                {x: '2020-09-25', y: 40}, 
-                {x: '2021-11-25', y: 23}, 
-                {x: '2022-06-25', y: 50}, 
-              ],
-              fill: true,
-              borderWidth: 2,
-              pointBackgroundColor: "#6366f1",
-              pointHoverRadius: 3,
-              borderColor: "#6366f1",
-              backgroundColor: "rgba(59,130,246, 0.08)",
-              tension: 0,
-            }]
-          },
-          options: {},
-          plugins: {
-            legend: {
-              display: true,
-            },
-            tooltip: {
-              titleFont: {
-                weight: '600',
-              },
-              callbacks: {
-                label: (context) => formatValue(context.parsed.y),
-              },
-            },
-          },
-          interaction: {
-            intersect: false,
-            mode: 'nearest',
-          },
-          animation: false,
-          maintainAspectRatio: false,
-          resizeDelay: 200,
+        $(document).ready(function(){
+            let count = 10;
+            let data = {
+              labels : ["1","2","3","4","5", "6", "7", "8", "9", "10"],
+              datasets : [
+                {
+                  fillColor : "rgba(220,220,220,0.5)",
+                  strokeColor : "rgba(220,220,220,1)",
+                  pointColor : "rgba(220,220,220,1)",
+                  pointStrokeColor : "#fff",
+                  data : [65,59,90,81,56,45,30,20,3,37]
+                },
+                {
+                  fillColor : "rgba(151,187,205,0.5)",
+                  strokeColor : "rgba(151,187,205,1)",
+                  pointColor : "rgba(151,187,205,1)",
+                  pointStrokeColor : "#fff",
+                  data : [28,48,40,19,96,87,66,97,92,85]
+                }
+              ]
+            }
+            // this is ugly, don't judge me
+            let updateData = function(oldData){
+              let labels = oldData["labels"];
+              let dataSetA = oldData["datasets"][0]["data"];
+              let dataSetB = oldData["datasets"][1]["data"];
+              
+              labels.shift();
+              count++;
+              labels.push(count.toString());
+              let newDataA = dataSetA[9] + (20 - Math.floor(Math.random() * (41)));
+              let newDataB = dataSetB[9] + (20 - Math.floor(Math.random() * (41)));
+              dataSetA.push(newDataA);
+              dataSetB.push(newDataB);
+              dataSetA.shift();
+              dataSetB.shift();    
+            };
+              
+            let optionsAnimation = {
+              //Boolean - If we want to override with a hard coded scale
+              scaleOverride : true,
+              //** Required if scaleOverride is true **
+              //Number - The number of steps in a hard coded scale
+              scaleSteps : 10,
+              //Number - The value jump in the hard coded scale
+              scaleStepWidth : 10,
+              //Number - The scale starting value
+              scaleStartValue : 0
+            }
+          
+            // Not sure why the scaleOverride isn't working...
+            let optionsNoAnimation = {
+              animation : false,
+              //Boolean - If we want to override with a hard coded scale
+              scaleOverride : true,
+              //** Required if scaleOverride is true **
+              //Number - The number of steps in a hard coded scale
+              scaleSteps : 20,
+              //Number - The value jump in the hard coded scale
+              scaleStepWidth : 10,
+              //Number - The scale starting value
+              scaleStartValue : 0
+            }
+
+              let name = document.getElementById("myChart").getContext("2d");
+              let config = {
+                type: 'line',
+                data: data,
+                options: optionsAnimation,
+              };
+              let MyChart = new Chart(name,config);
+
+            setInterval(function(){
+              MyChart.destroy();
+              config = {
+                type: 'line',
+                data: data,
+                options: optionsNoAnimation,
+              };
+              updateData(data);
+              MyChart = new Chart(name,config);
+            }, 2000
+          );
         });
       </script>
     
