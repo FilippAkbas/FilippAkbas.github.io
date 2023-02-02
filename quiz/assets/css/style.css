@@ -1,0 +1,331 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Calibre';
+    background-image: url(../img/background.png);
+    background-color: rgb(238 238 238 / 1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% 10%; 
+    background-attachment: fixed;
+    overflow: auto;
+}
+a {
+    text-decoration: none;
+}
+
+.quiz-form {
+    background: #fff;
+    max-width: 1080px;
+    height: 100%;
+    margin: 70px auto 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 8rem;
+    padding-bottom: 6rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.7px 0.8px rgba(0, 0, 0, 0.03), 0 1.9px 2.1px -0.8px rgba(0, 0, 0, 0.03), 0 4.7px 5.3px -1.7px rgba(0, 0, 0, 0.03), 0 11.3px 12.7px -2.5px rgba(0, 0, 0, 0.03);
+}
+.form-item {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Radio Item Css */
+.radio-grid {
+    display: grid;
+}
+.radio-grid label {
+    position: relative;
+}
+.radio-grid label:hover .img {
+    background-color: rgb(245, 245, 245);
+    transform: translateY(-10px);
+    box-shadow: 0 0.7px 0.8px rgba(0, 0, 0, 0.03), 0 1.9px 2.1px -0.8px rgba(0, 0, 0, 0.03), 0 4.7px 5.3px -1.7px rgba(0, 0, 0, 0.03), 0 11.3px 12.7px -2.5px rgba(0, 0, 0, 0.03);
+}
+.radio-grid label input {
+    position: absolute;
+    -webkit-apperance: none;
+    -moz-apperance: none;
+    appearance: none;
+}
+.radio-grid label input:checked + .radio-box .img {
+    border-color: #222;
+    background-color: #fff;
+    box-shadow: none;
+}
+.radio-grid label input:checked:focus + .radio-box .img {
+    background-color: #fff;
+}
+.radio-grid label input:focus + .radio-box .img {
+    background-color: rgb(245, 245, 245);
+    transform: translateY(-10px);
+    box-shadow: 0 0.7px 0.8px rgba(0, 0, 0, 0.03), 0 1.9px 2.1px -0.8px rgba(0, 0, 0, 0.03), 0 4.7px 5.3px -1.7px rgba(0, 0, 0, 0.03), 0 11.3px 12.7px -2.5px rgba(0, 0, 0, 0.03);
+}
+.radio-box {
+    cursor: pointer;
+}
+.radio-box .img {
+    background-color: rgb(238, 238, 238);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid transparent;
+    transition: all .3s;
+}
+
+/* Form Header Item Css */
+.item_header {
+    position: sticky;
+    background-color: #fff;
+    top: 0;
+    right: 0;left: 0;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 1.75rem 0;
+    z-index: 10;
+}
+.item_header .step-title {
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color:rgba(34, 34, 34, 0.95)
+}
+.item_header .step-title span {
+    margin-right: 0.5rem;
+}
+.item_header a.back-btn {
+    color: #222;
+    opacity: 0.3;
+    transition: all .5s;
+}
+.item_header a.back-btn:hover {
+    opacity: 1;
+    margin-right: 10px;
+}
+.item_header a.back-btn img {
+    margin-right: 5px;
+}
+.item_header .progress-bar {
+    position: relative;
+    grid-column: span 2;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(229 229 229 / 1);
+    margin-top: 1.25rem;
+}
+.item_header .progress-bar::after {
+    content: "";
+    position: absolute;
+    top: 0;bottom: 0;
+    left: 0;
+    width: var(--width);
+    background-color: #222222;
+}
+
+/* Form Body Item Css */
+.item_body {
+    max-width: 49rem;
+    margin: 0 auto;
+}
+.item_body .body-box {
+    margin-bottom: 5rem;
+}
+.body-box .title {
+    text-align: center;
+    font-weight: 400;
+    color: #222;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+.body-box .content {
+    position: relative;
+}
+.kitchen-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+.kitchen-box .img {
+    width: 240px;
+    height: 180px;
+}
+.kitchen-box .title {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+    color: #404040;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.collection-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.collection-grid label:hover .style {
+    opacity: 1;
+    background-color: rgb(245, 245, 245);
+    transform: translateY(-5px);
+    box-shadow: 0 0.7px 0.8px rgba(0, 0, 0, 0.03), 0 1.9px 2.1px -0.8px rgba(0, 0, 0, 0.03), 0 4.7px 5.3px -1.7px rgba(0, 0, 0, 0.03), 0 11.3px 12.7px -2.5px rgba(0, 0, 0, 0.03);
+}
+.collection-grid label input:checked + .collection-box .style {
+    opacity: 1;
+    border-color: #222;
+    background-color: #fff;
+    box-shadow: none;
+}
+.collection-grid label input:checked:focus + .collection-box .style {
+    background-color: #fff;
+}
+.collection-grid label input:focus + .collection-box .style {
+    background-color: rgb(245, 245, 245);
+    box-shadow: 0 0.7px 0.8px rgba(0, 0, 0, 0.03), 0 1.9px 2.1px -0.8px rgba(0, 0, 0, 0.03), 0 4.7px 5.3px -1.7px rgba(0, 0, 0, 0.03), 0 11.3px 12.7px -2.5px rgba(0, 0, 0, 0.03);
+}
+.collection-box .style {
+    background-color: rgb(238, 238, 238);
+    border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid transparent;
+    transition: all .3s;
+    opacity: 0.6;
+}
+.collection-box .style {
+    font-size: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    color: #404040;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Kitchen Size Css*/
+.kitchen-size_grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 50px;
+}
+.kitcen-size_img {
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+.kitchen-size_inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.kitchen-size_inputs input {
+    border-radius: 0.25rem;
+    padding: 0 1rem;
+    height: 3.75rem;
+    background-color: rgb(238, 238, 238);
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    border: none;
+}
+.kitchen-size_inputs .input span {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+/* Image Content Css*/
+.image-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.image-content .image-input {
+    position: relative;
+    border: 1px dashed #ddd;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.image-content .image-input input {
+    position: absolute;
+    -webkit-apperance: none;
+    -moz-apperance: none;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.image-content .image-input__box span {
+    display: block;
+    color: #a3a3a3;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.image-content .image-input__box a {
+    width: max-content;
+    margin: 0 auto;
+    display: block;
+    font-size: 0.90rem;
+    line-height: 1rem;
+    color: #fff;
+    background-color: #222222;
+    padding: 10px;
+    border-radius: 0.25rem;
+}
+.image-content .image-output {
+    display: none;
+    position: relative;
+    border: 1px dashed #ddd;
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+.image-content .image-output img {
+    position: absolute;
+    top: 0;bottom: 0;
+    right: 0;left: 0;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Form Footer Item Css */
+.item_footer {
+    text-align: center;
+}
+.item_footer .next-step {
+    display: inline-block;
+    background: #222;
+    font-size: 1rem;
+    line-height: 1rem;
+    margin: 0 auto;
+    padding: 1.25rem 2.5rem;
+    border-radius: 0.375rem;
+    color: #fff;
+    transition: all .5s;
+}
+.item_footer .next-step a:hover {
+    transform: translateY(-10px);
+}
