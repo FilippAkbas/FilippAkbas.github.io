@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 
 $method = $_SERVER['REQUEST_METHOD'];
 
@@ -6,12 +7,15 @@ if ($method !== 'POST') {
   exit();
 }
 
-$project_name = 'PizzaTime';
-$admin_email = '';
-$form_subject = 'Заявка с сайта PizzaTime';
+$project_name = 'Kitchen';
+$admin_email = 'kitchenquiz@proton.me';
+$form_subject = 'Email Requst form Kitchen Form';
 $message = '';
 
 $color_counter = 1;
+
+print_r($_POST);
+exit();
 
 foreach ($_POST as $key => $value) {
   if ($value === '') {
