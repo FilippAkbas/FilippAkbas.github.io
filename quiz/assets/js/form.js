@@ -75,22 +75,7 @@
             contactCountry.style.borderColor = 'transparent';
             contactTypeInquiry.style.borderColor = 'red';
         } else {
-            // formSend(forms);
-            $.ajax({
-                headers: { "Accept": "application/json"},
-                type: "POST",
-                url: "../mail/mail.php",
-                crossDomain: true,
-                contentType: "application/json",
-                dataType: 'json',
-                data:JSON.stringify({
-                    username:'text',
-                    password:'text'
-                }),
-                success: function() {
-                    alert('success');
-                }
-            });
+            formSend(forms);
         }
     });
 })();
