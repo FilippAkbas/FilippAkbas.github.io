@@ -75,7 +75,7 @@
             contactCountry.style.borderColor = 'transparent';
             contactTypeInquiry.style.borderColor = 'red';
         } else {
-            formSend(forms);
+            // formSend(forms);
         }
     });
 })();
