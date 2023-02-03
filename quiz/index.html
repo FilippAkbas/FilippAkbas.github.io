@@ -173,6 +173,7 @@
 				</div>
 				<div class="body-box">
 					<h2 class="title">Here, you can upload a photo, floor plan or homemade drawing of your kitchen?</h2>
+					<a href="javascript:void(0)" class="open-file" onclick="openFile()">Click for add photo</a>
 					<div class="content image-content">
 						<div class="image-output"><img src alt="Image Preview"></div>
 						<div class="image-input">
@@ -191,7 +192,7 @@
 		</div>
 		<div class="form-item" id="page-3">
 			<div class="item_header">
-				<h1 class="step-title"><span>3 / 3</span> Tell us about your kitchen project</h1>
+				<h1 class="step-title"><span>3 / 3</span> A few follow-up questions</h1>
 				<a href="javascript:void(0)" class="back-btn" onclick="BackToPrev('step2')">
 					<img width="5" height="9" alt="" src="./assets/img/left.svg">
 					<span>Back</span>
@@ -199,7 +200,42 @@
 				<div class="progress-bar" style="--width: 100%"></div>
 			</div>
 			<div class="item_body">
-				<h1>body</h1>
+				<div class="body-box kitchen-size">
+					<h2 class="title">Do you need to add additional equipment? Please check the box below.</h2>
+					<div class="content custom-equiment">
+						<label for="custom-equiment_label">
+							<input type="checkbox" name="custom-equiment_input" id="custom-equiment_label" onchange="AddAdditionalEquipment();">
+							<div class="custom-equiment_box">Click for add additional equipment</div>
+						</label>
+					</div>
+				</div>
+				<div class="body-box">
+					<h2 class="title">Please indicate how much you’re planning on investing in your full kitchen renovation and your ideal timeframe</h2>
+					<div class="content total-budget">
+						<label for="total-budget_label">
+							<select name="total-budget_select" title="Total budget" id="total-budget_label" placeholder="Total budget" onchange="addTotalBudget();">
+								<option class="selected-optin" value="empty" selected disabled>Total budget</option>
+								<option class="selected-optin" value="Less than $25,000">Less than $25,000</option>
+								<option class="selected-optin" value="$25,000–50,000">$25,000–50,000</option>
+								<option class="selected-optin" value="$50,000–75,000">$50,000–75,000</option>
+								<option class="selected-optin" value="$75,000–100,000">$75,000–100,000</option>
+								<option class="selected-optin" value="More than $100,000">More than $100,000</option>
+							</select>
+						</label>
+						<label for="time-installation_label">
+							<select name="time-installation_select" title="Time to installation" id="time-installation_label" placeholder="Time to installation" onchange="addTimeInstallation();">
+								<option value="empty" selected disabled>Time to installation</option>
+								<option value="2-3_months">2–3 months</option>
+								<option value="3-6_months">3–6 months</option>
+								<option value="6-12_months">6–12 months</option>
+								<option value="1_year">More than a year</option>
+							  </select>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="item_footer">
+				<a href="javascript:void(0)" class="next-step" onclick="GoToNext('step4')">Proceed to next step</a>
 			</div>
 		</div>
 		<div class="form-item" id="page-4">
@@ -212,7 +248,87 @@
 				<div class="progress-bar" style="--width: 100%"></div>
 			</div>
 			<div class="item_body">
-				<h1>body</h1>
+				<div class="body-box">
+					<h2 class="title">Who should we send the price estimate to?</h2>
+					<div class="content personal-data-grid">
+						<label for="name">
+							<input type="text" name="FirstName" id="name" placeholder="First name *">
+						</label>
+						<label for="surname">
+							<input type="text" name="surname" id="surname" placeholder="Surname *">
+						</label>
+						<label for="email">
+							<input type="email" name="email" id="email" placeholder="Email addrres *">
+						</label>
+						<label for="phone">
+							<input type="text" name="phone" id="phone" placeholder="Phone number *">
+						</label>
+						<label for="country">
+							<select name="country" id="country" required="">
+								<option value="" selected="" disabled="">Country *</option>
+								<option value="US">United States</option>
+								<option value="CA">Canada</option>
+								<option value="MX">Mexico</option>
+								<option disabled="">—</option>
+								<option value="AT">Austria</option>
+								<option value="BE">Belgium</option>
+								<option value="BG">Bulgaria</option>
+								<option value="CA">Canada</option>
+								<option value="HR">Croatia</option>
+								<option value="CY">Cyprus</option>
+								<option value="CZ">Czech Republic</option>
+								<option value="DK">Denmark</option>
+								<option value="EE">Estonia</option>
+								<option value="FO">Faroe Islands</option>
+								<option value="FI">Finland</option>
+								<option value="FR">France</option>
+								<option value="DE">Germany</option>
+								<option value="GR">Greece</option>
+								<option value="GL">Greenland</option>
+								<option value="HU">Hungary</option>
+								<option value="IS">Iceland</option>
+								<option value="IE">Ireland</option>
+								<option value="IT">Italy</option>
+								<option value="LV">Latvia</option>
+								<option value="LI">Liechtenstein</option>
+								<option value="LT">Lithuania</option>
+								<option value="LU">Luxembourg</option>
+								<option value="MT">Malta</option>
+								<option value="MX">Mexico</option>
+								<option value="NL">Netherlands</option>
+								<option value="NO">Norway</option>
+								<option value="PL">Poland</option>
+								<option value="PT">Portugal</option>
+								<option value="RO">Romania</option>
+								<option value="SK">Slovakia</option>
+								<option value="SI">Slovenia</option>
+								<option value="ES">Spain</option>
+								<option value="SE">Sweden</option>
+								<option value="CH">Switzerland</option>
+								<option value="GB">United Kingdom</option>
+								<option value="US">United States</option>
+								<option disabled="">—</option>
+								<option value="00">Rest of the world</option>
+							</select>
+						</label>
+						<label for="inquiry_type">
+							<select name="inquiry_type" id="inquiry_type" required="">
+								<option value="" selected="" disabled="">Type of inquiry *</option>
+								<option value="Homeowner">Homeowner</option>
+								<option value="Architect">Architect</option>
+								<option value="Interior Designer">Interior Designer</option>
+								<option value="Contractor">Contractor</option>
+								<option value="Developer">Developer</option>
+							</select>
+						</label>
+						<label for="city">
+							<input type="text" name="city" id="city" placeholder="City">
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="item_footer">
+				<a href="javascript:void(0)" class="submit-form" onclick="submitForm();">Submit Request</a>
 			</div>
 		</div>
 	</form>
