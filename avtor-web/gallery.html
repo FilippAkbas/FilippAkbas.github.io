@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtor Web || Gallery Page</title>
+    <link rel="stylesheet" href="./assets/font/avenitnextcyr.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/lightbox.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <!-- Modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header_logo">
+            <a href="index.html"><img src="./assets/images/avtor_logo.svg" alt="Logo"></a>
+        </div>
+        <div class="header_menu">
+            <div class="header_menu-item"><a href="index.html">Головна</a></div>
+            <div class="header_menu-item"><a href="index.html#advantages">Переваги</a></div>
+            <div class="header_menu-item"><a href="index.html#homeplus">Інфраструктура</a></div>
+            <div class="header_menu-item"><a href="block/block.html">Квартири</a></div>
+            <div class="header_menu-item"><a href="gallery.html">Галерея</a></div>
+            <div class="header_menu-item"><a href="contact.html">Контакти</a></div>
+        </div>
+        <div class="header_callback">
+            <a href="tel: +380 66 174 86 31">Позвони нам</a>
+        </div>
+        <div class="header_mobile-burger">
+            <a href="javascript:void(0)">
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <section class="s-gallery">
+        <div class="container">
+            <h2 class="section__title" data-aos="zoom-in-up">Галерея</h2>
+            <div class="gallery_content">
+                <div class="gallery_content-list">
+                    <a href="./assets/images/stroika/1_12.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/1_12.jpg" alt="Image"></a>
+                    <a href="./assets/images/stroika/2_2.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/2_2.jpg" alt="Image"></a>
+                    <a href="./assets/images/stroika/2_4.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/2_4.jpg" alt="Image"></a>
+                    <a href="./assets/images/stroika/2_5.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/2_5.jpg" alt="Image"></a>
+                    <a href="./assets/images/stroika/2_6.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/2_6.jpg" alt="Image"></a>
+                    <a href="./assets/images/stroika/2_7.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/2_7.jpg" alt="Image"></a>
+                    <a href="./assets/images/stroika/4.jpg" data-lightbox="gallery-grid" data-title="My caption" data-aos="fade-up"><img src="./assets/images/stroika/4.jpg" alt="Image"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="s-banner">
+        <div class="count" data-aos="fade-up" data-aos-delay="100">10%</div>
+        <h2 class="title" data-aos="fade-up" data-aos-delay="200">Бажаешь отримати знижку?</h2>
+        <div class="dsc" data-aos="fade-up" data-aos-delay="300">Ваш номер телефону:</div>
+        <a href="#discount" class="btn" data-aos="fade-up" data-aos-delay="400">Отримати</a>
+    </section>
+
+    <section class="s-contact">
+        <div class="container">
+            <div id="contact-map" style="width: 80%; height: 600px;"></div>
+            <div class="contact_content" data-aos="fade-left">
+                <h3 class="title">Ми можемо відповісти на всі ваші запитання!</h3>
+                <div class="dsc">Головна мета нашого проекту полягає в тому, що ми поєднали функціональність, естетику, використання новітніх технологій будівництва та екологічно чистих матеріалів.</div>
+                <a href="tel:+380 66 174 86 31" class="phone-link"><img src="./assets/images/phone-dark.png" alt="Phone Icon"> +380 66 174 86 31</a>
+                <a href="#callUs" class="contact-btn">Запросити дзвінок!</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Ми в соціальних мережах</p>
+            <ul class="footer_social">
+                <li><a href="https://www.instagram.com/avtor.gk" target="_blank"><img src="./assets/images/instagram.png" alt="Instagram Icon"></a></li>
+                <!-- <li><a href="javascript:void(0)"><img src="./assets/images/facebook.png" alt="Facebook Icon"></a></li>
+                <li><a href="javascript:void(0)"><img src="./assets/images/phone.png" alt="Phone Icon"></a></li> -->
+            </ul>
+            <p>© 2023 Всі права захищені</p>
+        </div>
+    </footer>
+
+    <!-- Call Us Modal -->
+    <div id="callUs" class="modal">
+        <form action="./assets/mail/mail.php" method="POST" class="callUsForm">
+            <h3>Введіть свої дані що б ми вам передзвонили</h3>
+            <label for="name">
+                <input type="text" name="name" id="name" placeholder="Введіть своє ім'я">
+            </label>
+            <label for="phone">
+                <input type="number" name="phone" id="phone" placeholder="Введіть свій номер телефону">
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+
+    <!-- Discount Modal -->
+    <div id="discount" class="modal">
+        <form action="./assets/mail/mail.php" method="POST" class="discountForm">
+            <h3>Введіть свої дані для отримання знижки</h3>
+            <label for="name">
+                <input type="text" name="name" id="name" placeholder="Введіть своє ім'я">
+            </label>
+            <label for="email">
+                <input type="email" name="email" id="email" placeholder="Введіть свою пошту">
+            </label>
+            <label for="phone">
+                <input type="number" name="phone" id="phone" placeholder="Введіть свій номер телефону">
+            </label>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+    
+    <!-- Success Modal -->
+    <div class="modal success-modal">
+        <h3>Ваші дані успішно відправлені</h3>
+        <p>Наші консультанти дадуть відповідь вам найближчим часом.</p>
+        <p>Наші години роботи: 09:00 - 18:00</p>
+    </div>
+
+    <!-- Error Modal -->
+    <div class="modal error-modal">
+        <h3>Ваші дані не надіслали</h3>
+        <p>Будь ласка введіть правильно свої дані знову.</p>
+    </div>
+    
+
+    <script src="./assets/js/jquery-3.6.3.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <script src="./assets/js/lightbox.min.js"></script>
+    <script src="./assets/js/lightbox-plus-jquery.min.js"></script>
+    <!-- Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+    <!-- Animation -->
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        let forms = document.querySelector('.callUsForm');
+        let contactUsButton = document.querySelector('.callUsForm button');
+        $('a[href="#callUs"]').click(function(event) {
+            event.preventDefault();
+            $(this).modal({
+                fadeDuration: 250
+            });
+        });
+        contactUsButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            formSend(forms);
+        })
+        var formSend = function(forms) {
+            console.log(forms)
+            var data = serialize(forms);
+            var xhr = new XMLHttpRequest();
+            var url = './assets/mail/mail.php';
+
+            xhr.open('POST', url);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xhr.onload = function() {
+                console.log(xhr.response);
+                if (xhr.response === 'success') {
+                    $('.success-modal').modal({
+                        fadeDuration: 250
+                    });
+                } else {
+                    $('.error-modal').modal({
+                        fadeDuration: 250
+                    });
+                }
+                forms.reset();
+            };
+
+            xhr.send(data);
+        };
+    </script>
+
+    <script>
+        let Discountforms = document.querySelector('.discountForm');
+        let discountButton = document.querySelector('.discountForm button');
+        $('a[href="#discount"]').click(function(event) {
+            event.preventDefault();
+            $(this).modal({
+                fadeDuration: 250
+            });
+        });
+        discountButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            DiscountFormSend(Discountforms);
+        })
+        var DiscountFormSend = function(forms) {
+            var data = serialize(forms);
+            var xhr = new XMLHttpRequest();
+            var url = './assets/mail/discountmail.php';
+
+            xhr.open('POST', url);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xhr.onload = function() {
+                console.log(xhr.response);
+                if (xhr.response === 'success') {
+                    $('.success-modal').modal({
+                        fadeDuration: 250
+                    });
+                } else {
+                    $('.error-modal').modal({
+                        fadeDuration: 250
+                    });
+                }
+                forms.reset();
+            };
+
+            xhr.send(data);
+        };
+    </script>
+
+    <script>
+        var serialize = function(forms) {
+            var items = forms.querySelectorAll('input, select, textarea');
+            var str = '';
+            for (var i = 0; i < items.length; i += 1) {
+                var item = items[i];
+                var name = item.name;
+                var value = item.value;
+                var separator = i === 0 ? '' : '&';
+
+                if (value) {
+                    str += separator + name + '=' + value;
+                }
+            }
+            return str;
+        };
+    </script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWtiYXNmaWxpcHAiLCJhIjoiY2p1andzbDQxMGc0NzRkbzQ1OWs4ZmV2ZSJ9.8zfZmh0xFQaNtM2wQ1YR5g';
+        const map = new mapboxgl.Map({
+            container: 'contact-map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [30.5241361, 50.4500336],
+            zoom: 15
+        });
+        // Set marker options.
+        const marker = new mapboxgl.Marker({
+            color: "#792A26",
+            draggable: true
+        })
+        .setLngLat([30.5241361, 50.4500336])
+        .addTo(map);
+    </script>
+</body>
+</html>

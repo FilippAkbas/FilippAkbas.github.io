@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avtor Web || Contact Page</title>
+    <link rel="stylesheet" href="./assets/font/avenitnextcyr.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./assets/css/lightbox.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/media.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header_logo">
+            <a href="index.html"><img src="./assets/images/avtor_logo.svg" alt="Logo"></a>
+        </div>
+        <div class="header_menu">
+            <div class="header_menu-item"><a href="index.html">Головна</a></div>
+            <div class="header_menu-item"><a href="index.html#advantages">Переваги</a></div>
+            <div class="header_menu-item"><a href="index.html#homeplus">Інфраструктура</a></div>
+            <div class="header_menu-item"><a href="block/block.html">Квартири</a></div>
+            <div class="header_menu-item"><a href="gallery.html">Галерея</a></div>
+            <div class="header_menu-item"><a href="contact.html">Контакти</a></div>
+        </div>
+        <div class="header_callback">
+            <a href="tel: +380 66 174 86 31">Позвони нам</a>
+        </div>
+        <div class="header_mobile-burger">
+            <a href="javascript:void(0)">
+                <span></span>
+            </a>
+        </div>
+    </header>
+
+    <div id="map" style="width: 100%; height: 100vh;">
+        <h1 class="map_title">Контакти</h1>
+        <div class="map_content" data-aos="zoom-in-up">
+            <h3>Відділ продажу</h3>
+            <ul>
+                <li>
+                    <div class="icon"><img src="assets/images/place.png" alt="Phone Icon"></div>
+                    <h5 class="title">Телефон</h5>
+                    <a href="tel: +380 66 174 86 31" class="link">+380 66 174 86 31</a>
+                </li>
+                <li>
+                    <div class="icon"><img src="assets/images/place.png" alt="Phone Icon"></div>
+                    <h5 class="title">Email:</h5>
+                    <a href="javascript:void(0)" class="link">help@avtor.com</a>
+                </li>
+                <li>
+                    <div class="icon"><img src="assets/images/place.png" alt="Phone Icon"></div>
+                    <h5 class="title">Адреса:</h5>
+                    <div class="dsc">Киев Україна</div>
+                </li>
+                <li>
+                    <div class="icon"><img src="assets/images/place.png" alt="Phone Icon"></div>
+                    <h5 class="title">Графік роботи:</h5>
+                    <div class="dsc">Пн.-Нд.: з 10:00 до 18:00</div>
+                </li>
+                <li>
+                    <div class="icon"><img src="assets/images/place.png" alt="Phone Icon"></div>
+                    <h5 class="title">Cоціальних мережа:</h5>
+                    <a href="https://www.instagram.com/avtor.gk" target="_blank">Instagram</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Ми в соціальних мережах</p>
+            <ul class="footer_social">
+                <li><a href="https://www.instagram.com/avtor.gk" target="_blank"><img src="./assets/images/instagram.png" alt="Instagram Icon"></a></li>
+                <!-- <li><a href="javascript:void(0)"><img src="./assets/images/facebook.png" alt="Facebook Icon"></a></li>
+                <li><a href="javascript:void(0)"><img src="./assets/images/phone.png" alt="Phone Icon"></a></li> -->
+            </ul>
+            <p>© 2023 Всі права захищені</p>
+        </div>
+    </footer>
+    
+
+    <script src="./assets/js/jquery-3.6.3.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+    <script src="./assets/js/lightbox.min.js"></script>
+    <script src="./assets/js/lightbox-plus-jquery.min.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWtiYXNmaWxpcHAiLCJhIjoiY2p1andzbDQxMGc0NzRkbzQ1OWs4ZmV2ZSJ9.8zfZmh0xFQaNtM2wQ1YR5g';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [30.5241361, 50.4500336],
+            zoom: 15
+        });
+        // Set marker options.
+        const marker = new mapboxgl.Marker({
+            color: "#792A26",
+            draggable: true
+        })
+        .setLngLat([30.5241361, 50.4500336])
+        .addTo(map);
+    </script>
+</body>
+</html>
