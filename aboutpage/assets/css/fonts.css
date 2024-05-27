@@ -1,0 +1,106 @@
+/* DrukCyr */
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('../fonts/DrukCyr/DrukCyr-Bold.woff2') format('woff2'),
+        url('../fonts/DrukCyr/DrukCyr-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('../fonts/DrukCyr/DrukCyr-Heavy.woff2') format('woff2'),
+        url('../fonts/DrukCyr/DrukCyr-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('../fonts/DrukCyr/DrukCyr-Super.woff2') format('woff2'),
+        url('../fonts/DrukCyr/DrukCyr-Super.woff') format('woff');
+    font-weight: super;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Druk Cyr';
+    src: url('../fonts/DrukCyr/DrukCyr-Medium.woff2') format('woff2'),
+        url('../fonts/DrukCyr/DrukCyr-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Kumbh Sans */
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-Thin.woff2') format('woff2'), 
+    url('../fonts/KumbhSans/KumbhSans-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-ExtraLight.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-Light.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-Regular.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-Medium.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-SemiBold.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-Bold.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-ExtraBold.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Kumbh Sans';
+    src: url('../fonts/KumbhSans/KumbhSans-Black.woff2') format('woff2'),
+    url('../fonts/KumbhSans/KumbhSans-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Duru Sans */
+@font-face {
+    font-family: 'Duru Sans';
+    src: url('../fonts/DuruSans/DuruSans-Regular.woff2') format('woff2'), 
+    url('../fonts/DuruSans/DuruSans-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
